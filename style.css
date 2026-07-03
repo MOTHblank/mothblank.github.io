@@ -45,18 +45,7 @@ body {
     overflow-x: hidden;
 }
 
-/* CRT Scanlines Overlay effect for that retro Phosphor Archive look */
-body::before {
-    content: " ";
-    display: block;
-    position: fixed;
-    top: 0; left: 0; bottom: 0; right: 0;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
-    z-index: 9999;
-    background-size: 100% 4px, 6px 100%;
-    pointer-events: none;
-    opacity: 0.4;
-}
+/* Scroll-performance optimized layout - removed fixed viewport scanline composites */
 
 header {
     background: rgba(10, 10, 15, 0.8);
@@ -154,9 +143,7 @@ main {
 
 /* Document / Policy Container */
 .doc-card {
-    background: var(--bg-card);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 3rem;
