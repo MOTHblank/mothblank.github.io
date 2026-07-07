@@ -378,3 +378,23 @@ footer {
     outline: 2px solid var(--accent-cyan);
     outline-offset: 2px;
 }
+
+/* Accessibility: Skip to main content link */
+.skip-to-main {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--bg-primary);
+    color: var(--accent-cyan);
+    padding: 8px 16px;
+    z-index: 1000;
+    transition: top 0.2s ease;
+    border-bottom: 2px solid var(--accent-cyan);
+    border-right: 2px solid var(--accent-cyan);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.skip-to-main:focus {
+    top: 0;
+}
