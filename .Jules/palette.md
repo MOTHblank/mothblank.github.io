@@ -9,3 +9,7 @@
 ## 2026-07-04 - Contextual labels for generic links
 **Learning:** Using generic link text like "Privacy Policy" multiple times across different product cards can be confusing for screen reader users who navigate by links out of context.
 **Action:** Always add descriptive `aria-label` attributes to repetitive action links to provide full context (e.g., `aria-label="[Product Name] Privacy Policy"`).
+
+## 2026-07-04 - Skip-to-Content Links
+**Learning:** Repetitive navigation headers can be tedious for keyboard and screen reader users to tab through on every page load.
+**Action:** Always include a hidden skip-to-content link at the very top of the DOM (right after the `<body>` tag) that becomes visible on focus and jumps to the main `<main id="main-content">` content area.
