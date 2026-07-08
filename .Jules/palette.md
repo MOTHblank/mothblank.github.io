@@ -13,3 +13,7 @@
 ## 2026-07-04 - Skip-to-Content Links
 **Learning:** Repetitive navigation headers can be tedious for keyboard and screen reader users to tab through on every page load.
 **Action:** Always include a hidden skip-to-content link at the very top of the DOM (right after the `<body>` tag) that becomes visible on focus and jumps to the main `<main id="main-content">` content area.
+
+## 2026-07-08 - WCAG 1.4.1 Color as State
+**Learning:** Relying solely on a color change (like changing text color to cyan) to indicate active state fails WCAG 1.4.1 for users with color vision deficiencies.
+**Action:** Always include a secondary visual indicator, such as an underline (`text-decoration: underline`) or a border, alongside color changes for state indicators like active navigation links.
