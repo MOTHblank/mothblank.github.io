@@ -17,3 +17,7 @@
 ## 2026-07-08 - WCAG 1.4.1 Color as State
 **Learning:** Relying solely on a color change (like changing text color to cyan) to indicate active state fails WCAG 1.4.1 for users with color vision deficiencies.
 **Action:** Always include a secondary visual indicator, such as an underline (`text-decoration: underline`) or a border, alongside color changes for state indicators like active navigation links.
+
+## 2026-07-09 - Respecting prefers-reduced-motion for Smooth Scrolling
+**Learning:** Global CSS rules like `scroll-behavior: smooth` can trigger motion sickness or discomfort for users with vestibular disorders when navigating via in-page links (like skip-to-content or hash links).
+**Action:** Always wrap global motion or animation CSS rules, specifically `scroll-behavior: smooth`, in a `@media (prefers-reduced-motion: no-preference)` query to respect user OS preferences.
