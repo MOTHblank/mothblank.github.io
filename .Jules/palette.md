@@ -25,3 +25,6 @@
 ## 2026-07-11 - Accessibility Warnings for External and Email Links
 **Learning:** Links that open in new tabs (`target="_blank"`) or trigger external applications (`mailto:`) can be extremely disorienting for screen reader users and users with cognitive disabilities if they happen unexpectedly without prior warning. Furthermore, just adding a title isn't enough; `aria-label` should also contain the link's text content to remain compliant with WCAG 2.5.3 (Label in Name).
 **Action:** Always add warnings to such links using both `title` and `aria-label`. Ensure the `aria-label` includes the exact visible text of the link followed by the warning (e.g., `aria-label="[Visible Link Text] (opens in a new tab)"` or `aria-label="[Visible Email] (opens email client)"`).
+## 2026-07-12 - Skip-to-content focus management
+**Learning:** Adding a "skip to main content" link is not enough if the `<main>` element cannot receive programmatic focus.
+**Action:** Always add `tabindex="-1"` to the target of a skip link (e.g., `<main id="main-content" tabindex="-1">`) so the browser can move focus to it. Additionally, add `outline: none;` on focus for that element to prevent unwanted visual focus rings on layout elements.
