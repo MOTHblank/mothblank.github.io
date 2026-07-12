@@ -406,3 +406,7 @@ footer {
 .skip-to-main:focus {
     top: 0;
 }
+
+main:focus {
+    outline: none;
+}
