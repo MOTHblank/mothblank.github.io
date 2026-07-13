@@ -28,3 +28,7 @@
 ## 2026-07-12 - Skip-to-content focus management
 **Learning:** Adding a "skip to main content" link is not enough if the `<main>` element cannot receive programmatic focus.
 **Action:** Always add `tabindex="-1"` to the target of a skip link (e.g., `<main id="main-content" tabindex="-1">`) so the browser can move focus to it. Additionally, add `outline: none;` on focus for that element to prevent unwanted visual focus rings on layout elements.
+
+## 2026-07-13 - Inline Styles Breaking CSS Pseudo-Classes
+**Learning:** Using inline styles for attributes like `background` and `color` to dynamically theme a component directly overrides the component's CSS pseudo-classes (e.g., `:hover`), breaking essential interactive feedback.
+**Action:** Always use CSS custom properties (variables) mapped in the base CSS class (e.g., `background: var(--btn-bg)`) and override the variable value via inline styles (e.g., `style="--btn-bg: var(--accent-amber)"`). This approach safely themes the element while preserving interactive CSS pseudo-class states.
