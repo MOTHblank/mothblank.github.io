@@ -3,8 +3,10 @@
     --bg-secondary: #1f2833;
     --bg-card: #1f2833;
     --accent-cyan: #45f3ff;
+    --accent-cyan-glow: rgba(69, 243, 255, 0.5);
     --accent-green: #66fcf1;
     --accent-amber: #f5a623;
+    --accent-amber-glow: rgba(245, 166, 35, 0.5);
     --text-primary: #ffffff;
     --text-secondary: #c5c6c7;
     --border-color: rgba(255, 255, 255, 0.1);
@@ -83,6 +85,7 @@ header {
 
 .nav-links a:hover, .nav-links a.active {
     color: var(--accent-cyan);
+    text-decoration: underline;
 }
 
 .nav-links a.active {
@@ -292,8 +295,10 @@ a.doc-link:hover {
 }
 
 .btn-primary {
-    background: var(--accent-cyan);
-    color: var(--bg-primary);
+    --btn-bg: var(--accent-cyan);
+    --btn-text: var(--bg-primary);
+    background: var(--btn-bg);
+    color: var(--btn-text);
 }
 
 .btn-primary:hover {
@@ -302,14 +307,17 @@ a.doc-link:hover {
 }
 
 .btn-secondary {
+    --btn-color: var(--text-primary);
+    --btn-border: var(--border-color);
     background: transparent;
-    color: var(--text-primary);
-    border: 1px solid var(--border-color);
+    color: var(--btn-color);
+    border: 1px solid var(--btn-border);
 }
 
 .btn-secondary:hover {
     background: rgba(255, 255, 255, 0.05);
     border-color: var(--text-primary);
+    color: var(--text-primary);
 }
 
 footer {
@@ -344,6 +352,7 @@ footer {
 
 .footer-links a:hover {
     color: var(--accent-cyan);
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
