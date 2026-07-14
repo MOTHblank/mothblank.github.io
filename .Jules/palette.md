@@ -32,3 +32,7 @@
 ## 2026-07-13 - Inline Styles Breaking CSS Pseudo-Classes
 **Learning:** Using inline styles for attributes like `background` and `color` to dynamically theme a component directly overrides the component's CSS pseudo-classes (e.g., `:hover`), breaking essential interactive feedback.
 **Action:** Always use CSS custom properties (variables) mapped in the base CSS class (e.g., `background: var(--btn-bg)`) and override the variable value via inline styles (e.g., `style="--btn-bg: var(--accent-amber)"`). This approach safely themes the element while preserving interactive CSS pseudo-class states.
+
+## 2026-07-14 - Theming Focus Indicators with CSS Custom Properties
+**Learning:** Hardcoding a color for `:focus-visible` outlines breaks component-specific theming. If a card or component uses a different accent color, a hardcoded focus ring will look out of place and break the visual harmony.
+**Action:** Use CSS custom properties for focus indicators with a fallback (e.g., `outline: 2px solid var(--focus-ring, var(--default-color))`). This allows specific components to override the `--focus-ring` variable, ensuring accessibility states remain on-theme and visually integrated.
