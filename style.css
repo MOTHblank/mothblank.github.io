@@ -316,8 +316,12 @@ a.doc-link:hover {
 
 .btn-secondary:hover {
     background: rgba(255, 255, 255, 0.05);
-    border-color: var(--text-primary);
-    color: var(--text-primary);
+    border-color: var(--btn-color);
+    color: var(--btn-color);
+}
+
+.btn:active {
+    transform: scale(0.97);
 }
 
 footer {
@@ -392,7 +396,7 @@ footer {
 
 /* Accessibility: Focus styles */
 :focus-visible {
-    outline: 2px solid var(--accent-cyan);
+    outline: 2px solid var(--focus-ring, var(--accent-cyan));
     outline-offset: 2px;
 }
 
