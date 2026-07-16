@@ -36,3 +36,7 @@
 ## 2026-07-14 - Theming Focus Indicators with CSS Custom Properties
 **Learning:** Hardcoding a color for `:focus-visible` outlines breaks component-specific theming. If a card or component uses a different accent color, a hardcoded focus ring will look out of place and break the visual harmony.
 **Action:** Use CSS custom properties for focus indicators with a fallback (e.g., `outline: 2px solid var(--focus-ring, var(--default-color))`). This allows specific components to override the `--focus-ring` variable, ensuring accessibility states remain on-theme and visually integrated.
+
+## 2026-07-15 - [Screen Reader Context for Logo Links]
+**Learning:** In projects without a templating engine, structural elements like navigation logos are duplicated across all HTML files. These are often missing descriptive ARIA labels, causing screen readers to announce the link text verbatim (e.g., "MOTHBLANK") without clarifying its function as a "Home" button.
+**Action:** Always check the primary logo link in navigation bars for an `aria-label` (e.g., "BrandName - Home") and ensure the fix is propagated across all static HTML files to maintain consistent accessibility.
