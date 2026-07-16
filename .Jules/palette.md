@@ -37,6 +37,9 @@
 **Learning:** Hardcoding a color for `:focus-visible` outlines breaks component-specific theming. If a card or component uses a different accent color, a hardcoded focus ring will look out of place and break the visual harmony.
 **Action:** Use CSS custom properties for focus indicators with a fallback (e.g., `outline: 2px solid var(--focus-ring, var(--default-color))`). This allows specific components to override the `--focus-ring` variable, ensuring accessibility states remain on-theme and visually integrated.
 
+## 2026-07-28 - Persistent Visual Indicators for Links (WCAG 1.4.1)
+**Learning:** Relying purely on a color difference to distinguish inline links (or footer links) from surrounding text fails WCAG 1.4.1 (Use of Color). Furthermore, sighted users are not warned about links opening in a new tab if it's only defined in `aria-label`.
+**Action:** Always provide a secondary persistent visual indicator for inline links, such as an underline. For external links opening in new tabs, add a visual indicator like an arrow (↗) using CSS pseudo-elements so sighted users receive the same expectation as screen reader users.
 ## 2026-07-15 - [Screen Reader Context for Logo Links]
 **Learning:** In projects without a templating engine, structural elements like navigation logos are duplicated across all HTML files. These are often missing descriptive ARIA labels, causing screen readers to announce the link text verbatim (e.g., "MOTHBLANK") without clarifying its function as a "Home" button.
 **Action:** Always check the primary logo link in navigation bars for an `aria-label` (e.g., "BrandName - Home") and ensure the fix is propagated across all static HTML files to maintain consistent accessibility.
