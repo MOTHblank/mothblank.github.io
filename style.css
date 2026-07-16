@@ -165,13 +165,27 @@ li {
 
 a.doc-link {
     color: var(--accent-cyan);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s ease;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(69, 243, 255, 0.4);
+    transition: text-decoration-color 0.2s ease;
 }
 
 a.doc-link:hover {
-    border-color: var(--accent-cyan);
+    text-decoration-color: var(--accent-cyan);
+}
+
+a.doc-link[target="_blank"]::after {
+    content: " ↗";
+    display: inline-block;
+    font-size: 0.85em;
+    margin-left: 2px;
+    transition: transform 0.2s ease;
+}
+
+a.doc-link[target="_blank"]:hover::after {
+    transform: translate(2px, -2px);
 }
 
 /* Home / Landing Page Specific styling */
@@ -350,13 +364,15 @@ footer {
 
 .footer-links a {
     color: var(--text-secondary);
-    text-decoration: none;
-    transition: color 0.2s ease;
+    text-decoration: underline;
+    text-decoration-color: rgba(197, 198, 199, 0.4); /* var(--text-secondary) with opacity */
+    text-underline-offset: 3px;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .footer-links a:hover {
     color: var(--accent-cyan);
-    text-decoration: underline;
+    text-decoration-color: var(--accent-cyan);
 }
 
 @media (max-width: 768px) {
