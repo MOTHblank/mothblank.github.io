@@ -43,3 +43,7 @@
 ## 2026-07-15 - [Screen Reader Context for Logo Links]
 **Learning:** In projects without a templating engine, structural elements like navigation logos are duplicated across all HTML files. These are often missing descriptive ARIA labels, causing screen readers to announce the link text verbatim (e.g., "MOTHBLANK") without clarifying its function as a "Home" button.
 **Action:** Always check the primary logo link in navigation bars for an `aria-label` (e.g., "BrandName - Home") and ensure the fix is propagated across all static HTML files to maintain consistent accessibility.
+
+## 2026-07-17 - Visual Warnings for Context Switches (mailto:)
+**Learning:** While screen readers get context from `aria-label` about external links and mailto triggers, sighted keyboard and mobile users do not see `title` attribute tooltips. This means they lack a visual warning before a major context switch, like launching an external email app.
+**Action:** Always provide a persistent visual indicator (like an envelope icon `✉` via CSS `::after`) for `mailto:` links, similarly to how `target="_blank"` links should have an external link icon (`↗`).

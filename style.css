@@ -188,6 +188,18 @@ a.doc-link[target="_blank"]:hover::after {
     transform: translate(2px, -2px);
 }
 
+a.doc-link[href^="mailto:"]::after {
+    content: " ✉";
+    display: inline-block;
+    font-size: 0.85em;
+    margin-left: 2px;
+    transition: transform 0.2s ease;
+}
+
+a.doc-link[href^="mailto:"]:hover::after {
+    transform: translate(2px, -2px);
+}
+
 /* Home / Landing Page Specific styling */
 .hero {
     text-align: center;
