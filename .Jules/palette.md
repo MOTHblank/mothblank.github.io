@@ -47,3 +47,7 @@
 ## 2026-07-17 - Visual Warnings for Context Switches (mailto:)
 **Learning:** While screen readers get context from `aria-label` about external links and mailto triggers, sighted keyboard and mobile users do not see `title` attribute tooltips. This means they lack a visual warning before a major context switch, like launching an external email app.
 **Action:** Always provide a persistent visual indicator (like an envelope icon `✉` via CSS `::after`) for `mailto:` links, similarly to how `target="_blank"` links should have an external link icon (`↗`).
+
+## 2026-07-18 - Keyboard Focus UX Parity (Hover == Focus)
+**Learning:** Only providing basic focus outlines (`:focus-visible`) while reserving rich visual interactions (like colors, transforms, or border highlights) exclusively for mouse users (`:hover`) creates an unequal and less intuitive experience for keyboard users.
+**Action:** Always verify that interactive elements provide UX parity. Combine `:hover` and `:focus-visible` selectors (or `:focus-within` for parent containers) so keyboard users receive the same visual feedback and context cues as mouse users.

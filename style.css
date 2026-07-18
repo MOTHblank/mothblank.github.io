@@ -83,7 +83,7 @@ header {
     transition: color 0.2s ease;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover, .nav-links a:focus-visible, .nav-links a.active {
     color: var(--accent-cyan);
     text-decoration: underline;
 }
@@ -172,7 +172,7 @@ a.doc-link {
     transition: text-decoration-color 0.2s ease;
 }
 
-a.doc-link:hover {
+a.doc-link:hover, a.doc-link:focus-visible {
     text-decoration-color: var(--accent-cyan);
 }
 
@@ -184,7 +184,7 @@ a.doc-link[target="_blank"]::after {
     transition: transform 0.2s ease;
 }
 
-a.doc-link[target="_blank"]:hover::after {
+a.doc-link[target="_blank"]:hover::after, a.doc-link[target="_blank"]:focus-visible::after {
     transform: translate(2px, -2px);
 }
 
@@ -196,7 +196,7 @@ a.doc-link[href^="mailto:"]::after {
     transition: transform 0.2s ease;
 }
 
-a.doc-link[href^="mailto:"]:hover::after {
+a.doc-link[href^="mailto:"]:hover::after, a.doc-link[href^="mailto:"]:focus-visible::after {
     transform: translate(2px, -2px);
 }
 
@@ -240,7 +240,7 @@ a.doc-link[href^="mailto:"]:hover::after {
     transition: border-color 0.2s ease;
 }
 
-.game-card:hover {
+.game-card:hover, .game-card:focus-within {
     border-color: var(--border-color-hover);
 }
 
@@ -327,7 +327,7 @@ a.doc-link[href^="mailto:"]:hover::after {
     color: var(--btn-text);
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:focus-visible {
     background: #ffffff;
     color: var(--bg-primary);
 }
@@ -340,7 +340,7 @@ a.doc-link[href^="mailto:"]:hover::after {
     border: 1px solid var(--btn-border);
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover, .btn-secondary:focus-visible {
     background: rgba(255, 255, 255, 0.05);
     border-color: var(--btn-color);
     color: var(--btn-color);
@@ -382,7 +382,7 @@ footer {
     transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
-.footer-links a:hover {
+.footer-links a:hover, .footer-links a:focus-visible {
     color: var(--accent-cyan);
     text-decoration-color: var(--accent-cyan);
 }
