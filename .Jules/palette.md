@@ -51,3 +51,7 @@
 ## 2026-07-18 - Keyboard Focus UX Parity (Hover == Focus)
 **Learning:** Only providing basic focus outlines (`:focus-visible`) while reserving rich visual interactions (like colors, transforms, or border highlights) exclusively for mouse users (`:hover`) creates an unequal and less intuitive experience for keyboard users.
 **Action:** Always verify that interactive elements provide UX parity. Combine `:hover` and `:focus-visible` selectors (or `:focus-within` for parent containers) so keyboard users receive the same visual feedback and context cues as mouse users.
+
+## 2026-07-20 - Skip to Main Content Link Obscured by Sticky Header
+**Learning:** Sticky headers obscure anchor link targets (like `<main>`) upon navigation, creating poor UX and frustrating accessibility. "Skip to main content" links become confusing as the start of the content is hidden.
+**Action:** When using sticky headers (e.g., 84px tall), apply `scroll-margin-top: [header height]` to anchor targets like `<main>` to ensure they scroll into view cleanly without being obscured.
