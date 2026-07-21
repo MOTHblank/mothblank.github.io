@@ -238,11 +238,13 @@ a.doc-link[href^="mailto:"]:hover::after, a.doc-link[href^="mailto:"]:focus-visi
     flex-direction: row;
     gap: 2rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.2s ease;
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .game-card:hover, .game-card:focus-within {
     border-color: var(--border-color-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .game-icon-container {
@@ -260,6 +262,11 @@ a.doc-link[href^="mailto:"]:hover::after, a.doc-link[href^="mailto:"]:focus-visi
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.game-card:hover .game-icon, .game-card:focus-within .game-icon {
+    transform: scale(1.05);
 }
 
 .game-icon svg {
