@@ -55,3 +55,7 @@
 ## 2026-07-29 - Scroll Margin for Sticky Headers
 **Learning:** When using sticky headers, navigating to anchor links (like "Skip to main content") can cause the target element to be scrolled to the top of the viewport and hidden beneath the header.
 **Action:** Always add `scroll-margin-top` to target elements (like `<main>`) matching or slightly exceeding the height of the sticky header to ensure they remain visible when focused.
+
+## 2024-06-25 - Interactive elevation and contextual icon scaling
+**Learning:** Combining parent container interactive feedback (elevation/box-shadow via `:focus-within` and `:hover`) with playful, synchronized scaling of internal visual anchors (icons) provides a cohesive and delightful context cue that is universally available to both mouse and keyboard users.
+**Action:** Always link primary container interactions with appropriate visual feedback on distinct child elements, utilizing `:focus-within` for containers with focusable children to ensure equivalent UX across interaction modalities.
