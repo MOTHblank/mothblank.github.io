@@ -59,3 +59,7 @@
 ## 2024-06-25 - Interactive elevation and contextual icon scaling
 **Learning:** Combining parent container interactive feedback (elevation/box-shadow via `:focus-within` and `:hover`) with playful, synchronized scaling of internal visual anchors (icons) provides a cohesive and delightful context cue that is universally available to both mouse and keyboard users.
 **Action:** Always link primary container interactions with appropriate visual feedback on distinct child elements, utilizing `:focus-within` for containers with focusable children to ensure equivalent UX across interaction modalities.
+
+## 2026-07-03 - Dark Theme Print Legibility
+**Learning:** Browsers strip CSS background colors by default during printing but keep explicitly set text colors. For dark-themed sites, this results in illegible "white-on-white" printed pages, which is especially critical for legal documents like Privacy Policies and EULAs.
+**Action:** Always include a `@media print` stylesheet for dark themes that resets CSS custom properties to light values (white background, black text) and hides unnecessary interactive UI elements (headers, footers, buttons) for optimal document legibility.

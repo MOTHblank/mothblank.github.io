@@ -459,3 +459,43 @@ footer {
 main:focus {
     outline: none;
 }
+
+/* Accessibility/UX: Print styles for legibility on white paper */
+@media print {
+    :root {
+        --bg-primary: #ffffff;
+        --bg-secondary: #ffffff;
+        --bg-card: #ffffff;
+        --text-primary: #000000;
+        --text-secondary: #333333;
+        --accent-cyan: #005566;
+        --border-color: #cccccc;
+        --border-color-hover: #cccccc;
+    }
+
+    body {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+    }
+
+    header, footer, .skip-to-main, .game-links {
+        display: none !important;
+    }
+
+    main {
+        padding: 0;
+        margin: 0;
+    }
+
+    .doc-card {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+    }
+
+    a.doc-link[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #555;
+    }
+}
