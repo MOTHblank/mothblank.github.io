@@ -28,6 +28,15 @@
     }
 }
 
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
@@ -37,6 +46,30 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    scrollbar-color: rgba(255, 255, 255, 0.2) var(--bg-primary);
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+::selection {
+    background: var(--accent-cyan);
+    color: #000000;
 }
 
 header {
@@ -77,21 +110,18 @@ header {
 
 .nav-links a {
     color: var(--text-secondary);
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
     font-weight: 500;
     font-size: 0.9rem;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .nav-links a:hover, .nav-links a:focus-visible, .nav-links a.active {
     color: var(--accent-cyan);
-    text-decoration: underline;
-}
-
-.nav-links a.active {
-    text-decoration: underline;
-    text-underline-offset: 6px;
-    text-decoration-thickness: 2px;
+    text-decoration-color: var(--accent-cyan);
 }
 
 main {
