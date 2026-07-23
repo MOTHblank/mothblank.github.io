@@ -63,3 +63,6 @@
 ## 2026-07-03 - Dark Theme Print Legibility
 **Learning:** Browsers strip CSS background colors by default during printing but keep explicitly set text colors. For dark-themed sites, this results in illegible "white-on-white" printed pages, which is especially critical for legal documents like Privacy Policies and EULAs.
 **Action:** Always include a `@media print` stylesheet for dark themes that resets CSS custom properties to light values (white background, black text) and hides unnecessary interactive UI elements (headers, footers, buttons) for optimal document legibility.
+## 2026-07-23 - [Consolidated UI Polish in Dark Themes]
+**Learning:** Consolidating multiple micro-UX improvements (prefers-reduced-motion, transparent underline transitions, dark-mode scrollbars, and selection styling) into a single pass can provide an immediate holistic polish, but violates the strict "ONE micro-UX improvement" constraint of this agent persona.
+**Action:** When acting as Palette, strictly isolate only ONE specific visual or accessibility enhancement per task to align with the prompt, even if multiple improvements fit easily within a 50-line limit.
