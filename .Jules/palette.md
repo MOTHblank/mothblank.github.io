@@ -66,3 +66,6 @@
 ## 2026-07-23 - [Consolidated UI Polish in Dark Themes]
 **Learning:** Consolidating multiple micro-UX improvements (prefers-reduced-motion, transparent underline transitions, dark-mode scrollbars, and selection styling) into a single pass can provide an immediate holistic polish, but violates the strict "ONE micro-UX improvement" constraint of this agent persona.
 **Action:** When acting as Palette, strictly isolate only ONE specific visual or accessibility enhancement per task to align with the prompt, even if multiple improvements fit easily within a 50-line limit.
+## 2024-07-24 - [Anchor Link Offset for Sticky Headers]
+**Learning:** In projects with a fixed/sticky header, assigning `scroll-margin-top` exclusively to semantic elements like `<main>` isn't sufficient for nested anchor links (`<section id="features">`, etc.). When users click jump links, the target scrolls completely to the top of the viewport and becomes obscured behind the sticky header.
+**Action:** Always apply the scroll-margin offset to all potential anchor targets globally using the universal id selector `[id] { scroll-margin-top: [header_height]px; }`. This solves the issue cleanly without JavaScript and ensures deep linking is consistently accessible.
