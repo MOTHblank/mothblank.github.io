@@ -69,3 +69,7 @@
 ## 2024-07-24 - [Anchor Link Offset for Sticky Headers]
 **Learning:** In projects with a fixed/sticky header, assigning `scroll-margin-top` exclusively to semantic elements like `<main>` isn't sufficient for nested anchor links (`<section id="features">`, etc.). When users click jump links, the target scrolls completely to the top of the viewport and becomes obscured behind the sticky header.
 **Action:** Always apply the scroll-margin offset to all potential anchor targets globally using the universal id selector `[id] { scroll-margin-top: [header_height]px; }`. This solves the issue cleanly without JavaScript and ensures deep linking is consistently accessible.
+
+## 2026-07-30 - Robust Visual Hiding for Skip Links
+**Learning:** Visually hiding 'skip-to-content' links using hardcoded negative top values (e.g., `top: -40px`) is fragile and can result in visual bleeding depending on device scaling, text size, or layout variations.
+**Action:** Always use dynamic transformations for visually hiding such elements. Set `top: 0` and use `transform: translateY(-100%)` for robust visual hiding. Transition the transform to `translateY(0)` on focus. This ensures the link is completely hidden regardless of its rendered size.

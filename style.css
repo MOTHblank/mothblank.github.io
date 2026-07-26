@@ -472,13 +472,14 @@ footer {
 /* Accessibility: Skip to main content link */
 .skip-to-main {
     position: absolute;
-    top: -40px;
+    top: 0;
     left: 0;
+    transform: translateY(-100%);
     background: var(--bg-primary);
     color: var(--accent-cyan);
     padding: 8px 16px;
     z-index: 1000;
-    transition: top 0.2s ease;
+    transition: transform 0.2s ease;
     border-bottom: 2px solid var(--accent-cyan);
     border-right: 2px solid var(--accent-cyan);
     font-weight: 600;
@@ -486,7 +487,7 @@ footer {
 }
 
 .skip-to-main:focus {
-    top: 0;
+    transform: translateY(0);
 }
 
 main:focus {
