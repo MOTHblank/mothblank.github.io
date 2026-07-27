@@ -490,6 +490,10 @@ footer {
     transform: translateY(0);
 }
 
+.skip-to-main:focus-visible {
+    outline-offset: -3px;
+}
+
 main:focus {
     outline: none;
 }
