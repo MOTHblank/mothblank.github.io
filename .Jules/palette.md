@@ -73,3 +73,7 @@
 ## 2026-07-30 - Robust Skip Link Hiding
 **Learning:** Hardcoding a negative `top` value (like `top: -40px`) to hide a "Skip to main content" link is fragile and can cause a visual sliver of the link's border or outline to bleed into the top of the viewport depending on device scaling, padding, or browser rendering.
 **Action:** Always use `transform: translateY(-100%)` along with `top: 0` to robustly hide skip links completely out of the viewport. Ensure focus transitions target `transform` to slide the link smoothly into view.
+
+## 2026-07-31 - [Inset Focus Rings for Flush-to-Edge Elements]
+**Learning:** Elements positioned flush against the edges of the viewport (such as a "Skip to main content" link anchored to the top-left) often have their default focus rings clipped by the browser window, making the focus state difficult or impossible to see for keyboard users.
+**Action:** Always use a negative `outline-offset` (e.g., `-2px` or `-4px`) on `:focus-visible` for such elements to ensure the focus ring draws inward and remains fully visible.
