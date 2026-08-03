@@ -1,19 +1,19 @@
 :root {
-    --bg-primary: #0b0c10;
-    --bg-secondary: #1f2833;
-    --bg-card: #1f2833;
-    --accent-cyan: #45f3ff;
-    --accent-cyan-glow: rgba(69, 243, 255, 0.5);
-    --accent-green: #66fcf1;
-    --accent-amber: #f5a623;
-    --accent-amber-glow: rgba(245, 166, 35, 0.5);
-    --text-primary: #ffffff;
-    --text-secondary: #c5c6c7;
-    --border-color: rgba(255, 255, 255, 0.1);
-    --border-color-hover: rgba(255, 255, 255, 0.25);
-    --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --font-mono: 'Fira Code', 'Courier New', Courier, monospace;
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #0a0a0a;
+    --bg-card: #0a0a0a;
+    --accent-cyan: #33ff00;
+    --accent-cyan-glow: rgba(51, 255, 0, 0.5);
+    --accent-green: #33ff00;
+    --accent-amber: #ffb000;
+    --accent-amber-glow: rgba(255, 176, 0, 0.5);
+    --text-primary: #33ff00;
+    --text-secondary: #1f521f;
+    --border-color: #1f521f;
+    --border-color-hover: #33ff00;
+    --font-heading: 'JetBrains Mono', 'Fira Code', 'VT323', monospace;
+    --font-body: 'JetBrains Mono', 'Fira Code', 'VT323', monospace;
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'VT323', monospace;
 }
 
 * {
@@ -46,8 +46,24 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    scrollbar-color: rgba(255, 255, 255, 0.2) var(--bg-primary);
+    scrollbar-color: var(--text-secondary) var(--bg-primary);
     scrollbar-width: thin;
+    text-shadow: 0 0 5px var(--accent-cyan-glow);
+    position: relative;
+}
+
+body::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 999;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
 }
 
 ::-webkit-scrollbar {
@@ -59,17 +75,17 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+    background: var(--text-secondary);
+    border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--accent-cyan);
 }
 
 ::selection {
     background: var(--accent-cyan);
-    color: #000000;
+    color: #0a0a0a;
 }
 
 header {
@@ -96,10 +112,18 @@ header {
     letter-spacing: 1px;
     color: var(--text-primary);
     text-decoration: none;
+    text-transform: uppercase;
 }
 
-.logo span {
-    color: var(--accent-cyan);
+.logo::before {
+    content: "user@";
+    color: var(--text-secondary);
+}
+
+.logo::after {
+    content: ":~$";
+    color: var(--text-secondary);
+    margin-left: 5px;
 }
 
 .nav-links {
@@ -110,18 +134,25 @@ header {
 
 .nav-links a {
     color: var(--text-secondary);
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    text-underline-offset: 6px;
-    text-decoration-thickness: 2px;
+    text-decoration: none;
     font-weight: 500;
     font-size: 0.9rem;
-    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+    transition: color 0.2s ease;
+    text-transform: uppercase;
+}
+
+.nav-links a::before {
+    content: "> ";
+    opacity: 0;
+    transition: opacity 0.2s ease;
 }
 
 .nav-links a:hover, .nav-links a:focus-visible, .nav-links a.active {
     color: var(--accent-cyan);
-    text-decoration-color: var(--accent-cyan);
+}
+
+.nav-links a:hover::before, .nav-links a:focus-visible::before, .nav-links a.active::before {
+    opacity: 1;
 }
 
 main {
@@ -140,9 +171,21 @@ main {
 .doc-card {
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 0px;
     padding: 2.5rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: none;
+    position: relative;
+}
+
+.doc-card::before {
+    content: "+--- SYSTEM STATUS ---+";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: var(--bg-primary);
+    padding: 0 10px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
 }
 
 h1 {
@@ -151,6 +194,7 @@ h1 {
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
+    text-transform: uppercase;
 }
 
 .doc-meta {
@@ -176,8 +220,14 @@ h2 {
     font-weight: 600;
     margin-bottom: 0.75rem;
     color: var(--text-primary);
-    border-left: 3px solid var(--accent-cyan);
+    border-left: 1px solid var(--accent-cyan);
     padding-left: 0.75rem;
+    text-transform: uppercase;
+}
+
+h2::before {
+    content: "# ";
+    color: var(--text-secondary);
 }
 
 p {
@@ -242,10 +292,21 @@ a.doc-link[href^="mailto:"]:hover::after, a.doc-link[href^="mailto:"]:focus-visi
 
 .hero-title {
     font-family: var(--font-heading);
-    font-size: 3rem;
+    font-size: 1rem;
     font-weight: 800;
     margin-bottom: 1rem;
     color: var(--text-primary);
+    white-space: pre;
+    line-height: 1.2;
+}
+
+.hero-title span.cursor {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 .hero-subtitle {
@@ -265,19 +326,29 @@ a.doc-link[href^="mailto:"]:hover::after, a.doc-link[href^="mailto:"]:focus-visi
 .game-card {
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 0px;
     padding: 2rem;
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: none;
+    transition: border-color 0.2s ease;
+    position: relative;
+}
+
+.game-card::before {
+    content: "+--- PROCESS ---+";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: var(--bg-primary);
+    padding: 0 10px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
 }
 
 .game-card:hover, .game-card:focus-within {
     border-color: var(--border-color-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .game-icon-container {
@@ -289,13 +360,13 @@ a.doc-link[href^="mailto:"]:hover::after, a.doc-link[href^="mailto:"]:focus-visi
 .game-icon {
     width: 90px;
     height: 90px;
-    border-radius: 12px;
-    background: #0f0f15;
-    border: 1px solid var(--border-color);
+    border-radius: 0px;
+    background: var(--bg-primary);
+    border: 1px dashed var(--border-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: border-color 0.4s ease;
 }
 
 .game-card:hover .game-icon, .game-card:focus-within .game-icon {
@@ -318,12 +389,19 @@ a.doc-link[href^="mailto:"]:hover::after, a.doc-link[href^="mailto:"]:focus-visi
     font-family: var(--font-mono);
     font-size: 0.7rem;
     color: var(--accent-cyan);
-    border: 1px solid var(--accent-cyan);
+    border: 1px dashed var(--accent-cyan);
     padding: 0.1rem 0.5rem;
-    border-radius: 4px;
+    border-radius: 0px;
     width: fit-content;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
+}
+
+.game-tag::before {
+    content: "[ ";
+}
+.game-tag::after {
+    content: " ]";
 }
 
 .game-title {
@@ -331,6 +409,7 @@ a.doc-link[href^="mailto:"]:hover::after, a.doc-link[href^="mailto:"]:focus-visi
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
+    text-transform: uppercase;
 }
 
 .game-desc {
@@ -355,26 +434,41 @@ a.doc-link[href^="mailto:"]:hover::after, a.doc-link[href^="mailto:"]:focus-visi
     text-transform: uppercase;
     text-decoration: none;
     padding: 0.6rem 1.2rem;
-    border-radius: 4px;
+    border-radius: 0px;
     transition: all 0.2s ease;
     cursor: pointer;
     letter-spacing: 0.5px;
+    position: relative;
 }
 
+.btn::before {
+    content: "[ ";
+    margin-right: 5px;
+    color: inherit;
+}
+
+.btn::after {
+    content: " ]";
+    margin-left: 5px;
+    color: inherit;
+}
+
+
 .btn-primary {
-    --btn-bg: var(--accent-cyan);
-    --btn-text: var(--bg-primary);
+    --btn-bg: transparent;
+    --btn-text: var(--accent-cyan);
     background: var(--btn-bg);
     color: var(--btn-text);
+    border: 1px solid var(--accent-cyan);
 }
 
 .btn-primary:hover, .btn-primary:focus-visible {
-    background: #ffffff;
-    color: var(--bg-primary);
+    background: var(--accent-cyan);
+    color: #0a0a0a;
 }
 
 .btn-secondary {
-    --btn-color: var(--text-primary);
+    --btn-color: var(--text-secondary);
     --btn-border: var(--border-color);
     background: transparent;
     color: var(--btn-color);
@@ -382,9 +476,9 @@ a.doc-link[href^="mailto:"]:hover::after, a.doc-link[href^="mailto:"]:focus-visi
 }
 
 .btn-secondary:hover, .btn-secondary:focus-visible {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: var(--btn-color);
-    color: var(--btn-color);
+    background: var(--text-secondary);
+    border-color: var(--text-secondary);
+    color: #0a0a0a;
 }
 
 .btn:active {
@@ -417,15 +511,16 @@ footer {
 
 .footer-links a {
     color: var(--text-secondary);
-    text-decoration: underline;
-    text-decoration-color: rgba(197, 198, 199, 0.4); /* var(--text-secondary) with opacity */
-    text-underline-offset: 3px;
-    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .footer-links a:hover, .footer-links a:focus-visible {
     color: var(--accent-cyan);
-    text-decoration-color: var(--accent-cyan);
+}
+
+.footer-links a::before {
+    content: "./";
 }
 
 @media (max-width: 768px) {
@@ -465,7 +560,7 @@ footer {
 
 /* Accessibility: Focus styles */
 :focus-visible {
-    outline: 2px solid var(--focus-ring, var(--accent-cyan));
+    outline: 1px solid var(--focus-ring, var(--accent-cyan));
     outline-offset: 2px;
 }
 
