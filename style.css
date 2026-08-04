@@ -1,19 +1,19 @@
 :root {
-    --bg-primary: #0a0a0a;
-    --bg-secondary: #0a0a0a;
-    --bg-card: #0a0a0a;
-    --accent-cyan: #33ff00;
-    --accent-cyan-glow: rgba(51, 255, 0, 0.5);
-    --accent-green: #33ff00;
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-card: #1e1e1e;
+    --accent-cyan: #79c0ff;
+    --accent-cyan-glow: rgba(121, 192, 255, 0.3);
+    --accent-green: #7ee787;
     --accent-amber: #ffb000;
-    --accent-amber-glow: rgba(255, 176, 0, 0.5);
-    --text-primary: #33ff00;
-    --text-secondary: #1f521f;
-    --border-color: #1f521f;
-    --border-color-hover: #33ff00;
-    --font-heading: 'JetBrains Mono', 'Fira Code', 'VT323', monospace;
-    --font-body: 'JetBrains Mono', 'Fira Code', 'VT323', monospace;
-    --font-mono: 'JetBrains Mono', 'Fira Code', 'VT323', monospace;
+    --accent-amber-glow: rgba(255, 176, 0, 0.3);
+    --text-primary: #c9d1d9;
+    --text-secondary: #8b949e;
+    --border-color: #30363d;
+    --border-color-hover: #8b949e;
+    --font-heading: system-ui, -apple-system, sans-serif;
+    --font-body: system-ui, -apple-system, sans-serif;
+    --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
 }
 
 * {
@@ -60,7 +60,7 @@ body::after {
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.05) 50%), linear-gradient(90deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.01));
     z-index: 999;
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
