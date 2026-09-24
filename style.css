@@ -115,15 +115,20 @@ header {
     text-transform: uppercase;
 }
 
+.logo span {
+    color: var(--accent-cyan);
+}
+
 .logo::before {
-    content: "user@";
+    content: "[";
     color: var(--text-secondary);
+    margin-right: 0.3rem;
 }
 
 .logo::after {
-    content: ":~$";
+    content: "]";
     color: var(--text-secondary);
-    margin-left: 5px;
+    margin-left: 0.3rem;
 }
 
 .nav-links {
@@ -290,18 +295,47 @@ a.doc-link[href^="mailto:"]:hover::after, a.doc-link[href^="mailto:"]:focus-visi
     padding: 2rem 0 3.5rem;
 }
 
-.hero-title {
-    font-family: var(--font-heading);
-    font-size: 1rem;
+.hero-mark {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.15rem;
+    margin-bottom: 1.25rem;
+    font-family: var(--font-mono);
+    font-size: clamp(1.75rem, 5vw, 3rem);
     font-weight: 800;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-    white-space: pre;
-    line-height: 1.2;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-shadow: 0 0 14px var(--accent-cyan-glow);
 }
 
-.hero-title span.cursor {
+.hero-mark-bracket {
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.hero-mark-moth {
+    color: var(--accent-cyan);
+}
+
+.hero-mark-blank {
+    color: var(--text-primary);
+}
+
+.hero-mark .cursor {
+    color: var(--accent-green);
     animation: blink 1s step-end infinite;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.65rem, 5vw, 2.65rem);
+    font-weight: 700;
+    margin: 0 auto 0.9rem;
+    max-width: 760px;
+    color: var(--text-primary);
+    line-height: 1.12;
+    text-transform: none;
+    letter-spacing: -0.025em;
 }
 
 @keyframes blink {
@@ -481,6 +515,22 @@ a.doc-link[href^="mailto:"]:hover::after, a.doc-link[href^="mailto:"]:focus-visi
     color: #0a0a0a;
 }
 
+.btn-store {
+    --store-color: var(--accent-green);
+    background: transparent;
+    color: var(--store-color);
+    border: 1px solid var(--store-color);
+}
+
+.btn-store:hover, .btn-store:focus-visible {
+    background: var(--store-color);
+    color: #0a0a0a;
+}
+
+.btn-store-amber {
+    --store-color: var(--accent-amber);
+}
+
 .btn:active {
     transform: scale(0.97);
 }
@@ -537,8 +587,12 @@ footer {
         padding: 1.5rem;
     }
     
+    .hero-mark {
+        font-size: clamp(1.45rem, 9vw, 2.15rem);
+    }
+
     .hero-title {
-        font-size: 2.2rem;
+        font-size: clamp(1.55rem, 8vw, 2.1rem);
     }
     
     .game-card {
