@@ -16,7 +16,7 @@ back_label: "back_overview"
 
 <div class="doc-section">
 <p>MOTHblank ("we", "us", or "our") develops and operates <strong>NotaSegura</strong>, an Android application for organizing purchase records, receipts, warranties, and payment reminders.</p>
-<p>NotaSegura is designed as a <strong>local-first application</strong>. The app itself has no Internet permission and does not include advertising, analytics, user accounts, or cloud synchronization.</p>
+<p>NotaSegura is designed as a <strong>local-first application</strong>. The app itself does not request Android's Internet permission and does not include advertising, MOTHblank analytics, user accounts, or cloud synchronization. It uses Google ML Kit through Google Play services for on-device OCR; related operational telemetry is described below.</p>
 </div>
 
 <div class="doc-section">
@@ -45,30 +45,31 @@ back_label: "back_overview"
 
 <div class="doc-section">
 <h2>5. Backups, Restore, and Exports</h2>
-<p>NotaSegura can create a portable <code>.notasegura</code> backup containing your structured records and managed documents. Portable backups are <strong>encrypted before being written to user-selected storage</strong> and include integrity validation so corrupted or incomplete archives can be rejected during restore.</p>
+<p>NotaSegura can create a portable <code>.notasegura</code> backup containing your structured records and managed documents. Portable backups include integrity validation so corrupted or incomplete archives can be rejected during restore. <strong>NotaSegura does not encrypt exported backup archives</strong>, so they should be stored only in locations you trust.</p>
 <p>You control where exported backup files are stored and shared. Once a backup leaves the app's private storage, you are responsible for safeguarding and deleting that exported copy when it is no longer needed.</p>
 <p>The app can also create human-readable PDF reports for sharing. Shared reports are created as temporary files and exposed to the receiving app through Android's controlled file-sharing mechanism.</p>
 </div>
 
 <div class="doc-section">
 <h2>6. Network Access and Third Parties</h2>
-<p>NotaSegura does not request Android's Internet permission. The application does not contain an advertising SDK, analytics SDK, MOTHblank account service, or cloud database.</p>
+<p>NotaSegura does not request Android's Internet permission. The application does not contain an advertising SDK, MOTHblank analytics SDK, MOTHblank account service, or cloud database.</p>
+<p>For receipt OCR, NotaSegura uses Google ML Kit text recognition through Google Play services. Receipt and document contents and recognized text are processed on-device and are not uploaded to MOTHblank. According to Google's ML Kit data disclosure, the Android SDK may collect device and application information, device or installation identifiers, performance metrics, API configuration, feature input/output size, event types, and error codes for diagnostics and usage analytics. Google states that this telemetry is encrypted in transit and is not transferred to third parties. See <a class="doc-link" href="https://developers.google.com/ml-kit/android-data-disclosure" target="_blank" rel="noopener noreferrer">Google's ML Kit data disclosure</a>.</p>
 <p>Distribution, purchases, installation, updates, crash handling performed by the operating system or store, and other Google Play platform activity are governed by Google Play and your Google account settings rather than by NotaSegura's own data layer.</p>
 </div>
 
 <div class="doc-section">
 <h2>7. Android Backup</h2>
-<p>Automatic Android application backup is disabled for NotaSegura. Portable backups are created only when you explicitly choose to export one.</p>
+<p>Automatic Android application backup and device-to-device transfer of NotaSegura's private app data are disabled by the application's backup and data-extraction configuration. Portable backups are created only when you explicitly choose to export one.</p>
 </div>
 
 <div class="doc-section">
 <h2>8. Data Retention and Deletion</h2>
-<p>Local NotaSegura data remains on your device until you delete individual records, clear the app's data, or uninstall the app. Exported PDFs and encrypted backup archives remain wherever you chose to save or share them until you delete those copies yourself.</p>
+<p>Local NotaSegura data remains on your device until you delete individual records, clear the app's data, or uninstall the app. Exported PDFs and backup archives remain wherever you chose to save or share them until you delete those copies yourself.</p>
 </div>
 
 <div class="doc-section">
 <h2>9. Security</h2>
-<p>Structured records and managed documents are stored in app-private Android storage. Portable backup archives are encrypted before export. No security mechanism can guarantee absolute protection, and users should still protect their device, exported files, and any recovery credentials used for backups.</p>
+<p>Structured records and managed documents are stored in app-private Android storage. Exported backup archives include integrity checks but are not encrypted by NotaSegura, so users should protect the destination where those files are saved. No security mechanism can guarantee absolute protection.</p>
 </div>
 
 <div class="doc-section">
