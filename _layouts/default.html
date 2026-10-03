@@ -25,15 +25,21 @@
     {{ content }}
     <footer>
         <div class="footer-content">
-            <p>&copy; 2026 MOTHblank. {{ ui.rights }}</p>
-            <nav aria-label="Footer navigation">
-                <ul class="footer-links">
-                    {% if page.lang == 'pt-BR' %}
-                    <li><a href="/pt-BR/index.html">{{ ui.all_apps }}</a></li>
-                    {% else %}
-                    <li><a href="/index.html">{{ ui.all_apps }}</a></li>
-                    {% endif %}
-                </ul>
+            <p class="footer-copyright">&copy; 2026 MOTHblank. {{ ui.rights }}</p>
+            <nav class="footer-contact" aria-label="{{ ui.contact }}">
+                <span class="footer-brand">MOTHblank</span>
+                <span class="footer-separator" aria-hidden="true">·</span>
+                <a href="https://x.com/MOTHblank" target="_blank" rel="noopener noreferrer">X</a>
+                <span class="footer-separator" aria-hidden="true">·</span>
+                <a href="https://github.com/MOTHblank" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <span class="footer-separator" aria-hidden="true">·</span>
+                <a href="mailto:mothblankdev@gmail.com">{{ ui.email }}</a>
+                <span class="footer-separator footer-home-separator" aria-hidden="true">·</span>
+                {% if page.lang == 'pt-BR' %}
+                <a class="footer-home" href="/pt-BR/index.html">{{ ui.all_apps }}</a>
+                {% else %}
+                <a class="footer-home" href="/index.html">{{ ui.all_apps }}</a>
+                {% endif %}
             </nav>
         </div>
     </footer>
