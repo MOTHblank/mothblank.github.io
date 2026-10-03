@@ -4,6 +4,8 @@ en:
   privacy: "Privacy"
   rights: "All rights reserved."
   language: "Language"
+  contact: "Contact"
+  email: "Email"
   english: "English"
   portuguese: "Português"
 pt-BR:
@@ -12,5 +14,7 @@ pt-BR:
   privacy: "Privacidade"
   rights: "Todos os direitos reservados."
   language: "Idioma"
+  contact: "Contato"
+  email: "Email"
   english: "English"
   portuguese: "Português"
