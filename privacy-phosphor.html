@@ -39,9 +39,10 @@ back_label: "back_overview"
 
 <div class="doc-section">
 <h2>3. Advertising</h2>
-<p>The Android version uses <strong>Google AdMob</strong> for banner, interstitial, and rewarded advertisements. Rewarded ads can provide in-game benefits such as a revive or shop-related reward after the advertising SDK confirms the reward.</p>
-<p>The advertising integration uses Android advertising-ID capabilities. Google and its advertising partners may process advertising identifiers, device information, ad interactions, diagnostics, approximate location derived by their services, and related information for ad delivery, measurement, fraud prevention, and personalization where permitted by your settings and applicable law.</p>
-<p>You can manage advertising controls through your Android/Google account settings.</p>
+<p>The Android version uses <strong>Google AdMob</strong> for banner, interstitial, and rewarded advertisements and Google's <strong>User Messaging Platform (UMP)</strong> to manage advertising privacy and consent choices where applicable. Rewarded ads can provide in-game benefits such as a revive or shop-related reward after the advertising SDK confirms the reward.</p>
+<p>The game requests current UMP consent information before initializing the advertising SDK and only enables ad requests when UMP reports that ads may be requested. When Google requires a privacy-options entry point, Phosphor Archive exposes one in the Options screen.</p>
+<p>Google and its advertising partners may process advertising identifiers, device information, ad interactions, diagnostics, approximate location derived by their services, and related information for ad delivery, measurement, fraud prevention, and personalization where permitted by your settings and applicable law.</p>
+<p>You can manage advertising controls through the in-game privacy options when available and through your Android/Google account settings.</p>
 </div>
 
 <div class="doc-section">
