@@ -10,6 +10,8 @@
     --accent-emoji: #d8a7ff;
     --accent-emoji-strong: #f0b5ff;
     --accent-emoji-glow: rgba(216, 167, 255, 0.26);
+    --accent-nota: #7ee787;
+    --accent-nota-glow: rgba(126, 231, 135, 0.24);
     --text-primary: #c9d1d9;
     --text-secondary: #8b949e;
     --border-color: #30363d;
@@ -1194,5 +1196,94 @@ main:focus {
 @media print {
     .page-back-nav {
         display: none !important;
+    }
+}
+
+
+/* NotaSegura */
+.nota-card {
+    --focus-ring: var(--accent-nota);
+    border-color: rgba(126, 231, 135, 0.32);
+}
+
+.nota-card::before {
+    content: "+--- LOCAL ARCHIVE ---+";
+    color: var(--accent-nota);
+}
+
+.nota-game-icon,
+.nota-mark {
+    color: var(--accent-nota);
+    border-color: var(--accent-nota);
+    filter: drop-shadow(0 0 14px var(--accent-nota-glow));
+}
+
+.nota-game-icon {
+    box-shadow: 0 0 20px var(--accent-nota-glow);
+}
+
+.nota-tag,
+.nota-accent,
+.nota-heading > span,
+.nota-text-cta,
+.nota-meta {
+    color: var(--accent-nota);
+}
+
+.nota-tag {
+    border-color: var(--accent-nota);
+}
+
+.btn-nota {
+    background: transparent;
+    color: var(--accent-nota);
+    border: 1px solid var(--accent-nota);
+}
+
+.btn-nota:hover,
+.btn-nota:focus-visible {
+    background: var(--accent-nota);
+    color: #0a0a0a;
+}
+
+.nota-secondary {
+    --btn-color: var(--accent-nota);
+    --btn-border: rgba(126, 231, 135, 0.42);
+}
+
+.nota-doc::before {
+    content: "+--- NOTASEGURA / LOCAL DATA ---+";
+    color: var(--accent-nota);
+}
+
+.nota-product::before {
+    content: "NOTASEGURA";
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    font-family: var(--font-mono);
+    font-size: clamp(2.5rem, 10vw, 6.4rem);
+    font-weight: 800;
+    color: rgba(126, 231, 135, 0.035);
+    letter-spacing: -0.06em;
+    pointer-events: none;
+}
+
+.nota-feature:hover {
+    border-color: rgba(126, 231, 135, 0.5);
+}
+
+.nota-text-cta {
+    border-bottom-color: rgba(126, 231, 135, 0.45);
+}
+
+.nota-text-cta:hover,
+.nota-text-cta:focus-visible {
+    border-bottom-color: var(--accent-nota);
+}
+
+@media (max-width: 700px) {
+    .nota-product::before {
+        display: none;
     }
 }
