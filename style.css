@@ -700,11 +700,6 @@ main:focus {
     box-shadow: 0 0 22px var(--accent-emoji-glow);
 }
 
-.emoji-icon-mark {
-    font-size: 2.2rem;
-    line-height: 1;
-    filter: drop-shadow(0 0 8px var(--accent-emoji-glow));
-}
 
 .emoji-tag {
     color: var(--accent-emoji);
@@ -919,6 +914,111 @@ main:focus {
     }
 
     .emoji-product::before {
+        display: none;
+    }
+}
+
+
+/* Product overview accents */
+.product-svg-mark {
+    width: 94px;
+    height: 94px;
+    margin-bottom: 1.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-svg-mark svg {
+    width: 100%;
+    height: 100%;
+}
+
+.phosphor-mark {
+    color: var(--accent-cyan);
+    filter: drop-shadow(0 0 14px var(--accent-cyan-glow));
+}
+
+.hestia-mark {
+    color: var(--accent-amber);
+    filter: drop-shadow(0 0 14px var(--accent-amber-glow));
+}
+
+.phosphor-product::before,
+.hestia-product::before {
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    font-family: var(--font-mono);
+    font-size: clamp(2.5rem, 10vw, 6.4rem);
+    font-weight: 800;
+    letter-spacing: -0.06em;
+    pointer-events: none;
+}
+
+.phosphor-product::before {
+    content: "PHOSPHOR";
+    color: rgba(121, 192, 255, 0.035);
+}
+
+.hestia-product::before {
+    content: "HESTIA";
+    color: rgba(255, 176, 0, 0.04);
+}
+
+.phosphor-accent,
+.phosphor-heading > span,
+.phosphor-text-cta {
+    color: var(--accent-cyan);
+}
+
+.hestia-accent,
+.hestia-heading > span,
+.hestia-text-cta {
+    color: var(--accent-amber);
+}
+
+.phosphor-feature:hover {
+    border-color: rgba(121, 192, 255, 0.5);
+}
+
+.hestia-feature:hover {
+    border-color: rgba(255, 176, 0, 0.5);
+}
+
+.btn-hestia {
+    background: transparent;
+    color: var(--accent-amber);
+    border: 1px solid var(--accent-amber);
+}
+
+.btn-hestia:hover,
+.btn-hestia:focus-visible {
+    background: var(--accent-amber);
+    color: #0a0a0a;
+}
+
+.hestia-text-cta {
+    border-bottom-color: rgba(255, 176, 0, 0.45);
+}
+
+.phosphor-text-cta {
+    border-bottom-color: rgba(121, 192, 255, 0.45);
+}
+
+.hestia-text-cta:hover,
+.hestia-text-cta:focus-visible {
+    border-bottom-color: var(--accent-amber);
+}
+
+.phosphor-text-cta:hover,
+.phosphor-text-cta:focus-visible {
+    border-bottom-color: var(--accent-cyan);
+}
+
+@media (max-width: 700px) {
+    .phosphor-product::before,
+    .hestia-product::before {
         display: none;
     }
 }
