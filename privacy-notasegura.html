@@ -16,7 +16,7 @@ back_label: "back_overview"
 
 <div class="doc-section">
 <p>MOTHblank ("we", "us", or "our") develops and operates <strong>NotaSegura</strong>, an Android application for organizing purchase records, receipts, warranties, and payment reminders.</p>
-<p>NotaSegura is designed as a <strong>local-first application</strong>. It does not include advertising, MOTHblank analytics, user accounts, or MOTHblank cloud synchronization, and it does not upload your purchase records, attached documents, or OCR text to MOTHblank. It uses Google ML Kit through Google Play services for on-device OCR; related operational telemetry is described below.</p>
+<p>NotaSegura is designed as a <strong>local-first application</strong>. It does not include advertising, MOTHblank analytics, user accounts, or MOTHblank cloud synchronization, and it does not upload your purchase records, attached documents, or OCR text to MOTHblank. Receipt OCR uses bundled PP-OCRv6_small models and runs on the device.</p>
 </div>
 
 <div class="doc-section">
@@ -54,7 +54,7 @@ back_label: "back_overview"
 <div class="doc-section">
 <h2>6. Network Access and Third Parties</h2>
 <p>NotaSegura does not contain an advertising SDK, MOTHblank analytics SDK, MOTHblank account service, or MOTHblank cloud database. Purchase records, attached documents, and recognized receipt text are not uploaded to MOTHblank.</p>
-<p>For receipt OCR, NotaSegura uses Google ML Kit text recognition through Google Play services. Receipt and document contents and recognized text are processed on-device and are not uploaded to MOTHblank. According to Google's ML Kit data disclosure, the Android SDK may collect device and application information, device or installation identifiers, performance metrics, API configuration, feature input/output size, event types, and error codes for diagnostics and usage analytics. Google states that this telemetry is encrypted in transit and is not transferred to third parties. See <a class="doc-link" href="https://developers.google.com/ml-kit/android-data-disclosure" target="_blank" rel="noopener noreferrer">Google's ML Kit data disclosure</a>.</p>
+<p>Receipt OCR uses bundled PP-OCRv6_small models and runs locally on the device. The OCR models are included with the installed app, do not require a runtime model download, and NotaSegura does not transmit receipt images, document contents, or recognized OCR text for recognition or analytics.</p>
 <p>Distribution, purchases, installation, updates, crash handling performed by the operating system or store, and other Google Play platform activity are governed by Google Play and your Google account settings rather than by NotaSegura's own data layer.</p>
 </div>
 
