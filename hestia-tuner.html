@@ -1,6 +1,7 @@
 ---
 layout: default
 lang: en
+app_id: "hestia-tuner"
 title: "Hestia Tuner - MOTHblank"
 description: "Hestia Tuner is a high-precision guitar tuner and mechanical metronome for Android by MOTHblank."
 alternate_url: "/pt-BR/hestia-tuner.html"
@@ -24,11 +25,7 @@ back_label: "back_home"
             <div class="product-kicker hestia-accent">ANDROID UTILITY · PRODUCTION</div>
             <h1>Hestia Tuner</h1>
             <p class="product-lede">A focused guitar tuner and mechanical metronome built for stable pitch feedback, precise timing, and fast use during practice.</p>
-            <div class="product-actions">
-                <a href="https://play.google.com/store/apps/details?id=com.mothblank.hestiatuner" class="btn btn-store btn-store-amber" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-                <a href="privacy-hestia.html" class="btn btn-hestia">Privacy Policy</a>
-                <a href="eula-hestia.html" class="btn btn-secondary">EULA</a>
-            </div>
+            {% include product-actions.html lang=page.lang %}
         </section>
 
         <section class="product-section">
@@ -53,9 +50,6 @@ back_label: "back_home"
         <section class="product-section">
             <div class="section-heading hestia-heading"><span>03</span><h2>Policies</h2></div>
             <p>Hestia Tuner has dedicated privacy and license pages for the production Android release.</p>
-            <div class="product-actions">
-                <a href="privacy-hestia.html" class="text-cta hestia-text-cta">Privacy Policy →</a>
-                <a href="eula-hestia.html" class="text-cta hestia-text-cta">EULA →</a>
-            </div>
+            {% include product-policy-links.html lang=page.lang %}
         </section>
     </main>
