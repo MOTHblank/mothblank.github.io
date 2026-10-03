@@ -1,6 +1,7 @@
 ---
 layout: default
 lang: pt-BR
+app_id: "phosphor-archive"
 title: "Phosphor Archive - MOTHblank"
 description: "Phosphor Archive é um shooter arcade retrô para Android da MOTHblank, com renderização vetorial, persistência de fósforo, campanha e sobrevivência infinita."
 alternate_url: "/phosphor-archive.html"
@@ -15,7 +16,7 @@ back_label: "back_home"
     <div class="product-kicker phosphor-accent">JOGO ANDROID · TESTE ABERTO</div>
     <h1>Phosphor Archive</h1>
     <p class="product-lede">Um shooter arcade vetorial construído em torno de rastros luminosos de fósforo, espaço hostil, missões compactas e sobrevivência sob alta pressão.</p>
-    <div class="product-actions"><a href="https://play.google.com/store/apps/details?id=com.mothblank.phosphorarchive" class="btn btn-store" target="_blank" rel="noopener noreferrer">Google Play ↗</a><a href="/pt-BR/privacy-phosphor.html" class="btn btn-primary">Privacidade</a><a href="/pt-BR/eula-phosphor.html" class="btn btn-secondary">EULA</a><a href="https://groups.google.com/g/mothblankdev" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Participar do teste ↗</a></div>
+    {% include product-actions.html lang=page.lang %}
 </section>
 <section class="product-section">
     <div class="section-heading phosphor-heading"><span>01</span><h2>Combate arcade no espaço</h2></div>
@@ -34,6 +35,6 @@ back_label: "back_home"
 <section class="product-section">
     <div class="section-heading phosphor-heading"><span>03</span><h2>Políticas</h2></div>
     <p>Phosphor Archive possui páginas próprias de privacidade e licença para a versão Android.</p>
-    <div class="product-actions"><a href="/pt-BR/privacy-phosphor.html" class="text-cta phosphor-text-cta">Política de Privacidade →</a><a href="/pt-BR/eula-phosphor.html" class="text-cta phosphor-text-cta">EULA →</a></div>
+    {% include product-policy-links.html lang=page.lang %}
 </section>
 </main>
