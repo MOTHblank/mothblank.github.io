@@ -23,6 +23,14 @@
         "label": {
           "en": "In Development",
           "pt-BR": "Em desenvolvimento"
+        },
+        "summary": {
+          "en": "In active development",
+          "pt-BR": "Em desenvolvimento ativo"
+        },
+        "detail": {
+          "en": "Emoji Magia is not presented here as a production release yet. This page will be updated with the official Google Play listing when public distribution is ready.",
+          "pt-BR": "Emoji Magia ainda não é apresentado aqui como lançamento de produção. A página será atualizada com o link oficial da Google Play quando a distribuição pública estiver pronta."
         }
       },
       "play_url": null,
@@ -66,6 +74,14 @@
         "label": {
           "en": "Open Testing",
           "pt-BR": "Teste aberto"
+        },
+        "summary": {
+          "en": "Android release in open testing",
+          "pt-BR": "Versão Android em teste aberto"
+        },
+        "detail": {
+          "en": "The Android repository is the production source of truth. A separate desktop port is being prepared for itch.io and possible later Steam distribution.",
+          "pt-BR": "O repositório Android é a fonte oficial da versão de produção. Um port separado para desktop está sendo preparado para itch.io e possivelmente Steam depois."
         }
       },
       "play_url": "https://play.google.com/store/apps/details?id=com.mothblank.phosphorarchive",
@@ -109,6 +125,14 @@
         "label": {
           "en": "Production",
           "pt-BR": "Produção"
+        },
+        "summary": {
+          "en": "Available in production",
+          "pt-BR": "Disponível em produção"
+        },
+        "detail": {
+          "en": "Hestia Tuner is the currently released Android utility, with ongoing stability, compatibility, layout, and pitch-analysis refinements.",
+          "pt-BR": "Hestia Tuner é o utilitário Android atualmente lançado, com melhorias contínuas de estabilidade, compatibilidade, layout e análise de afinação."
         }
       },
       "play_url": "https://play.google.com/store/apps/details?id=com.mothblank.hestiatuner",
@@ -152,6 +176,14 @@
         "label": {
           "en": "Closed Testing",
           "pt-BR": "Teste fechado"
+        },
+        "summary": {
+          "en": "Preparing for Google Play closed testing",
+          "pt-BR": "Preparando o teste fechado da Google Play"
+        },
+        "detail": {
+          "en": "The current focus is release hardening, persistence, backup/restore reliability, accessibility, and validation before public distribution.",
+          "pt-BR": "O foco atual é robustez de release, persistência, confiabilidade de backup/restauração, acessibilidade e validação antes da distribuição pública."
         }
       },
       "play_url": null,
