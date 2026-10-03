@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description | escape }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    {% if page.lang == 'pt-BR' %}
+    <link rel="alternate" hreflang="pt-BR" href="{{ site.url }}{{ page.url }}">
+    <link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.alternate_url }}">
+    {% else %}
+    <link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.url }}">
+    <link rel="alternate" hreflang="pt-BR" href="{{ site.url }}{{ page.alternate_url }}">
+    {% endif %}
+    <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.english_url | default: page.url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/style.css?v=20261002c' | relative_url }}">
+</head>
+<body>
+    {% assign ui = site.data.i18n[page.lang] %}
+    <a href="#main-content" class="skip-to-main">{{ ui.skip }}</a>
+    {{ content }}
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 MOTHblank. {{ ui.rights }}</p>
+            <nav aria-label="Footer navigation">
+                <ul class="footer-links">
+                    {% if page.lang == 'pt-BR' %}
+                    <li><a href="/pt-BR/index.html">{{ ui.all_apps }}</a></li>
+                    {% else %}
+                    <li><a href="/index.html">{{ ui.all_apps }}</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    {% include language-selector.html %}
+</body>
+</html>
