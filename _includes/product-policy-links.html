@@ -1,0 +1,6 @@
+{% assign app = site.data.apps.apps | where: "id", page.app_id | first %}
+{% assign ui = site.data.i18n[include.lang] %}
+<div class="product-actions">
+    <a href="{{ app.privacy[include.lang] }}" class="text-cta{% if app.theme == "hestia" %} hestia-text-cta{% elsif app.theme == "phosphor" %} phosphor-text-cta{% elsif app.theme == "nota" %} nota-text-cta{% endif %}">{{ ui.privacy_policy }} →</a>
+    <a href="{{ app.eula[include.lang] }}" class="text-cta{% if app.theme == "hestia" %} hestia-text-cta{% elsif app.theme == "phosphor" %} phosphor-text-cta{% elsif app.theme == "nota" %} nota-text-cta{% endif %}">EULA →</a>
+</div>
