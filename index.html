@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20261002">
+    <link rel="stylesheet" href="style.css?v=20261002b">
 </head>
 <body>
     <a href="#main-content" class="skip-to-main">Skip to main content</a>
@@ -20,8 +20,8 @@
             <ul class="nav-links">
                 <li><a href="index.html" class="active" aria-current="page" id="link-home">Home</a></li>
                 <li><a href="emoji-magia.html" id="link-emoji-magia">Emoji Magia</a></li>
-                <li><a href="privacy-phosphor.html" id="link-privacy-phosphor">Phosphor Privacy</a></li>
-                <li><a href="privacy-hestia.html" id="link-privacy-hestia">Hestia Privacy</a></li>
+                <li><a href="phosphor-archive.html">Phosphor Archive</a></li>
+                <li><a href="hestia-tuner.html">Hestia Tuner</a></li>
             </ul>
         </nav>
     </header>
@@ -41,7 +41,11 @@
             <div class="game-card emoji-card">
                 <div class="game-icon-container">
                     <div class="game-icon emoji-game-icon" aria-hidden="true">
-                        <span class="emoji-icon-mark">🧙✨</span>
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M29 72L67 34" stroke="#d8a7ff" stroke-width="7" stroke-linecap="round"/>
+                            <path d="M62 26L69 35L80 37L71 44L73 55L63 50L53 55L55 44L46 37L57 35L62 26Z" stroke="#f0b5ff" stroke-width="3" stroke-linejoin="round"/>
+                            <path d="M26 28V40M20 34H32M78 65V77M72 71H84" stroke="#d8a7ff" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
                     </div>
                 </div>
                 <div class="game-info">
@@ -71,7 +75,8 @@
                     <h2 class="game-title">Phosphor Archive</h2>
                     <p class="game-desc">A stylized arcade shooter featuring retro CRT phosphor emulation, dynamic bloom, and responsive multi-touch controls. Challenge yourself across dynamic campaign sectors or survival mode.</p>
                     <div class="game-links">
-                        <a href="privacy-phosphor.html" class="btn btn-primary" id="btn-phosphor-privacy" aria-label="Phosphor Archive Privacy Policy">Privacy Policy</a>
+                        <a href="phosphor-archive.html" class="btn btn-primary" id="btn-phosphor-overview" aria-label="Phosphor Archive overview">Game Overview</a>
+                        <a href="privacy-phosphor.html" class="btn btn-secondary" id="btn-phosphor-privacy" aria-label="Phosphor Archive Privacy Policy">Privacy Policy</a>
                         <a href="eula-phosphor.html" class="btn btn-secondary" id="btn-phosphor-eula" aria-label="Phosphor Archive EULA">EULA</a>
                         <a href="https://play.google.com/store/apps/details?id=com.mothblank.phosphorarchive" class="btn btn-store" id="btn-phosphor-play" aria-label="Get Phosphor Archive on Google Play" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
                     </div>
@@ -98,7 +103,8 @@
                     <h2 class="game-title">Hestia Tuner</h2>
                     <p class="game-desc">A high-precision guitar tuner and mechanical metronome app. Uses optimized McLeod Pitch Method (MPM) frequency analysis for accurate tuning, and a foreground service for solid metronome timing.</p>
                     <div class="game-links">
-                        <a href="privacy-hestia.html" class="btn btn-primary" style="--accent-cyan: var(--accent-amber);" id="btn-hestia-privacy" aria-label="Hestia Tuner Privacy Policy">Privacy Policy</a>
+                        <a href="hestia-tuner.html" class="btn btn-hestia" id="btn-hestia-overview" aria-label="Hestia Tuner overview">App Overview</a>
+                        <a href="privacy-hestia.html" class="btn btn-secondary" style="--btn-color: var(--accent-amber); --btn-border: rgba(255,176,0,.45);" id="btn-hestia-privacy" aria-label="Hestia Tuner Privacy Policy">Privacy Policy</a>
                         <a href="eula-hestia.html" class="btn btn-secondary" style="--text-secondary: var(--accent-amber);" id="btn-hestia-eula" aria-label="Hestia Tuner EULA">EULA</a>
                         <a href="https://play.google.com/store/apps/details?id=com.mothblank.hestiatuner" class="btn btn-store btn-store-amber" id="btn-hestia-play" aria-label="Get Hestia Tuner on Google Play" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
                     </div>
