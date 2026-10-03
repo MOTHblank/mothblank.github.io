@@ -45,7 +45,8 @@ back_label: "back_overview"
 
 <div class="doc-section">
 <h2>5. Backups, Restore, and Exports</h2>
-<p>NotaSegura can create a portable <code>.notasegura</code> backup containing your structured records and managed documents. Portable backups include integrity validation so corrupted or incomplete archives can be rejected during restore. <strong>NotaSegura does not encrypt exported backup archives</strong>, so they should be stored only in locations you trust.</p>
+<p>NotaSegura can create a portable <code>.notasegura</code> backup containing your structured records and managed documents. Portable backups are <strong>encrypted and authenticated with AES-256-GCM</strong> before being written to user-selected storage. The encryption key is derived from a password you choose using PBKDF2-HMAC-SHA256 with a unique random salt for each backup.</p>
+<p>NotaSegura does not store, upload, or have access to your backup password. If you lose the password, NotaSegura and MOTHblank cannot recover the encrypted backup. The encrypted payload also retains the archive's integrity checks so corrupted, incomplete, or modified data is rejected during restore.</p>
 <p>You control where exported backup files are stored and shared. Once a backup leaves the app's private storage, you are responsible for safeguarding and deleting that exported copy when it is no longer needed.</p>
 <p>The app can also create human-readable PDF reports for sharing. Shared reports are created as temporary files and exposed to the receiving app through Android's controlled file-sharing mechanism.</p>
 </div>
@@ -64,12 +65,12 @@ back_label: "back_overview"
 
 <div class="doc-section">
 <h2>8. Data Retention and Deletion</h2>
-<p>Local NotaSegura data remains on your device until you delete individual records, clear the app's data, or uninstall the app. Exported PDFs and backup archives remain wherever you chose to save or share them until you delete those copies yourself.</p>
+<p>Local NotaSegura data remains on your device until you delete individual records, clear the app's data, or uninstall the app. Exported PDFs and encrypted backup archives remain wherever you chose to save or share them until you delete those copies yourself.</p>
 </div>
 
 <div class="doc-section">
 <h2>9. Security</h2>
-<p>Structured records and managed documents are stored in app-private Android storage. Exported backup archives include integrity checks but are not encrypted by NotaSegura, so users should protect the destination where those files are saved. No security mechanism can guarantee absolute protection.</p>
+<p>Structured records and managed documents are stored in app-private Android storage. Portable backups are encrypted with AES-256-GCM using a key derived from the user-provided password and authenticated so tampering is detected before restore. The password is never stored by NotaSegura and cannot be recovered by MOTHblank. No security mechanism can guarantee absolute protection, so users should still protect their device, password, and exported files.</p>
 </div>
 
 <div class="doc-section">
