@@ -1,0 +1,38 @@
+{% assign ui = site.data.i18n[page.lang] %}
+<details class="language-selector">
+    <summary aria-label="{{ ui.language }}">
+        <span class="language-corners" aria-hidden="true"></span>
+        {% if page.lang == 'pt-BR' %}
+        <img src="/assets/flags/br.svg" alt="" width="31" height="21">
+        <span class="language-code">[PT-BR]</span>
+        {% else %}
+        <img src="/assets/flags/us.svg" alt="" width="31" height="21">
+        <span class="language-code">[EN]</span>
+        {% endif %}
+    </summary>
+    <div class="language-options">
+        {% if page.lang == 'pt-BR' %}
+        <a href="{{ page.alternate_url }}" lang="en">
+            <img src="/assets/flags/us.svg" alt="" width="31" height="21">
+            <span>English</span>
+            <code>[EN]</code>
+        </a>
+        <span class="language-option-current">
+            <img src="/assets/flags/br.svg" alt="" width="31" height="21">
+            <span>Português</span>
+            <code>[PT-BR]</code>
+        </span>
+        {% else %}
+        <span class="language-option-current">
+            <img src="/assets/flags/us.svg" alt="" width="31" height="21">
+            <span>English</span>
+            <code>[EN]</code>
+        </span>
+        <a href="{{ page.alternate_url }}" lang="pt-BR">
+            <img src="/assets/flags/br.svg" alt="" width="31" height="21">
+            <span>Português</span>
+            <code>[PT-BR]</code>
+        </a>
+        {% endif %}
+    </div>
+</details>
