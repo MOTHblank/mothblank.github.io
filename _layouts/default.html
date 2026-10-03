@@ -22,6 +22,14 @@
 <body>
     {% assign ui = site.data.i18n[page.lang] %}
     <a href="#main-content" class="skip-to-main">{{ ui.skip }}</a>
+    {% if page.parent_url %}
+    <nav class="page-back-nav" aria-label="{{ ui.back_navigation }}">
+        <a class="page-back-link" href="{{ page.parent_url }}">
+            <span aria-hidden="true">←</span>
+            <span>{{ ui[page.back_label] }}</span>
+        </a>
+    </nav>
+    {% endif %}
     {{ content }}
     <footer>
         <div class="footer-content">
