@@ -1,6 +1,7 @@
 ---
 layout: default
 lang: pt-BR
+app_id: "hestia-tuner"
 title: "Hestia Tuner - MOTHblank"
 description: "Hestia Tuner é um afinador de guitarra de alta precisão e metrônomo mecânico para Android desenvolvido pela MOTHblank."
 alternate_url: "/hestia-tuner.html"
@@ -15,7 +16,7 @@ back_label: "back_home"
     <div class="product-kicker hestia-accent">UTILITÁRIO ANDROID · PRODUÇÃO</div>
     <h1>Hestia Tuner</h1>
     <p class="product-lede">Um afinador de guitarra e metrônomo mecânico focado em leitura estável de afinação, tempo preciso e uso rápido durante a prática.</p>
-    <div class="product-actions"><a href="https://play.google.com/store/apps/details?id=com.mothblank.hestiatuner" class="btn btn-store btn-store-amber" target="_blank" rel="noopener noreferrer">Google Play ↗</a><a href="/pt-BR/privacy-hestia.html" class="btn btn-hestia">Privacidade</a><a href="/pt-BR/eula-hestia.html" class="btn btn-secondary">EULA</a></div>
+    {% include product-actions.html lang=page.lang %}
 </section>
 <section class="product-section">
     <div class="section-heading hestia-heading"><span>01</span><h2>Afine e mantenha o tempo</h2></div>
@@ -34,6 +35,6 @@ back_label: "back_home"
 <section class="product-section">
     <div class="section-heading hestia-heading"><span>03</span><h2>Políticas</h2></div>
     <p>Hestia Tuner possui páginas próprias de privacidade e licença para a versão Android em produção.</p>
-    <div class="product-actions"><a href="/pt-BR/privacy-hestia.html" class="text-cta hestia-text-cta">Política de Privacidade →</a><a href="/pt-BR/eula-hestia.html" class="text-cta hestia-text-cta">EULA →</a></div>
+    {% include product-policy-links.html lang=page.lang %}
 </section>
 </main>
