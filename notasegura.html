@@ -1,6 +1,7 @@
 ---
 layout: default
 lang: en
+app_id: "notasegura"
 title: "NotaSegura - MOTHblank"
 description: "NotaSegura is a local-first Android archive for receipts, purchase documents, warranties, and payment reminders."
 alternate_url: "/pt-BR/notasegura.html"
@@ -22,12 +23,7 @@ back_label: "back_home"
     <div class="product-kicker nota-accent">ANDROID UTILITY · CLOSED TESTING</div>
     <h1>NotaSegura</h1>
     <p class="product-lede">A local-first archive for receipts, proof-of-purchase documents, warranties, and payment reminders—built to keep important purchase records useful after the paper fades.</p>
-    <div class="product-actions">
-        <a href="/privacy-notasegura.html" class="btn btn-nota">Privacy Policy</a>
-        <a href="/eula-notasegura.html" class="btn btn-secondary nota-secondary">EULA</a>
-        <a href="https://groups.google.com/g/mothblankdev" class="btn btn-store" target="_blank" rel="noopener noreferrer">Join Test ↗</a>
-        <a href="/index.html" class="btn btn-secondary">MOTHblank Apps</a>
-    </div>
+    {% include product-actions.html lang=page.lang %}
 </section>
 
 <section class="product-section">
@@ -53,9 +49,6 @@ back_label: "back_home"
 
 <section class="product-section">
     <div class="section-heading nota-heading"><span>04</span><h2>Policies</h2></div>
-    <div class="product-actions">
-        <a href="/privacy-notasegura.html" class="text-cta nota-text-cta">Privacy Policy →</a>
-        <a href="/eula-notasegura.html" class="text-cta nota-text-cta">EULA →</a>
-    </div>
+    {% include product-policy-links.html lang=page.lang %}
 </section>
 </main>
