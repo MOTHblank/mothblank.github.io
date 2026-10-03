@@ -6,6 +6,9 @@ en:
   language: "Language"
   contact: "Contact"
   email: "Email"
+  back_navigation: "Back navigation"
+  back_home: "Back to home"
+  back_overview: "Back to overview"
   english: "English"
   portuguese: "Português"
 pt-BR:
@@ -16,5 +19,8 @@ pt-BR:
   language: "Idioma"
   contact: "Contato"
   email: "Email"
+  back_navigation: "Navegação de retorno"
+  back_home: "Voltar ao início"
+  back_overview: "Voltar à visão geral"
   english: "English"
   portuguese: "Português"
