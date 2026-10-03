@@ -10,6 +10,7 @@ permalink: "/phosphor-archive.html"
 parent_url: "/index.html"
 back_label: "back_home"
 ---
+{% assign app = site.data.apps.apps | where: "id", page.app_id | first %}
 <main id="main-content" tabindex="-1" class="product-page">
         <section class="product-hero phosphor-product">
             <div class="product-svg-mark phosphor-mark" aria-hidden="true">
@@ -19,8 +20,8 @@ back_label: "back_home"
                     <circle cx="60" cy="69" r="7" fill="white"/>
                 </svg>
             </div>
-            <div class="product-kicker phosphor-accent">ANDROID GAME · OPEN TESTING</div>
-            <h1>Phosphor Archive</h1>
+            <div class="product-kicker phosphor-accent">{{ app.type[page.lang] | upcase }} · {{ app.status.label[page.lang] | upcase }}</div>
+            <h1>{{ app.name }}</h1>
             <p class="product-lede">A vector-styled arcade shooter built around luminous phosphor trails, hostile space, compact missions, and high-pressure survival.</p>
             {% include product-actions.html lang=page.lang %}
         </section>
@@ -38,10 +39,7 @@ back_label: "back_home"
 
         <section class="product-section">
             <div class="section-heading phosphor-heading"><span>02</span><h2>Current Status</h2></div>
-            <div class="status-line">
-                <span class="status-dot"></span>
-                <div><strong>Android release in open testing</strong><p>The Android repository is the production source of truth. A separate desktop port is being prepared for itch.io and possible later Steam distribution.</p></div>
-            </div>
+            <div class="status-line"><span class="status-dot"></span><div><strong>{{ app.status.summary[page.lang] }}</strong><p>{{ app.status.detail[page.lang] }}</p></div></div>
         </section>
 
         <section class="product-section">
