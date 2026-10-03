@@ -10,6 +10,7 @@ permalink: "/notasegura.html"
 parent_url: "/index.html"
 back_label: "back_home"
 ---
+{% assign app = site.data.apps.apps | where: "id", page.app_id | first %}
 <main id="main-content" tabindex="-1" class="product-page">
 <section class="product-hero nota-product">
     <div class="product-svg-mark nota-mark" aria-hidden="true">
@@ -20,8 +21,8 @@ back_label: "back_home"
             <path d="M72 89L79 96L94 79" stroke="#7ee787" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </div>
-    <div class="product-kicker nota-accent">ANDROID UTILITY · CLOSED TESTING</div>
-    <h1>NotaSegura</h1>
+    <div class="product-kicker nota-accent">{{ app.type[page.lang] | upcase }} · {{ app.status.label[page.lang] | upcase }}</div>
+    <h1>{{ app.name }}</h1>
     <p class="product-lede">A local-first archive for receipts, proof-of-purchase documents, warranties, and payment reminders—built to keep important purchase records useful after the paper fades.</p>
     {% include product-actions.html lang=page.lang %}
 </section>
@@ -44,7 +45,7 @@ back_label: "back_home"
 
 <section class="product-section product-status">
     <div class="section-heading nota-heading"><span>03</span><h2>Current status</h2></div>
-    <div class="status-line"><span class="status-dot"></span><div><strong>Preparing for Google Play closed testing</strong><p>The current focus is release hardening, persistence, backup/restore reliability, accessibility, and validation before public distribution.</p></div></div>
+    <div class="status-line"><span class="status-dot"></span><div><strong>{{ app.status.summary[page.lang] }}</strong><p>{{ app.status.detail[page.lang] }}</p></div></div>
 </section>
 
 <section class="product-section">
