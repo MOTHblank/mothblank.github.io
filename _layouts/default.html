@@ -22,10 +22,17 @@
 <body>
     {% assign ui = site.data.i18n[page.lang] %}
     {% assign manifest = site.data.apps %}
+    {% assign resolved_parent_url = page.parent_url %}
+    {% if page.app_id and page.back_label == "back_overview" %}
+        {% assign current_app = manifest.apps | where: "id", page.app_id | first %}
+        {% assign resolved_parent_url = current_app.overview[page.lang] %}
+    {% elsif page.app_id and page.back_label == "back_home" %}
+        {% assign resolved_parent_url = manifest.home[page.lang] %}
+    {% endif %}
     <a href="#main-content" class="skip-to-main">{{ ui.skip }}</a>
-    {% if page.parent_url %}
+    {% if resolved_parent_url %}
     <nav class="page-back-nav" aria-label="{{ ui.back_navigation }}">
-        <a class="page-back-link" href="{{ page.parent_url }}"><span aria-hidden="true">←</span><span>{{ ui[page.back_label] }}</span></a>
+        <a class="page-back-link" href="{{ resolved_parent_url }}"><span aria-hidden="true">←</span><span>{{ ui[page.back_label] }}</span></a>
     </nav>
     {% endif %}
     {{ content }}
