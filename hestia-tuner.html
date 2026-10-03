@@ -12,6 +12,7 @@ back_label: "back_home"
 parent_url: "/index.html"
 back_label: "back_home"
 ---
+{% assign app = site.data.apps.apps | where: "id", page.app_id | first %}
 <main id="main-content" tabindex="-1" class="product-page">
         <section class="product-hero hestia-product">
             <div class="product-svg-mark hestia-mark" aria-hidden="true">
@@ -22,8 +23,8 @@ back_label: "back_home"
                     <path d="M23 49C17 59 17 70 23 81M97 49C103 59 103 70 97 81" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
                 </svg>
             </div>
-            <div class="product-kicker hestia-accent">ANDROID UTILITY · PRODUCTION</div>
-            <h1>Hestia Tuner</h1>
+            <div class="product-kicker hestia-accent">{{ app.type[page.lang] | upcase }} · {{ app.status.label[page.lang] | upcase }}</div>
+            <h1>{{ app.name }}</h1>
             <p class="product-lede">A focused guitar tuner and mechanical metronome built for stable pitch feedback, precise timing, and fast use during practice.</p>
             {% include product-actions.html lang=page.lang %}
         </section>
@@ -41,10 +42,7 @@ back_label: "back_home"
 
         <section class="product-section">
             <div class="section-heading hestia-heading"><span>02</span><h2>Current Status</h2></div>
-            <div class="status-line">
-                <span class="status-dot"></span>
-                <div><strong>Available in production</strong><p>Hestia Tuner is the currently released Android utility, with ongoing stability, compatibility, layout, and pitch-analysis refinements.</p></div>
-            </div>
+            <div class="status-line"><span class="status-dot"></span><div><strong>{{ app.status.summary[page.lang] }}</strong><p>{{ app.status.detail[page.lang] }}</p></div></div>
         </section>
 
         <section class="product-section">
