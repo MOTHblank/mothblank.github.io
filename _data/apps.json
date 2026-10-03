@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "home": {
+    "en": "/index.html",
+    "pt-BR": "/pt-BR/index.html"
+  },
+  "contacts": {
+    "email": "mothblankdev@gmail.com",
+    "x": "https://x.com/MOTHblank",
+    "github": "https://github.com/MOTHblank"
+  },
+  "apps": [
+    {
+      "id": "emoji-magia",
+      "name": "Emoji Magia",
+      "package": "com.mothblank.emojimagia",
+      "type": {
+        "en": "Android Game",
+        "pt-BR": "Jogo Android"
+      },
+      "status": {
+        "code": "development",
+        "label": {
+          "en": "In Development",
+          "pt-BR": "Em desenvolvimento"
+        }
+      },
+      "play_url": null,
+      "testing_url": "https://groups.google.com/g/mothblankdev",
+      "overview": {
+        "en": "/emoji-magia.html",
+        "pt-BR": "/pt-BR/emoji-magia.html"
+      },
+      "privacy": {
+        "en": "/privacy-emojimagia.html",
+        "pt-BR": "/pt-BR/privacy-emojimagia.html"
+      },
+      "eula": {
+        "en": "/eula-emojimagia.html",
+        "pt-BR": "/pt-BR/eula-emojimagia.html"
+      },
+      "languages": [
+        "en",
+        "pt-BR"
+      ],
+      "theme": "emoji",
+      "overview_label": {
+        "en": "Game Overview",
+        "pt-BR": "Visão geral"
+      },
+      "description": {
+        "en": "A light-fantasy survivors-like built around expressive emoji heroes, innate signature attacks, weapon evolutions, synergies, roaming character discoveries, and authored survival arenas.",
+        "pt-BR": "Um survivors-like de fantasia leve com heróis em emoji, ataques de assinatura, evoluções de armas, sinergias, descobertas de personagens e arenas de sobrevivência autorais."
+      }
+    },
+    {
+      "id": "phosphor-archive",
+      "name": "Phosphor Archive",
+      "package": "com.mothblank.phosphorarchive",
+      "type": {
+        "en": "Android Game",
+        "pt-BR": "Jogo Android"
+      },
+      "status": {
+        "code": "open-testing",
+        "label": {
+          "en": "Open Testing",
+          "pt-BR": "Teste aberto"
+        }
+      },
+      "play_url": "https://play.google.com/store/apps/details?id=com.mothblank.phosphorarchive",
+      "testing_url": "https://groups.google.com/g/mothblankdev",
+      "overview": {
+        "en": "/phosphor-archive.html",
+        "pt-BR": "/pt-BR/phosphor-archive.html"
+      },
+      "privacy": {
+        "en": "/privacy-phosphor.html",
+        "pt-BR": "/pt-BR/privacy-phosphor.html"
+      },
+      "eula": {
+        "en": "/eula-phosphor.html",
+        "pt-BR": "/pt-BR/eula-phosphor.html"
+      },
+      "languages": [
+        "en",
+        "pt-BR"
+      ],
+      "theme": "phosphor",
+      "overview_label": {
+        "en": "Game Overview",
+        "pt-BR": "Visão geral"
+      },
+      "description": {
+        "en": "A stylized arcade shooter featuring retro CRT phosphor emulation, dynamic bloom, and responsive multi-touch controls. Challenge yourself across dynamic campaign sectors or survival mode.",
+        "pt-BR": "Um shooter arcade estilizado com emulação de fósforo CRT, bloom dinâmico e controles responsivos. Enfrente setores de campanha com objetivos próprios ou sobreviva no modo infinito."
+      }
+    },
+    {
+      "id": "hestia-tuner",
+      "name": "Hestia Tuner",
+      "package": "com.mothblank.hestiatuner",
+      "type": {
+        "en": "Android Utility",
+        "pt-BR": "Utilitário Android"
+      },
+      "status": {
+        "code": "production",
+        "label": {
+          "en": "Production",
+          "pt-BR": "Produção"
+        }
+      },
+      "play_url": "https://play.google.com/store/apps/details?id=com.mothblank.hestiatuner",
+      "testing_url": null,
+      "overview": {
+        "en": "/hestia-tuner.html",
+        "pt-BR": "/pt-BR/hestia-tuner.html"
+      },
+      "privacy": {
+        "en": "/privacy-hestia.html",
+        "pt-BR": "/pt-BR/privacy-hestia.html"
+      },
+      "eula": {
+        "en": "/eula-hestia.html",
+        "pt-BR": "/pt-BR/eula-hestia.html"
+      },
+      "languages": [
+        "en",
+        "pt-BR"
+      ],
+      "theme": "hestia",
+      "overview_label": {
+        "en": "App Overview",
+        "pt-BR": "Visão geral"
+      },
+      "description": {
+        "en": "A high-precision guitar tuner and mechanical metronome app. Uses optimized McLeod Pitch Method (MPM) frequency analysis for accurate tuning, and a foreground service for solid metronome timing.",
+        "pt-BR": "Afinador de guitarra de alta precisão e metrônomo mecânico. Usa análise MPM otimizada para afinação estável e um serviço em primeiro plano para manter o tempo do metrônomo."
+      }
+    },
+    {
+      "id": "notasegura",
+      "name": "NotaSegura",
+      "package": "com.mothblank.notasegura",
+      "type": {
+        "en": "Android Utility",
+        "pt-BR": "Utilitário Android"
+      },
+      "status": {
+        "code": "closed-testing",
+        "label": {
+          "en": "Closed Testing",
+          "pt-BR": "Teste fechado"
+        }
+      },
+      "play_url": null,
+      "testing_url": "https://groups.google.com/g/mothblankdev",
+      "overview": {
+        "en": "/notasegura.html",
+        "pt-BR": "/pt-BR/notasegura.html"
+      },
+      "privacy": {
+        "en": "/privacy-notasegura.html",
+        "pt-BR": "/pt-BR/privacy-notasegura.html"
+      },
+      "eula": {
+        "en": "/eula-notasegura.html",
+        "pt-BR": "/pt-BR/eula-notasegura.html"
+      },
+      "languages": [
+        "en",
+        "pt-BR"
+      ],
+      "theme": "nota",
+      "overview_label": {
+        "en": "App Overview",
+        "pt-BR": "Visão geral"
+      },
+      "description": {
+        "en": "A local-first archive for receipts, proof-of-purchase documents, warranties, and payment reminders. OCR, records, and managed documents stay on-device, with encrypted portable backups when you choose to export them.",
+        "pt-BR": "Um arquivo local para comprovantes, documentos de compra, garantias e lembretes de pagamento. OCR, registros e documentos gerenciados ficam no dispositivo, com backups portáteis criptografados quando você escolhe exportá-los."
+      }
+    }
+  ]
+}

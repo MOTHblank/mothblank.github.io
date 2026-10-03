@@ -1,0 +1,31 @@
+{% assign app = include.app %}
+{% assign lang = include.lang %}
+{% assign ui = site.data.i18n[lang] %}
+{% assign card_class = "" %}
+{% if app.theme == "emoji" %}{% assign card_class = " emoji-card" %}{% elsif app.theme == "nota" %}{% assign card_class = " nota-card" %}{% endif %}
+<div class="game-card{{ card_class }}"{% if app.theme == "hestia" %} style="--focus-ring: var(--accent-amber);"{% endif %}>
+    <div class="game-icon-container">
+        {% case app.theme %}
+        {% when "emoji" %}
+        <div class="game-icon emoji-game-icon" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M29 72L67 34" stroke="#d8a7ff" stroke-width="7" stroke-linecap="round"/><path d="M62 26L69 35L80 37L71 44L73 55L63 50L53 55L55 44L46 37L57 35L62 26Z" stroke="#f0b5ff" stroke-width="3" stroke-linejoin="round"/><path d="M26 28V40M20 34H32M78 65V77M72 71H84" stroke="#d8a7ff" stroke-width="3" stroke-linecap="round"/></svg></div>
+        {% when "phosphor" %}
+        <div class="game-icon" style="border-color: var(--accent-cyan); box-shadow: 0 0 20px var(--accent-cyan-glow);" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 15L85 80L50 62L15 80L50 15Z" stroke="#00ffcc" stroke-width="4" stroke-linejoin="round"/><path d="M50 40L65 70L50 62L35 70L50 40Z" fill="#ffb800" opacity="0.8"/><circle cx="50" cy="58" r="6" fill="#ffffff" filter="drop-shadow(0 0 4px #00ffcc)"/></svg></div>
+        {% when "hestia" %}
+        <div class="game-icon" style="border-color: var(--accent-amber); box-shadow: 0 0 20px var(--accent-amber-glow);" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 L30 85 L70 85 Z" stroke="#ffb800" stroke-width="4" stroke-linejoin="round"/><line x1="50" y1="80" x2="50" y2="30" stroke="#ffb800" stroke-width="4" stroke-linecap="round"/><circle cx="50" cy="30" r="6" fill="#ffffff" filter="drop-shadow(0 0 4px #ffb800)"/><path d="M20 50 A 35 35 0 0 0 20 70M80 50 A 35 35 0 0 1 80 70" stroke="#ffb800" stroke-width="2" stroke-linecap="round"/></svg></div>
+        {% when "nota" %}
+        <div class="game-icon nota-game-icon" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 14H63L76 27V86H25V14Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M62 14V29H76" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M36 43H65M36 55H65M36 67H55" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M58 75L64 81L78 66" stroke="#7ee787" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        {% endcase %}
+    </div>
+    <div class="game-info">
+        <span class="game-tag{% if app.theme == "emoji" %} emoji-tag{% elsif app.theme == "nota" %} nota-tag{% endif %}"{% if app.theme == "phosphor" %} style="color: var(--accent-cyan); border-color: var(--accent-cyan);"{% elsif app.theme == "hestia" %} style="color: var(--accent-amber); border-color: var(--accent-amber);"{% endif %}>{{ app.type[lang] }} · {{ app.status.label[lang] }}</span>
+        <h2 class="game-title">{{ app.name }}</h2>
+        <p class="game-desc">{{ app.description[lang] }}</p>
+        <div class="game-links">
+            <a href="{{ app.overview[lang] }}" class="btn {% if app.theme == "emoji" %}btn-emoji{% elsif app.theme == "phosphor" %}btn-primary{% elsif app.theme == "hestia" %}btn-hestia{% else %}btn-nota{% endif %}">{{ app.overview_label[lang] }}</a>
+            <a href="{{ app.privacy[lang] }}" class="btn btn-secondary{% if app.theme == "emoji" %} emoji-secondary{% elsif app.theme == "nota" %} nota-secondary{% endif %}"{% if app.theme == "hestia" %} style="--btn-color: var(--accent-amber); --btn-border: rgba(255,176,0,.45);"{% endif %}>{{ ui.privacy_policy }}</a>
+            <a href="{{ app.eula[lang] }}" class="btn btn-secondary{% if app.theme == "emoji" %} emoji-secondary{% elsif app.theme == "nota" %} nota-secondary{% endif %}">EULA</a>
+            {% if app.play_url %}<a href="{{ app.play_url }}" class="btn btn-store{% if app.theme == "hestia" %} btn-store-amber{% endif %}" target="_blank" rel="noopener noreferrer">{{ ui.google_play }} ↗</a>{% endif %}
+            {% if app.testing_url %}<a href="{{ app.testing_url }}" class="btn {% if app.play_url %}btn-secondary{% else %}btn-store{% endif %}" target="_blank" rel="noopener noreferrer">{{ ui.join_test }} ↗</a>{% endif %}
+        </div>
+    </div>
+</div>

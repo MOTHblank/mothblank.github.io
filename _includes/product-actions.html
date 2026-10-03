@@ -1,0 +1,9 @@
+{% assign app = site.data.apps.apps | where: "id", page.app_id | first %}
+{% assign ui = site.data.i18n[include.lang] %}
+<div class="product-actions">
+    {% if app.play_url %}<a href="{{ app.play_url }}" class="btn btn-store{% if app.theme == "hestia" %} btn-store-amber{% endif %}" target="_blank" rel="noopener noreferrer">{{ ui.google_play }} ↗</a>{% endif %}
+    <a href="{{ app.privacy[include.lang] }}" class="btn {% if app.theme == "emoji" %}btn-emoji{% elsif app.theme == "phosphor" %}btn-primary{% elsif app.theme == "hestia" %}btn-hestia{% else %}btn-nota{% endif %}">{{ ui.privacy_policy }}</a>
+    <a href="{{ app.eula[include.lang] }}" class="btn btn-secondary{% if app.theme == "emoji" %} emoji-secondary{% elsif app.theme == "nota" %} nota-secondary{% endif %}">EULA</a>
+    {% if app.testing_url %}<a href="{{ app.testing_url }}" class="btn {% if app.play_url %}btn-secondary{% else %}btn-store{% endif %}" target="_blank" rel="noopener noreferrer">{{ ui.join_test }} ↗</a>{% endif %}
+    <a href="{{ site.data.apps.home[include.lang] }}" class="btn btn-secondary">{{ ui.all_apps }}</a>
+</div>

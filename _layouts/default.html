@@ -17,17 +17,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/style.css?v=20261002c' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/style.css?v=20261003a' | relative_url }}">
 </head>
 <body>
     {% assign ui = site.data.i18n[page.lang] %}
+    {% assign manifest = site.data.apps %}
     <a href="#main-content" class="skip-to-main">{{ ui.skip }}</a>
     {% if page.parent_url %}
     <nav class="page-back-nav" aria-label="{{ ui.back_navigation }}">
-        <a class="page-back-link" href="{{ page.parent_url }}">
-            <span aria-hidden="true">←</span>
-            <span>{{ ui[page.back_label] }}</span>
-        </a>
+        <a class="page-back-link" href="{{ page.parent_url }}"><span aria-hidden="true">←</span><span>{{ ui[page.back_label] }}</span></a>
     </nav>
     {% endif %}
     {{ content }}
@@ -37,17 +35,13 @@
             <nav class="footer-contact" aria-label="{{ ui.contact }}">
                 <span class="footer-brand">MOTHblank</span>
                 <span class="footer-separator" aria-hidden="true">·</span>
-                <a href="https://x.com/MOTHblank" target="_blank" rel="noopener noreferrer">X</a>
+                <a href="{{ manifest.contacts.x }}" target="_blank" rel="noopener noreferrer">X</a>
                 <span class="footer-separator" aria-hidden="true">·</span>
-                <a href="https://github.com/MOTHblank" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="{{ manifest.contacts.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <span class="footer-separator" aria-hidden="true">·</span>
-                <a href="mailto:mothblankdev@gmail.com">{{ ui.email }}</a>
+                <a href="mailto:{{ manifest.contacts.email }}">{{ ui.email }}</a>
                 <span class="footer-separator footer-home-separator" aria-hidden="true">·</span>
-                {% if page.lang == 'pt-BR' %}
-                <a class="footer-home" href="/pt-BR/index.html">{{ ui.all_apps }}</a>
-                {% else %}
-                <a class="footer-home" href="/index.html">{{ ui.all_apps }}</a>
-                {% endif %}
+                <a class="footer-home" href="{{ manifest.home[page.lang] }}">{{ ui.all_apps }}</a>
             </nav>
         </div>
     </footer>
