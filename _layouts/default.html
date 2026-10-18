@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <meta name="description" content="{{ page.description | escape }}">
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    {% assign manifest = site.data.apps %}
+    {% assign social_app = nil %}
+    {% if page.app_id %}
+        {% assign social_app = manifest.apps | where: 'id', page.app_id | first %}
+    {% endif %}
+    {% assign social_title = page.social_title | default: page.title | default: social_app.name | default: site.title %}
+    {% assign social_description = page.social_description | default: page.description %}
+    {% unless social_description %}
+        {% if social_app %}{% assign social_description = social_app.description[page.lang] %}{% endif %}
+    {% endunless %}
+    {% assign social_image = page.social_image | default: social_app.social_image | default: '/home.png' %}
+    {% assign social_image_alt = page.social_image_alt | default: social_app.name | default: site.title %}
+    {% assign social_url = page.url | absolute_url %}
+    {% assign social_image_url = social_image | absolute_url %}
+    {% if page.lang == 'pt-BR' %}
+        {% assign social_locale = 'pt_BR' %}
+        {% assign social_alternate_locale = 'en_US' %}
+    {% else %}
+        {% assign social_locale = 'en_US' %}
+        {% assign social_alternate_locale = 'pt_BR' %}
+    {% endif %}
+    <title>{{ page.title | escape }}</title>
+    <meta name="description" content="{{ social_description | escape }}">
+    <link rel="canonical" href="{{ social_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.title | escape }}">
+    <meta property="og:title" content="{{ social_title | escape }}">
+    <meta property="og:description" content="{{ social_description | escape }}">
+    <meta property="og:url" content="{{ social_url }}">
+    <meta property="og:locale" content="{{ social_locale }}">
+    <meta property="og:locale:alternate" content="{{ social_alternate_locale }}">
+    <meta property="og:image" content="{{ social_image_url }}">
+    <meta property="og:image:alt" content="{{ social_image_alt | escape }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ social_title | escape }}">
+    <meta name="twitter:description" content="{{ social_description | escape }}">
+    <meta name="twitter:image" content="{{ social_image_url }}">
+    <meta name="twitter:image:alt" content="{{ social_image_alt | escape }}">
     {% if page.lang == 'pt-BR' %}
     <link rel="alternate" hreflang="pt-BR" href="{{ site.url }}{{ page.url }}">
     <link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.alternate_url }}">
@@ -14,10 +49,7 @@
     <link rel="alternate" hreflang="pt-BR" href="{{ site.url }}{{ page.alternate_url }}">
     {% endif %}
     <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.english_url | default: page.url }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/style.css?v=20261003a' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/style.css?v=20261018a' | relative_url }}">
 </head>
 <body>
     {% assign ui = site.data.i18n[page.lang] %}

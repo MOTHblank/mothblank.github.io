@@ -1,0 +1,5 @@
+{% assign icon_path = include.app.icon | default: '/assets/icons/app-default.svg' %}
+{% assign icon_theme = include.app.theme | default: 'default' %}
+<div class="game-icon {{ icon_theme | escape }}-game-icon" aria-hidden="true">
+    <img src="{{ icon_path | relative_url }}" alt="" width="55" height="55" loading="lazy" decoding="async">
+</div>
