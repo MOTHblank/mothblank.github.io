@@ -59,7 +59,8 @@
       "description": {
         "en": "A light-fantasy survivors-like built around expressive emoji heroes, innate signature attacks, weapon evolutions, synergies, roaming character discoveries, and authored survival arenas.",
         "pt-BR": "Um survivors-like de fantasia leve com heróis em emoji, ataques de assinatura, evoluções de armas, sinergias, descobertas de personagens e arenas de sobrevivência autorais."
-      }
+      },
+      "icon": "/assets/icons/emoji.svg"
     },
     {
       "id": "phosphor-archive",
@@ -110,7 +111,8 @@
       "description": {
         "en": "A stylized arcade shooter featuring retro CRT phosphor emulation, dynamic bloom, and responsive multi-touch controls. Challenge yourself across dynamic campaign sectors or survival mode.",
         "pt-BR": "Um shooter arcade estilizado com emulação de fósforo CRT, bloom dinâmico e controles responsivos. Enfrente setores de campanha com objetivos próprios ou sobreviva no modo infinito."
-      }
+      },
+      "icon": "/assets/icons/phosphor.svg"
     },
     {
       "id": "hestia-tuner",
@@ -161,7 +163,8 @@
       "description": {
         "en": "A high-precision guitar tuner and mechanical metronome app. Uses optimized McLeod Pitch Method (MPM) frequency analysis for accurate tuning, and a foreground service for solid metronome timing.",
         "pt-BR": "Afinador de guitarra de alta precisão e metrônomo mecânico. Usa análise MPM otimizada para afinação estável e um serviço em primeiro plano para manter o tempo do metrônomo."
-      }
+      },
+      "icon": "/assets/icons/hestia.svg"
     },
     {
       "id": "notasegura",
@@ -212,7 +215,8 @@
       "description": {
         "en": "A local-first archive for receipts, proof-of-purchase documents, warranties, and payment reminders. OCR, records, and managed documents stay on-device, with encrypted portable backups when you choose to export them.",
         "pt-BR": "Um arquivo local para comprovantes, documentos de compra, garantias e lembretes de pagamento. OCR, registros e documentos gerenciados ficam no dispositivo, com backups portáteis criptografados quando você escolhe exportá-los."
-      }
+      },
+      "icon": "/assets/icons/nota.svg"
     }
   ]
 }
