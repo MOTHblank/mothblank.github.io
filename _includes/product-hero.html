@@ -1,0 +1,7 @@
+<section class="product-hero {{ include.app.theme }}-product">
+    {% include product-mark.html theme=include.app.theme %}
+    <div class="product-kicker {{ include.app.theme }}-accent">{{ include.app.type[page.lang] | upcase }} · {{ include.app.status.label[page.lang] | upcase }}</div>
+    <h1>{{ include.app.name }}</h1>
+    <p class="product-lede">{{ include.copy.lede }}</p>
+    {% include product-actions.html lang=page.lang %}
+</section>

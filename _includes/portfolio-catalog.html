@@ -1,0 +1,21 @@
+{% assign ui = site.data.i18n[include.lang] %}
+<section class="portfolio-section" id="projects" aria-labelledby="projects-heading" data-project-catalog>
+    <div class="portfolio-heading">
+        <p class="portfolio-eyebrow">{{ ui.portfolio_eyebrow }}</p>
+        <h2 id="projects-heading">{{ ui.portfolio_heading }}</h2>
+        <p>{{ ui.portfolio_description }}</p>
+    </div>
+    <div class="portfolio-filters" role="group" aria-label="{{ ui.filter_label }}" data-filter-controls hidden>
+        <button type="button" data-filter="all" aria-pressed="true">{{ ui.all_projects }}</button>
+        <button type="button" data-filter="games" aria-pressed="false">{{ ui.games }}</button>
+        <button type="button" data-filter="tools" aria-pressed="false">{{ ui.tools }}</button>
+        <button type="button" data-filter="experiments" aria-pressed="false">{{ ui.experiments }}</button>
+    </div>
+    <p class="portfolio-count" data-filter-count aria-live="polite"></p>
+    <div class="project-grid">
+        {% for project in site.data.projects %}
+            {% include project-card.html project=project lang=include.lang %}
+        {% endfor %}
+    </div>
+</section>
+<script src="{{ '/assets/js/project-catalog.js' | relative_url }}" defer></script>

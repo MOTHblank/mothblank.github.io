@@ -1,0 +1,20 @@
+{% assign block = include.block %}
+{% assign app = include.app %}
+{% assign display_index = include.number | prepend: '0' %}
+<section class="product-section{% if block.kind == 'status' %} product-status{% endif %}">
+    <div class="section-heading{% if app.theme != 'emoji' %} {{ app.theme }}-heading{% endif %}"><span>{{ display_index }}</span><h2>{{ block.title }}</h2></div>
+    {% if block.intro %}<p>{{ block.intro }}</p>{% endif %}
+    {% if block.kind == 'features' %}
+    <div class="feature-grid">
+        {% for feature in block.features %}
+        <article class="feature-card{% if app.theme != 'emoji' %} {{ app.theme }}-feature{% endif %}">
+            <span class="feature-icon" aria-hidden="true">{{ feature.icon }}</span><h3>{{ feature.title }}</h3><p>{{ feature.description }}</p>
+        </article>
+        {% endfor %}
+    </div>
+    {% elsif block.kind == 'status' %}
+    <div class="status-line"><span class="status-dot" aria-hidden="true"></span><div><strong>{{ app.status.summary[include.lang] }}</strong><p>{{ app.status.detail[include.lang] }}</p></div></div>
+    {% elsif block.kind == 'policies' %}
+        {% include product-policy-links.html lang=include.lang %}
+    {% endif %}
+</section>

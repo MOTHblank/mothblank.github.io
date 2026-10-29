@@ -1,0 +1,9 @@
+{% assign app = site.data.apps.apps | where: "id", page.app_id | first %}
+{% assign copy = site.data.product_pages[page.app_id][page.lang] %}
+<main id="main-content" tabindex="-1" class="product-page">
+    {% include product-hero.html app=app copy=copy %}
+    {% for section in copy.sections %}
+        {% include product-section.html block=section app=app number=forloop.index lang=page.lang %}
+    {% endfor %}
+    {% include product-gallery.html app=app lang=page.lang %}
+</main>

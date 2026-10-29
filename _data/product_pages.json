@@ -1,0 +1,346 @@
+{
+  "emoji-magia": {
+    "en": {
+      "lede": "Small heroes. Big magic. A direct-control survivors-like built around readable chaos, expressive emoji characters, and run-defining combinations.",
+      "sections": [
+        {
+          "kind": "features",
+          "title": "Survive, Build, Transform",
+          "intro": "Move the hero directly while weapons and innate signature attacks handle combat. Collect XP, commit to a six-weapon build, combine passives, evolve weapons, and turn complementary tools into stronger synergies as enemy pressure escalates.",
+          "features": [
+            {
+              "icon": "🪄",
+              "title": "Signature Heroes",
+              "description": "Each character has its own stats, trait, ability, visual identity, and innate signature attack outside the normal weapon slots."
+            },
+            {
+              "icon": "🔀",
+              "title": "Build Decisions",
+              "description": "Weapons, passives, evolutions, synergies, and limited slots make each run a sequence of commitments rather than automatic upgrades."
+            },
+            {
+              "icon": "🌙",
+              "title": "Distinct Arenas",
+              "description": "Survival maps use different terrain, encounter patterns, landmarks, enemy mixes, and authored pressure phases."
+            },
+            {
+              "icon": "🧭",
+              "title": "Discoveries",
+              "description": "Roaming character echoes and optional landmark encounters turn the arena into more than a flat survival timer."
+            }
+          ]
+        },
+        {
+          "kind": "status",
+          "title": "Current Status"
+        },
+        {
+          "kind": "policies",
+          "title": "Policies and Monetization",
+          "intro": "The game includes age-aware rewarded advertising, Google Play Billing, and optional account-backed economy features. The privacy policy documents data handling, while the EULA covers the license, digital items, purchases, and use of the software."
+        }
+      ]
+    },
+    "pt-BR": {
+      "lede": "Heróis pequenos. Magia grande. Um survivors-like de controle direto construído em torno de caos legível, personagens expressivos em emoji e combinações que definem cada partida.",
+      "sections": [
+        {
+          "kind": "features",
+          "title": "Sobreviva, monte sua build, transforme",
+          "intro": "Mova o herói diretamente enquanto armas e ataques de assinatura cuidam do combate. Colete XP, monte uma build de seis armas, combine passivas, evolua armas e transforme ferramentas complementares em sinergias mais fortes conforme a pressão aumenta.",
+          "features": [
+            {
+              "icon": "🪄",
+              "title": "Heróis com assinatura",
+              "description": "Cada personagem possui atributos, traço, habilidade, identidade visual e ataque de assinatura próprios, fora dos slots normais de armas."
+            },
+            {
+              "icon": "🔀",
+              "title": "Decisões de build",
+              "description": "Armas, passivas, evoluções, sinergias e slots limitados fazem cada partida exigir escolhas reais."
+            },
+            {
+              "icon": "🌙",
+              "title": "Arenas distintas",
+              "description": "Os mapas usam terrenos, encontros, pontos de interesse, inimigos e fases de pressão diferentes."
+            },
+            {
+              "icon": "🧭",
+              "title": "Descobertas",
+              "description": "Ecos de personagens e encontros opcionais transformam a arena em mais do que um simples cronômetro de sobrevivência."
+            }
+          ]
+        },
+        {
+          "kind": "status",
+          "title": "Status atual"
+        },
+        {
+          "kind": "policies",
+          "title": "Políticas e monetização",
+          "intro": "O jogo inclui anúncios recompensados com tratamento por idade, Google Play Billing e recursos opcionais de economia vinculada à conta. A política de privacidade documenta o tratamento de dados, enquanto o EULA cobre a licença, itens digitais, compras e uso do software."
+        }
+      ]
+    }
+  },
+  "phosphor-archive": {
+    "en": {
+      "lede": "A vector-styled arcade shooter built around luminous phosphor trails, hostile space, compact missions, and high-pressure survival.",
+      "sections": [
+        {
+          "kind": "features",
+          "title": "Arcade Space Combat",
+          "intro": "Fly through compact combat sectors, react to enemy pressure, and complete distinct mission objectives while the renderer builds the game's CRT-like identity from line work, glow, bloom, and phosphor persistence.",
+          "features": [
+            {
+              "icon": "△",
+              "title": "Vector Identity",
+              "description": "Ships, hazards, projectiles, and environments are presented with a clean line-based visual language and multi-pass phosphor rendering."
+            },
+            {
+              "icon": "◎",
+              "title": "Campaign Sectors",
+              "description": "Missions introduce objectives such as asteroid destruction, satellite hacking, and planetary assaults rather than repeating one endless encounter."
+            },
+            {
+              "icon": "∞",
+              "title": "Endless Mode",
+              "description": "A procedural survival stream extends the combat loop beyond the authored campaign and pushes upgrades, enemy density, and endurance."
+            },
+            {
+              "icon": "⌁",
+              "title": "Responsive Control",
+              "description": "The Android version is designed around direct touch movement, with gamepad support adapted toward the same readable handling model."
+            }
+          ]
+        },
+        {
+          "kind": "status",
+          "title": "Current Status"
+        },
+        {
+          "kind": "policies",
+          "title": "Policies",
+          "intro": "Phosphor Archive has dedicated privacy and license pages covering the Android release."
+        }
+      ]
+    },
+    "pt-BR": {
+      "lede": "Um shooter arcade vetorial construído em torno de rastros luminosos de fósforo, espaço hostil, missões compactas e sobrevivência sob alta pressão.",
+      "sections": [
+        {
+          "kind": "features",
+          "title": "Combate arcade no espaço",
+          "intro": "Atravesse setores compactos, reaja à pressão dos inimigos e cumpra objetivos distintos enquanto o renderizador constrói a identidade CRT do jogo com linhas, glow, bloom e persistência de fósforo.",
+          "features": [
+            {
+              "icon": "△",
+              "title": "Identidade vetorial",
+              "description": "Naves, perigos, projéteis e ambientes usam uma linguagem visual limpa baseada em linhas e pós-processamento de fósforo."
+            },
+            {
+              "icon": "◎",
+              "title": "Setores de campanha",
+              "description": "As missões introduzem objetivos como destruir asteroides, hackear satélites e atacar planetas em vez de repetir o mesmo encontro."
+            },
+            {
+              "icon": "∞",
+              "title": "Modo infinito",
+              "description": "Uma sequência procedural de sobrevivência amplia o loop além da campanha e testa upgrades, densidade de inimigos e resistência."
+            },
+            {
+              "icon": "⌁",
+              "title": "Controle responsivo",
+              "description": "A versão Android é baseada em movimento direto por toque, com suporte a controle adaptado ao mesmo modelo de movimentação legível."
+            }
+          ]
+        },
+        {
+          "kind": "status",
+          "title": "Status atual"
+        },
+        {
+          "kind": "policies",
+          "title": "Políticas",
+          "intro": "Phosphor Archive possui páginas próprias de privacidade e licença para a versão Android."
+        }
+      ]
+    }
+  },
+  "hestia-tuner": {
+    "en": {
+      "lede": "A focused guitar tuner and mechanical metronome built for stable pitch feedback, precise timing, and fast use during practice.",
+      "sections": [
+        {
+          "kind": "features",
+          "title": "Tune and Keep Time",
+          "intro": "Hestia combines a dedicated pitch-detection interface with a mechanical-style metronome, keeping both tools available without turning the app into a larger music workstation.",
+          "features": [
+            {
+              "icon": "♪",
+              "title": "Precision Tuner",
+              "description": "Optimized McLeod Pitch Method analysis identifies the note, octave, frequency, and cents offset for responsive instrument tuning."
+            },
+            {
+              "icon": "↔",
+              "title": "Stable Needle",
+              "description": "Pitch smoothing and deliberate display motion prioritize a readable, holdable tuning target instead of noisy frame-by-frame movement."
+            },
+            {
+              "icon": "♩",
+              "title": "Mechanical Metronome",
+              "description": "Adjust tempo from 40 to 300 BPM, choose time signatures, and hear a distinct accented downbeat."
+            },
+            {
+              "icon": "▣",
+              "title": "Background Timing",
+              "description": "A foreground service and low-latency Android audio APIs keep metronome playback consistent while the app remains active."
+            }
+          ]
+        },
+        {
+          "kind": "status",
+          "title": "Current Status"
+        },
+        {
+          "kind": "policies",
+          "title": "Policies",
+          "intro": "Hestia Tuner has dedicated privacy and license pages for the production Android release."
+        }
+      ]
+    },
+    "pt-BR": {
+      "lede": "Um afinador de guitarra e metrônomo mecânico focado em leitura estável de afinação, tempo preciso e uso rápido durante a prática.",
+      "sections": [
+        {
+          "kind": "features",
+          "title": "Afine e mantenha o tempo",
+          "intro": "Hestia combina uma interface dedicada de detecção de afinação com um metrônomo de estilo mecânico, mantendo ambas as ferramentas disponíveis sem transformar o app em uma estação musical maior.",
+          "features": [
+            {
+              "icon": "♪",
+              "title": "Afinador preciso",
+              "description": "A análise otimizada pelo método McLeod identifica nota, oitava, frequência e desvio em cents para uma afinação responsiva."
+            },
+            {
+              "icon": "↔",
+              "title": "Ponteiro estável",
+              "description": "Suavização de afinação e movimento deliberado priorizam um alvo legível em vez de oscilações quadro a quadro."
+            },
+            {
+              "icon": "♩",
+              "title": "Metrônomo mecânico",
+              "description": "Ajuste de 40 a 300 BPM, escolha de compassos e acento distinto no primeiro tempo."
+            },
+            {
+              "icon": "▣",
+              "title": "Tempo em segundo plano",
+              "description": "Um serviço em primeiro plano e APIs de áudio de baixa latência mantêm a reprodução consistente."
+            }
+          ]
+        },
+        {
+          "kind": "status",
+          "title": "Status atual"
+        },
+        {
+          "kind": "policies",
+          "title": "Políticas",
+          "intro": "Hestia Tuner possui páginas próprias de privacidade e licença para a versão Android em produção."
+        }
+      ]
+    }
+  },
+  "notasegura": {
+    "en": {
+      "lede": "A local-first archive for receipts, proof-of-purchase documents, warranties, and payment reminders—built to keep important purchase records useful after the paper fades.",
+      "sections": [
+        {
+          "kind": "features",
+          "title": "Keep the proof, not the clutter",
+          "intro": "Each purchase can keep the information that matters later: merchant, value, purchase date, warranty, category, model, serial number, notes, and attached receipt or invoice documents.",
+          "features": [
+            {
+              "icon": "▤",
+              "title": "Receipt archive",
+              "description": "Store purchases with image or PDF attachments in app-private storage instead of relying on fragile paper or scattered gallery files."
+            },
+            {
+              "icon": "⌕",
+              "title": "Local OCR",
+              "description": "On-device text recognition extracts reviewable suggestions such as merchant, purchase date, total, model, and serial number."
+            },
+            {
+              "icon": "◷",
+              "title": "Useful reminders",
+              "description": "Track pending payments and warranty dates, with Android notifications for obligations that deserve attention."
+            },
+            {
+              "icon": "⇄",
+              "title": "Encrypted backup",
+              "description": "Create and restore password-protected, AES-256-GCM encrypted <code>.notasegura</code> archives containing structured records and original managed documents."
+            }
+          ]
+        },
+        {
+          "kind": "text",
+          "title": "Local-first by design",
+          "intro": "NotaSegura has no advertising, MOTHblank analytics, app account, or MOTHblank cloud sync. Its Room database, receipt contents, OCR text, and managed documents remain local unless you explicitly export a report or encrypted backup. Receipt OCR runs on-device with bundled PP-OCRv6_small models."
+        },
+        {
+          "kind": "status",
+          "title": "Current status"
+        },
+        {
+          "kind": "policies",
+          "title": "Policies"
+        }
+      ]
+    },
+    "pt-BR": {
+      "lede": "Um arquivo local para comprovantes, documentos de compra, garantias e lembretes de pagamento — feito para manter registros importantes úteis depois que o papel desbota.",
+      "sections": [
+        {
+          "kind": "features",
+          "title": "Guarde a prova, não a bagunça",
+          "intro": "Cada compra pode manter as informações que importam depois: loja, valor, data da compra, garantia, categoria, modelo, número de série, observações e comprovantes ou notas anexadas.",
+          "features": [
+            {
+              "icon": "▤",
+              "title": "Arquivo de comprovantes",
+              "description": "Guarde compras com imagens ou PDFs em armazenamento privado do aplicativo, sem depender de papel frágil ou arquivos espalhados pela galeria."
+            },
+            {
+              "icon": "⌕",
+              "title": "OCR local",
+              "description": "O reconhecimento de texto no dispositivo extrai sugestões revisáveis, como loja, data, total, modelo e número de série."
+            },
+            {
+              "icon": "◷",
+              "title": "Lembretes úteis",
+              "description": "Acompanhe pagamentos pendentes e datas de garantia com notificações Android para obrigações importantes."
+            },
+            {
+              "icon": "⇄",
+              "title": "Backup criptografado",
+              "description": "Crie e restaure arquivos <code>.notasegura</code> protegidos por senha e criptografados com AES-256-GCM, incluindo registros estruturados e documentos originais."
+            }
+          ]
+        },
+        {
+          "kind": "text",
+          "title": "Local por projeto",
+          "intro": "NotaSegura não possui publicidade, analytics da MOTHblank, conta do aplicativo ou sincronização em nuvem da MOTHblank. O banco Room, o conteúdo dos comprovantes, o texto do OCR e os documentos gerenciados permanecem locais, salvo quando você exporta explicitamente um relatório ou backup criptografado. O OCR de comprovantes roda no aparelho com modelos PP-OCRv6_small incluídos no aplicativo."
+        },
+        {
+          "kind": "status",
+          "title": "Status atual"
+        },
+        {
+          "kind": "policies",
+          "title": "Políticas"
+        }
+      ]
+    }
+  }
+}

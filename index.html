@@ -14,9 +14,11 @@ permalink: "/index.html"
         <h1 class="hero-title">Independent software, games, and small experiments.</h1>
         <p class="hero-subtitle">Android utilities and games built around focused mechanics, clear interfaces, and efficient code.</p>
     </section>
+    <section class="portfolio-apps-heading" id="apps" aria-labelledby="apps-heading"><h2 id="apps-heading">Apps &amp; Android games</h2><p>Product information, current availability, and policies for the MOTHblank Android catalog.</p></section>
     <section class="game-showcase">
         {% for app in site.data.apps.apps %}
             {% include app-card.html app=app lang=page.lang %}
         {% endfor %}
     </section>
+    {% include portfolio-catalog.html lang=page.lang %}
 </main>

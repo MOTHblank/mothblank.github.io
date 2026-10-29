@@ -1,0 +1,16 @@
+{% assign project = include.project %}
+{% assign lang = include.lang %}
+{% assign ui = site.data.i18n[lang] %}
+<article class="project-card" data-category="{{ project.category }}">
+    <div class="project-card-top">
+        <span class="game-tag project-category">{{ ui[project.category] }}</span>
+        <span class="project-status">{{ project.status[lang] }}</span>
+    </div>
+    <h3>{{ project.name }}</h3>
+    <p class="project-platform">{{ project.platform[lang] }}</p>
+    <p class="project-description">{{ project.description[lang] }}</p>
+    <div class="project-links">
+        <a class="btn btn-secondary" href="{{ project.repository }}" target="_blank" rel="noopener noreferrer" aria-label="{{ project.name }} — {{ ui.source_code }} ({{ ui.new_tab }})">{{ ui.source_code }} ↗</a>
+        {% if project.releases %}<a class="btn btn-primary" href="{{ project.releases }}" target="_blank" rel="noopener noreferrer" aria-label="{{ project.name }} — {{ ui.releases }} ({{ ui.new_tab }})">{{ ui.releases }} ↗</a>{% endif %}
+    </div>
+</article>

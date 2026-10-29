@@ -14,9 +14,11 @@ permalink: "/pt-BR/index.html"
         <h1 class="hero-title">Software independente, jogos e pequenos experimentos.</h1>
         <p class="hero-subtitle">Utilitários e jogos para Android construídos em torno de mecânicas focadas, interfaces claras e código eficiente.</p>
     </section>
+    <section class="portfolio-apps-heading" id="apps" aria-labelledby="apps-heading"><h2 id="apps-heading">Apps e jogos Android</h2><p>Informações, disponibilidade atual e políticas dos aplicativos Android da MOTHblank.</p></section>
     <section class="game-showcase">
         {% for app in site.data.apps.apps %}
             {% include app-card.html app=app lang=page.lang %}
         {% endfor %}
     </section>
+    {% include portfolio-catalog.html lang=page.lang %}
 </main>

@@ -1,0 +1,93 @@
+[
+  {
+    "id": "do-you-copy",
+    "name": "Do You Copy?",
+    "category": "games",
+    "platform": {
+      "en": "PC / Godot",
+      "pt-BR": "PC / Godot"
+    },
+    "status": {
+      "en": "In development",
+      "pt-BR": "Em desenvolvimento"
+    },
+    "description": {
+      "en": "A short radio-operator horror game centered on authenticating field transmissions and making irreversible communication decisions.",
+      "pt-BR": "Jogo curto de terror com operador de rádio, verificação de transmissões e decisões irreversíveis de comunicação."
+    },
+    "repository": "https://github.com/MOTHblank/DoYouCopy"
+  },
+  {
+    "id": "signal-operator",
+    "name": "Signal Operator",
+    "category": "games",
+    "platform": {
+      "en": "Android / Kotlin",
+      "pt-BR": "Android / Kotlin"
+    },
+    "status": {
+      "en": "In development",
+      "pt-BR": "Em desenvolvimento"
+    },
+    "description": {
+      "en": "A terminal-styled simulation of radio tuning, oscilloscope calibration, cipher decoding, and consequential network decisions.",
+      "pt-BR": "Simulação em estilo terminal com sintonia de rádio, calibração de osciloscópio, decifração e decisões sobre uma rede."
+    },
+    "repository": "https://github.com/MOTHblank/SignalOperator"
+  },
+  {
+    "id": "lumora-reader",
+    "name": "LumoraReader",
+    "category": "tools",
+    "platform": {
+      "en": "Android / Kotlin",
+      "pt-BR": "Android / Kotlin"
+    },
+    "status": {
+      "en": "In development",
+      "pt-BR": "Em desenvolvimento"
+    },
+    "description": {
+      "en": "An EPUB and PDF reading app with customizable themes, bookmarks, and reading-focused navigation.",
+      "pt-BR": "Leitor de EPUB e PDF com temas personalizáveis, marcadores e navegação voltada à leitura."
+    },
+    "repository": "https://github.com/MOTHblank/LumoraReader"
+  },
+  {
+    "id": "moth-controller",
+    "name": "Moth Controller",
+    "category": "tools",
+    "platform": {
+      "en": "Windows / Linux / Rust",
+      "pt-BR": "Windows / Linux / Rust"
+    },
+    "status": {
+      "en": "Public pre-releases",
+      "pt-BR": "Pré-lançamentos públicos"
+    },
+    "description": {
+      "en": "An unofficial lightweight desktop companion for multiple PokéIdle sessions, with account and hunt monitoring.",
+      "pt-BR": "Companheiro leve e não oficial para desktop que organiza sessões do PokéIdle e monitora contas e caçadas."
+    },
+    "repository": "https://github.com/MOTHblank/pokeidle-addons",
+    "releases": "https://github.com/MOTHblank/pokeidle-addons/releases"
+  },
+  {
+    "id": "fable-recomp",
+    "name": "Fable 2 Recompiled",
+    "category": "experiments",
+    "platform": {
+      "en": "Windows / C++ / WPF",
+      "pt-BR": "Windows / C++ / WPF"
+    },
+    "status": {
+      "en": "Community experiment",
+      "pt-BR": "Experimento comunitário"
+    },
+    "description": {
+      "en": "An independent recompilation and launcher experiment for Fable II. Requires a legally obtained game copy; not an official distribution.",
+      "pt-BR": "Experimento independente de recompilação e launcher para Fable II. Requer uma cópia legal do jogo; não é distribuição oficial."
+    },
+    "repository": "https://github.com/MOTHblank/Fable-2-Recomp"
+  }
+]

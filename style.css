@@ -1304,3 +1304,38 @@ main:focus {
         display: none;
     }
 }
+
+/* Curated project catalog – preserve the established phosphor/terminal palette */
+.portfolio-apps-heading { margin-bottom: 1.5rem; }
+.portfolio-apps-heading h2, .portfolio-heading h2 { border: 0; padding: 0; text-transform: none; }
+.portfolio-apps-heading h2::before, .portfolio-heading h2::before { content: none; }
+.portfolio-section { margin-top: 4.5rem; border-top: 1px solid var(--border-color); padding-top: 2.8rem; }
+.portfolio-heading { margin-bottom: 1.5rem; }
+.portfolio-heading h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+.portfolio-eyebrow { color: var(--accent-cyan); font: 0.77rem var(--font-mono); text-transform: uppercase; letter-spacing: 0.15em; }
+.portfolio-filters { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.5rem 0 0.8rem; }
+.portfolio-filters[hidden], .project-card[hidden] { display: none !important; }
+.portfolio-filters button { color: var(--text-secondary); background: transparent; border: 1px solid var(--border-color); padding: 0.48rem 0.75rem; font: 0.8rem var(--font-mono); cursor: pointer; }
+.portfolio-filters button:hover, .portfolio-filters button:focus-visible { border-color: var(--accent-cyan); color: var(--text-primary); }
+.portfolio-filters button[aria-pressed="true"] { color: var(--accent-cyan); border-color: var(--accent-cyan); text-decoration: underline; text-underline-offset: 4px; background: rgba(121, 192, 255, 0.06); }
+.portfolio-count { font: 0.76rem var(--font-mono); margin: 0 0 1.2rem; min-height: 1.2rem; }
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; }
+.project-card { border: 1px solid var(--border-color); background: var(--bg-secondary); padding: 1.5rem; min-width: 0; display: flex; flex-direction: column; }
+.project-card:hover, .project-card:focus-within { border-color: var(--border-color-hover); }
+.project-card-top { display: flex; align-items: baseline; flex-wrap: wrap; justify-content: space-between; gap: 0.4rem; }
+.project-category { margin: 0; }
+.project-status, .project-platform { font: 0.75rem var(--font-mono); color: var(--accent-green); }
+.project-card h3 { font-size: 1.22rem; margin: 0.9rem 0 0.2rem; color: var(--text-primary); }
+.project-platform { color: var(--text-secondary); margin: 0 0 0.8rem; }
+.project-description { font-size: 0.88rem; flex: 1; }
+.project-links { display: flex; gap: 0.55rem; flex-wrap: wrap; }
+.project-links .btn { font-size: 0.72rem; padding: 0.45rem 0.7rem; }
+.media-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,260px),1fr)); gap: 1rem; }
+.media-card { min-width: 0; margin: 0; background: var(--bg-secondary); border: 1px solid var(--border-color); }
+.media-card a { display: block; }
+.media-card img { width: 100%; height: auto; max-height: 380px; display: block; object-fit: contain; background: var(--bg-primary); }
+.media-card video { width: 100%; display: block; background: #090909; }
+.media-card figcaption { color: var(--text-secondary); padding: 0.8rem 1rem; font-size: 0.84rem; }
+.media-card:hover, .media-card:focus-within { border-color: var(--accent-cyan); }
+@media (max-width: 700px) { .project-grid { grid-template-columns: 1fr; } .portfolio-section { margin-top: 3rem; } }
+@media print { .portfolio-filters { display: none; } .project-grid { display: block; } .project-card { break-inside: avoid; margin-bottom: 1rem; } }

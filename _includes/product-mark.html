@@ -1,0 +1,10 @@
+{% case include.theme %}
+{% when 'emoji' %}
+<div class="product-mark" aria-hidden="true"><span>🧙</span><span>✨</span><span>⚔️</span></div>
+{% when 'phosphor' %}
+<div class="product-svg-mark phosphor-mark" aria-hidden="true"><svg viewBox="0 0 120 120" fill="none"><path d="M60 12L102 96L60 74L18 96L60 12Z" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><path d="M60 44L77 79L60 70L43 79L60 44Z" fill="currentColor" opacity="0.45"/><circle cx="60" cy="69" r="7" fill="white"/></svg></div>
+{% when 'hestia' %}
+<div class="product-svg-mark hestia-mark" aria-hidden="true"><svg viewBox="0 0 120 120" fill="none"><path d="M60 12L36 103H84L60 12Z" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><path d="M60 94V36" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><circle cx="60" cy="35" r="7" fill="white"/><path d="M23 49C17 59 17 70 23 81M97 49C103 59 103 70 97 81" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div>
+{% when 'nota' %}
+<div class="product-svg-mark nota-mark" aria-hidden="true"><svg viewBox="0 0 120 120" fill="none"><path d="M31 15H78L91 28V101H31V15Z" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><path d="M77 15V30H91" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><path d="M43 48H78M43 62H78M43 76H66" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M72 89L79 96L94 79" stroke="#7ee787" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+{% endcase %}
