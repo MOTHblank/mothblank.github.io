@@ -7,12 +7,16 @@
         .replace(/[\u0300-\u036f]/g, "");
 
     catalogs.forEach((catalog) => {
+        const filters = catalog.querySelector(".project-filters");
         const search = catalog.querySelector("[data-project-search-input]");
         const type = catalog.querySelector("[data-project-type-filter]");
         const status = catalog.querySelector("[data-project-status-filter]");
         const count = catalog.querySelector("[data-project-count]");
         const empty = catalog.querySelector("[data-project-empty]");
         const cards = Array.from(catalog.querySelectorAll("[data-project-card]"));
+
+        if (filters) filters.hidden = false;
+        if (count) count.hidden = false;
 
         const update = () => {
             const query = normalize(search?.value);

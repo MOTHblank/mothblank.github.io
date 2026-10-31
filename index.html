@@ -39,7 +39,7 @@ permalink: "/index.html"
             <p>A curated selection of public repositories spanning games, Android software, desktop utilities, web work, and technical experiments. Work-in-progress projects are labeled as such.</p>
         </div>
 
-        <div class="project-filters" aria-label="Project filters">
+        <div class="project-filters" aria-label="Project filters" hidden>
             <label class="project-filter-field">
                 <span>Search</span>
                 <input type="search" placeholder="Name, technology, platform…" autocomplete="off" data-project-search-input>
@@ -66,7 +66,7 @@ permalink: "/index.html"
             </label>
         </div>
 
-        <p class="project-count" aria-live="polite" data-project-count data-singular="project shown" data-plural="projects shown"></p>
+        <p class="project-count" aria-live="polite" data-project-count data-singular="project shown" data-plural="projects shown" hidden></p>
 
         <div class="project-grid">
             {% for project in site.data.projects.projects %}

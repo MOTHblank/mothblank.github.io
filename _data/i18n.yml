@@ -1,6 +1,6 @@
 en:
   skip: "Skip to main content"
-  all_apps: "All Apps"
+  all_apps: "Portfolio"
   privacy: "Privacy"
   privacy_policy: "Privacy Policy"
   google_play: "Google Play"
@@ -16,7 +16,7 @@ en:
   portuguese: "Português"
 pt-BR:
   skip: "Pular para o conteúdo principal"
-  all_apps: "Todos os apps"
+  all_apps: "Portfólio"
   privacy: "Privacidade"
   privacy_policy: "Privacidade"
   google_play: "Google Play"

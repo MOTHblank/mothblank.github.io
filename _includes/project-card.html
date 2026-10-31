@@ -1,10 +1,11 @@
 {% assign project = include.project %}
 {% assign lang = include.lang %}
+{% capture project_search_text %}{{ project.name }} {{ project.type.label[lang] }} {{ project.status.label[lang] }} {{ project.platform[lang] }} {{ project.tech | join: ' ' }} {{ project.description[lang] }}{% endcapture %}
 <article class="project-card"
          data-project-card
-         data-project-type="{{ project.type.code }}"
-         data-project-status="{{ project.status.code }}"
-         data-project-search="{{ project.name | downcase }} {{ project.type.label[lang] | downcase }} {{ project.status.label[lang] | downcase }} {{ project.platform[lang] | downcase }} {{ project.tech | join: ' ' | downcase }} {{ project.description[lang] | downcase }}">
+         data-project-type="{{ project.type.code | escape }}"
+         data-project-status="{{ project.status.code | escape }}"
+         data-project-search="{{ project_search_text | strip_newlines | downcase | escape }}">
     {% if project.screenshot %}
     <div class="project-media">
         <img src="{{ project.screenshot }}" alt="" loading="lazy" decoding="async">

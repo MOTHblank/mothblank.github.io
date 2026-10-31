@@ -39,7 +39,7 @@ permalink: "/pt-BR/index.html"
             <p>Uma seleção curada de repositórios públicos entre jogos, software Android, utilitários desktop, projetos web e experimentos técnicos. Projetos em andamento aparecem identificados como tal.</p>
         </div>
 
-        <div class="project-filters" aria-label="Filtros de projetos">
+        <div class="project-filters" aria-label="Filtros de projetos" hidden>
             <label class="project-filter-field">
                 <span>Buscar</span>
                 <input type="search" placeholder="Nome, tecnologia, plataforma…" autocomplete="off" data-project-search-input>
@@ -66,7 +66,7 @@ permalink: "/pt-BR/index.html"
             </label>
         </div>
 
-        <p class="project-count" aria-live="polite" data-project-count data-singular="projeto exibido" data-plural="projetos exibidos"></p>
+        <p class="project-count" aria-live="polite" data-project-count data-singular="projeto exibido" data-plural="projetos exibidos" hidden></p>
 
         <div class="project-grid">
             {% for project in site.data.projects.projects %}

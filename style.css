@@ -1425,6 +1425,8 @@ main:focus {
     border: 1px solid var(--border-color);
     background: var(--bg-secondary);
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card[hidden] {
@@ -1452,8 +1454,8 @@ main:focus {
 
 .project-card-body {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    height: 100%;
     padding: 1.35rem;
 }
 
