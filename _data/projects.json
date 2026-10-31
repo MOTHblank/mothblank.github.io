@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "projects": [
+    {
+      "id": "signal-operator",
+      "name": "Signal Operator",
+      "repository_url": "https://github.com/MOTHblank/SignalOperator",
+      "type": {
+        "code": "game",
+        "label": {
+          "en": "Game / simulation",
+          "pt-BR": "Jogo / simulação"
+        }
+      },
+      "status": {
+        "code": "active",
+        "label": {
+          "en": "In development",
+          "pt-BR": "Em desenvolvimento"
+        }
+      },
+      "platform": {
+        "en": "Android",
+        "pt-BR": "Android"
+      },
+      "tech": [
+        "Kotlin",
+        "Jetpack Compose",
+        "Android"
+      ],
+      "description": {
+        "en": "A retro terminal-style radio operator simulator about tuning signals, decoding telemetry, correlating evidence, and deciding which communications can be trusted.",
+        "pt-BR": "Um simulador retrô de operador de rádio sobre sintonizar sinais, decodificar telemetria, correlacionar evidências e decidir em quais comunicações confiar."
+      },
+      "screenshot": null
+    },
+    {
+      "id": "do-you-copy",
+      "name": "Do You Copy?",
+      "repository_url": "https://github.com/MOTHblank/DoYouCopy",
+      "type": {
+        "code": "game",
+        "label": {
+          "en": "Horror game",
+          "pt-BR": "Jogo de terror"
+        }
+      },
+      "status": {
+        "code": "prototype",
+        "label": {
+          "en": "Playable foundation",
+          "pt-BR": "Base jogável"
+        }
+      },
+      "platform": {
+        "en": "Desktop / PC",
+        "pt-BR": "Desktop / PC"
+      },
+      "tech": [
+        "Godot 4.7",
+        "GDScript"
+      ],
+      "description": {
+        "en": "A radio-operator horror game where identity verification is the main puzzle: callers can imitate voices, learn protocol, and force irreversible decisions.",
+        "pt-BR": "Um jogo de terror de operador de rádio em que verificar identidades é o quebra-cabeça central: vozes podem ser imitadas, protocolos aprendidos e decisões se tornam irreversíveis."
+      },
+      "screenshot": null
+    },
+    {
+      "id": "lumora-reader",
+      "name": "LumoraReader",
+      "repository_url": "https://github.com/MOTHblank/LumoraReader",
+      "type": {
+        "code": "app",
+        "label": {
+          "en": "Reading app",
+          "pt-BR": "App de leitura"
+        }
+      },
+      "status": {
+        "code": "active",
+        "label": {
+          "en": "In development",
+          "pt-BR": "Em desenvolvimento"
+        }
+      },
+      "platform": {
+        "en": "Android",
+        "pt-BR": "Android"
+      },
+      "tech": [
+        "Kotlin",
+        "Jetpack Compose",
+        "EPUB",
+        "PDF"
+      ],
+      "description": {
+        "en": "An Android reading application focused on EPUB and PDF reading, persistent reading position, flexible themes, and a cohesive long-form reading experience.",
+        "pt-BR": "Um aplicativo Android de leitura focado em EPUB e PDF, posição persistente, temas flexíveis e uma experiência coesa para leitura longa."
+      },
+      "screenshot": null
+    },
+    {
+      "id": "placecheck",
+      "name": "Placecheck",
+      "repository_url": "https://github.com/MOTHblank/placecheck",
+      "type": {
+        "code": "web",
+        "label": {
+          "en": "Web project",
+          "pt-BR": "Projeto web"
+        }
+      },
+      "status": {
+        "code": "active",
+        "label": {
+          "en": "MVP in development",
+          "pt-BR": "MVP em desenvolvimento"
+        }
+      },
+      "platform": {
+        "en": "Web",
+        "pt-BR": "Web"
+      },
+      "tech": [
+        "Django",
+        "Python",
+        "TypeScript",
+        "Vite"
+      ],
+      "description": {
+        "en": "A real-estate listing aggregator MVP with normalized ingestion, conservative deduplication, offer comparison, and source-aware inventory tracking.",
+        "pt-BR": "Um MVP agregador de anúncios imobiliários com ingestão normalizada, deduplicação conservadora, comparação de ofertas e acompanhamento de estoque por fonte."
+      },
+      "screenshot": null
+    },
+    {
+      "id": "ghost-mirror",
+      "name": "Ghost Mirror",
+      "repository_url": "https://github.com/MOTHblank/smb-ghost-mirror",
+      "type": {
+        "code": "tool",
+        "label": {
+          "en": "Practice tool",
+          "pt-BR": "Ferramenta de treino"
+        }
+      },
+      "status": {
+        "code": "experimental",
+        "label": {
+          "en": "Experimental",
+          "pt-BR": "Experimental"
+        }
+      },
+      "platform": {
+        "en": "Windows desktop",
+        "pt-BR": "Desktop Windows"
+      },
+      "tech": [
+        "C++",
+        "SDL2",
+        "Nestopia"
+      ],
+      "description": {
+        "en": "A Super Mario Bros. speedrun practice tool with synchronized player, personal-best, and TAS views, ghost overlays, split comparison, and controller support.",
+        "pt-BR": "Uma ferramenta de treino para speedrun de Super Mario Bros. com visualizações sincronizadas do jogador, PB e TAS, ghosts, comparação de splits e suporte a controle."
+      },
+      "screenshot": null
+    },
+    {
+      "id": "moth-controller",
+      "name": "Moth Controller",
+      "repository_url": "https://github.com/MOTHblank/pokeidle-addons",
+      "type": {
+        "code": "tool",
+        "label": {
+          "en": "Desktop tool",
+          "pt-BR": "Ferramenta desktop"
+        }
+      },
+      "status": {
+        "code": "public",
+        "label": {
+          "en": "Public builds",
+          "pt-BR": "Builds públicos"
+        }
+      },
+      "platform": {
+        "en": "Windows / Linux",
+        "pt-BR": "Windows / Linux"
+      },
+      "tech": [
+        "Rust",
+        "Firefox",
+        "WebSocket"
+      ],
+      "description": {
+        "en": "A lightweight multi-account PokéIdle companion focused on low resource use, background sessions, hunt tracking, automation, and consolidated streaming-chat connectivity.",
+        "pt-BR": "Um companion leve para múltiplas contas do PokéIdle, focado em baixo consumo de recursos, sessões em segundo plano, acompanhamento de hunts, automações e conectividade consolidada com chats de streaming."
+      },
+      "screenshot": null
+    }
+  ]
+}

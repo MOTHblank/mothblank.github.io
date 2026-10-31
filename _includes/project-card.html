@@ -1,0 +1,34 @@
+{% assign project = include.project %}
+{% assign lang = include.lang %}
+<article class="project-card"
+         data-project-card
+         data-project-type="{{ project.type.code }}"
+         data-project-status="{{ project.status.code }}"
+         data-project-search="{{ project.name | downcase }} {{ project.type.label[lang] | downcase }} {{ project.status.label[lang] | downcase }} {{ project.platform[lang] | downcase }} {{ project.tech | join: ' ' | downcase }} {{ project.description[lang] | downcase }}">
+    {% if project.screenshot %}
+    <div class="project-media">
+        <img src="{{ project.screenshot }}" alt="" loading="lazy" decoding="async">
+    </div>
+    {% endif %}
+    <div class="project-card-body">
+        <div class="project-meta">
+            <span class="project-kind">{{ project.type.label[lang] }}</span>
+            <span class="project-status project-status-{{ project.status.code }}">{{ project.status.label[lang] }}</span>
+        </div>
+        <h3 class="project-title">{{ project.name }}</h3>
+        <p class="project-desc">{{ project.description[lang] }}</p>
+        <div class="project-details">
+            <span class="project-platform">{{ project.platform[lang] }}</span>
+            <ul class="project-tech" aria-label="{% if lang == 'pt-BR' %}Tecnologias{% else %}Technologies{% endif %}">
+                {% for technology in project.tech %}
+                <li>{{ technology }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="project-actions">
+            <a class="project-link" href="{{ project.repository_url }}" target="_blank" rel="noopener noreferrer">
+                {% if lang == "pt-BR" %}Repositório{% else %}Repository{% endif %} ↗
+            </a>
+        </div>
+    </div>
+</article>

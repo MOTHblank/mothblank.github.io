@@ -1,8 +1,8 @@
 ---
 layout: default
 lang: en
-title: "MOTHblank Games & Apps"
-description: "Official website and privacy policies for games and applications developed by MOTHblank, including Emoji Magia, Phosphor Archive, Hestia Tuner, and NotaSegura."
+title: "MOTHblank Portfolio — Games, Apps & Tools"
+description: "Independent software portfolio by MOTHblank: Android apps, games, desktop tools, web projects, and experiments."
 alternate_url: "/pt-BR/index.html"
 english_url: "/index.html"
 permalink: "/index.html"
@@ -12,11 +12,68 @@ permalink: "/index.html"
         <div class="hero-identity" aria-hidden="true"><span class="hero-wordmark-moth">MOTH</span><span class="hero-wordmark-blank">blank</span></div>
         <div class="hero-rule" aria-hidden="true"><span></span></div>
         <h1 class="hero-title">Independent software, games, and small experiments.</h1>
-        <p class="hero-subtitle">Android utilities and games built around focused mechanics, clear interfaces, and efficient code.</p>
+        <p class="hero-subtitle">Apps, games, tools, and prototypes built around focused mechanics, clear interfaces, and efficient code.</p>
+        <nav class="catalog-jump" aria-label="Portfolio sections">
+            <a href="#apps">Apps & releases</a>
+            <a href="#projects">Projects & experiments</a>
+        </nav>
     </section>
-    <section class="game-showcase">
-        {% for app in site.data.apps.apps %}
-            {% include app-card.html app=app lang=page.lang %}
-        {% endfor %}
+
+    <section class="portfolio-section" id="apps" aria-labelledby="apps-title">
+        <div class="portfolio-heading">
+            <p class="section-kicker">Distributed software</p>
+            <h2 id="apps-title">Apps & releases</h2>
+            <p>Product pages, testing links, privacy information, and release status for the applications with dedicated distribution pages.</p>
+        </div>
+        <div class="game-showcase">
+            {% for app in site.data.apps.apps %}
+                {% include app-card.html app=app lang=page.lang %}
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="portfolio-section project-catalog" id="projects" aria-labelledby="projects-title" data-project-catalog>
+        <div class="portfolio-heading">
+            <p class="section-kicker">Selected work</p>
+            <h2 id="projects-title">Projects & experiments</h2>
+            <p>A curated selection of public repositories spanning games, Android software, desktop utilities, web work, and technical experiments. Work-in-progress projects are labeled as such.</p>
+        </div>
+
+        <div class="project-filters" aria-label="Project filters">
+            <label class="project-filter-field">
+                <span>Search</span>
+                <input type="search" placeholder="Name, technology, platform…" autocomplete="off" data-project-search-input>
+            </label>
+            <label class="project-filter-field">
+                <span>Type</span>
+                <select data-project-type-filter>
+                    <option value="all">All types</option>
+                    <option value="game">Games</option>
+                    <option value="app">Apps</option>
+                    <option value="web">Web</option>
+                    <option value="tool">Tools</option>
+                </select>
+            </label>
+            <label class="project-filter-field">
+                <span>Status</span>
+                <select data-project-status-filter>
+                    <option value="all">All statuses</option>
+                    <option value="active">In development</option>
+                    <option value="prototype">Playable foundation</option>
+                    <option value="experimental">Experimental</option>
+                    <option value="public">Public builds</option>
+                </select>
+            </label>
+        </div>
+
+        <p class="project-count" aria-live="polite" data-project-count data-singular="project shown" data-plural="projects shown"></p>
+
+        <div class="project-grid">
+            {% for project in site.data.projects.projects %}
+                {% include project-card.html project=project lang=page.lang %}
+            {% endfor %}
+        </div>
+        <p class="project-empty" data-project-empty hidden>No projects match these filters.</p>
     </section>
 </main>
+<script src="/assets/project-filter.js" defer></script>
