@@ -8,25 +8,30 @@
          data-project-search="{{ project_search_text | strip_newlines | downcase | escape }}">
     {% if project.screenshot %}
     <div class="project-media">
-        <img src="{{ project.screenshot }}" alt="" loading="lazy" decoding="async">
+        {% assign shot = project.screenshot %}
+        <img src="{% if shot.src %}{{ shot.src | relative_url }}{% else %}{{ shot | relative_url }}{% endif %}"
+             alt="{% if shot.alt %}{{ shot.alt[lang] | escape }}{% else %}{{ project.name | escape }}{% endif %}"
+             {% if shot.width and shot.height %}width="{{ shot.width }}" height="{{ shot.height }}"{% endif %}
+             loading="lazy" decoding="async">
     </div>
     {% endif %}
     <div class="project-card-body">
         <div class="project-meta">
-            <span class="project-kind">{{ project.type.label[lang] }}</span>
-            <span class="project-status project-status-{{ project.status.code }}">{{ project.status.label[lang] }}</span>
+            <span class="project-kind">{{ project.type.label[lang] | escape }}</span>
+            <span class="project-status project-status-{{ project.status.code }}">{{ project.status.label[lang] | escape }}</span>
         </div>
-        <h3 class="project-title">{{ project.name }}</h3>
-        <p class="project-desc">{{ project.description[lang] }}</p>
+        <h3 class="project-title"><a href="{% if lang == 'pt-BR' %}/pt-BR{% endif %}/projects/{{ project.id }}.html">{{ project.name | escape }}</a></h3>
+        <p class="project-desc">{{ project.description[lang] | escape }}</p>
         <div class="project-details">
-            <span class="project-platform">{{ project.platform[lang] }}</span>
+            <span class="project-platform">{{ project.platform[lang] | escape }}</span>
             <ul class="project-tech" aria-label="{% if lang == 'pt-BR' %}Tecnologias{% else %}Technologies{% endif %}">
                 {% for technology in project.tech %}
-                <li>{{ technology }}</li>
+                <li>{{ technology | escape }}</li>
                 {% endfor %}
             </ul>
         </div>
         <div class="project-actions">
+            <a class="project-link" href="{% if lang == 'pt-BR' %}/pt-BR{% endif %}/projects/{{ project.id }}.html">{% if lang == 'pt-BR' %}Detalhes{% else %}Details{% endif %}</a>
             <a class="project-link" href="{{ project.repository_url }}" target="_blank" rel="noopener noreferrer">
                 {% if lang == "pt-BR" %}Repositório{% else %}Repository{% endif %} ↗
             </a>

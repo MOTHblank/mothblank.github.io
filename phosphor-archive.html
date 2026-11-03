@@ -24,6 +24,7 @@ back_label: "back_home"
             <p class="product-lede">A vector-styled arcade shooter built around luminous phosphor trails, hostile space, compact missions, and high-pressure survival.</p>
             {% include product-actions.html lang=page.lang %}
         </section>
+    {% include product-gallery.html app=app lang=page.lang %}
 
         <section class="product-section">
             <div class="section-heading phosphor-heading"><span>01</span><h2>Arcade Space Combat</h2></div>
@@ -46,4 +47,8 @@ back_label: "back_home"
             <p>Phosphor Archive has dedicated privacy and license pages covering the Android release.</p>
             {% include product-policy-links.html lang=page.lang %}
         </section>
-    </main>
+        <section class="product-section">
+        <h2>Desktop edition</h2>
+        <p>The Windows, Linux, and macOS edition is developed separately. <a class="doc-link" href="/projects/phosphor-archive-desktop.html">Explore the desktop port</a>.</p>
+    </section>
+</main>

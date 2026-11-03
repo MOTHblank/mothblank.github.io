@@ -1,0 +1,17 @@
+{% comment %}Images must be genuine captures, not placeholder art. Provide a localized alt and native dimensions in apps.json.{% endcomment %}
+{% if include.app.screenshots and include.app.screenshots.size > 0 %}
+<section class="product-section product-screenshots" aria-label="{% if include.lang == 'pt-BR' %}Capturas de tela{% else %}Screenshots{% endif %}">
+    <h2>{% if include.lang == 'pt-BR' %}Capturas de tela{% else %}Screenshots{% endif %}</h2>
+    <div class="product-gallery">
+        {% for shot in include.app.screenshots %}
+        <figure class="product-gallery-item">
+            <img src="{{ shot.src | relative_url }}"
+                 alt="{{ shot.alt[include.lang] | escape }}"
+                 width="{{ shot.width }}" height="{{ shot.height }}"
+                 loading="lazy" decoding="async">
+            {% if shot.caption %}<figcaption>{{ shot.caption[include.lang] | escape }}</figcaption>{% endif %}
+        </figure>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}

@@ -1,0 +1,23 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{% assign public_pages = site.pages | where_exp: "entry", "entry.lang" %}
+{% for entry in public_pages %}
+  <url>
+    <loc>{{ entry.url | absolute_url | xml_escape }}</loc>
+    {% if entry.alternate_url %}
+    {% if entry.lang == 'pt-BR' %}
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="{{ entry.url | absolute_url | xml_escape }}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ entry.alternate_url | absolute_url | xml_escape }}"/>
+    {% else %}
+    <xhtml:link rel="alternate" hreflang="en" href="{{ entry.url | absolute_url | xml_escape }}"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="{{ entry.alternate_url | absolute_url | xml_escape }}"/>
+    {% endif %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ entry.english_url | default: entry.url | absolute_url | xml_escape }}"/>
+    {% endif %}
+  </url>
+{% endfor %}
+</urlset>

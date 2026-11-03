@@ -32,7 +32,28 @@
         "en": "A retro terminal-style radio operator simulator about tuning signals, decoding telemetry, correlating evidence, and deciding which communications can be trusted.",
         "pt-BR": "Um simulador retrô de operador de rádio sobre sintonizar sinais, decodificar telemetria, correlacionar evidências e decidir em quais comunicações confiar."
       },
-      "screenshot": null
+      "screenshot": null,
+      "detail": {
+        "en": "Tune unfamiliar transmissions, decode incomplete information, and connect evidence to determine which messages deserve trust. The investigation is built around uncertainty rather than a simple correct/incorrect switch.",
+        "pt-BR": "Sintonize transmissões desconhecidas, decodifique informações incompletas e conecte evidências para decidir em quais mensagens confiar. A investigação se baseia em incerteza, não em uma simples resposta certa ou errada."
+      },
+      "highlights": [
+        {
+          "en": "Radio calibration, signal interpretation, and decoding",
+          "pt-BR": "Calibração de rádio, interpretação de sinais e decodificação"
+        },
+        {
+          "en": "Evidence correlation across intercepted communications",
+          "pt-BR": "Correlação de evidências entre comunicações interceptadas"
+        },
+        {
+          "en": "Persistent consequences for operator decisions",
+          "pt-BR": "Consequências persistentes das decisões do operador"
+        }
+      ],
+      "related_projects": [
+        "do-you-copy"
+      ]
     },
     {
       "id": "do-you-copy",
@@ -64,7 +85,28 @@
         "en": "A radio-operator horror game where identity verification is the main puzzle: callers can imitate voices, learn protocol, and force irreversible decisions.",
         "pt-BR": "Um jogo de terror de operador de rádio em que verificar identidades é o quebra-cabeça central: vozes podem ser imitadas, protocolos aprendidos e decisões se tornam irreversíveis."
       },
-      "screenshot": null
+      "screenshot": null,
+      "detail": {
+        "en": "A horror game driven by voice, identity, and procedure. Suspicious callers may imitate familiar signals; authentication becomes more difficult as the operator learns which channels are safe.",
+        "pt-BR": "Um jogo de terror centrado em voz, identidade e procedimentos. Interlocutores suspeitos podem imitar sinais familiares; a autenticação fica mais difícil conforme o operador descobre quais canais são seguros."
+      },
+      "highlights": [
+        {
+          "en": "Changing authentication challenges and suspicious transmissions",
+          "pt-BR": "Desafios de autenticação variáveis e transmissões suspeitas"
+        },
+        {
+          "en": "Irreversible channel-quarantine decisions",
+          "pt-BR": "Decisões irreversíveis de quarentena de canais"
+        },
+        {
+          "en": "An authored, checkpointed sequence of radio contacts",
+          "pt-BR": "Uma sequência autoral de contatos por rádio com checkpoints"
+        }
+      ],
+      "related_projects": [
+        "signal-operator"
+      ]
     },
     {
       "id": "lumora-reader",
@@ -98,7 +140,79 @@
         "en": "An Android reading application focused on EPUB and PDF reading, persistent reading position, flexible themes, and a cohesive long-form reading experience.",
         "pt-BR": "Um aplicativo Android de leitura focado em EPUB e PDF, posição persistente, temas flexíveis e uma experiência coesa para leitura longa."
       },
-      "screenshot": null
+      "screenshot": null,
+      "detail": {
+        "en": "A cohesive Android library and reader for long-form EPUB and PDF documents, combining reader customization with persistent progress and offline organization.",
+        "pt-BR": "Uma biblioteca e leitor Android para documentos EPUB e PDF, combinando personalização de leitura, progresso persistente e organização offline."
+      },
+      "highlights": [
+        {
+          "en": "EPUB and PDF reading with configurable typography and themes",
+          "pt-BR": "Leitura de EPUB e PDF com tipografia e temas configuráveis"
+        },
+        {
+          "en": "Bookmarks, reading position, and library organization",
+          "pt-BR": "Marcadores, posição de leitura e organização da biblioteca"
+        },
+        {
+          "en": "Offline EPUB content search and PDF outline navigation",
+          "pt-BR": "Busca offline no conteúdo de EPUB e navegação pelo sumário de PDF"
+        }
+      ]
+    },
+    {
+      "id": "phosphor-archive-desktop",
+      "name": "Phosphor Archive — Desktop",
+      "repository_url": "https://github.com/MOTHblank/PhosphorArchive-Desktop",
+      "type": {
+        "code": "game",
+        "label": {
+          "en": "Arcade game",
+          "pt-BR": "Jogo arcade"
+        }
+      },
+      "status": {
+        "code": "active",
+        "label": {
+          "en": "Desktop port in development",
+          "pt-BR": "Port desktop em desenvolvimento"
+        }
+      },
+      "platform": {
+        "en": "Windows / Linux / macOS",
+        "pt-BR": "Windows / Linux / macOS"
+      },
+      "tech": [
+        "Kotlin",
+        "LibGDX",
+        "Desktop"
+      ],
+      "description": {
+        "en": "A desktop port of the retro CRT-style Phosphor Archive shooter, with campaign sectors, vector-inspired effects, and endless survival.",
+        "pt-BR": "Um port desktop do shooter retrô Phosphor Archive, com setores de campanha, efeitos vetoriais de estilo CRT e sobrevivência infinita."
+      },
+      "screenshot": null,
+      "detail": {
+        "en": "A separate Kotlin/LibGDX desktop adaptation of the Phosphor Archive arcade shooter, with CRT-style vector rendering, campaign sectors, and endless survival. The Android release has its own product page.",
+        "pt-BR": "Uma adaptação desktop independente em Kotlin/LibGDX do shooter Phosphor Archive, com renderização vetorial de estilo CRT, setores de campanha e sobrevivência infinita. A versão Android tem sua própria página."
+      },
+      "highlights": [
+        {
+          "en": "Vector-inspired phosphor rendering with glow and trails",
+          "pt-BR": "Renderização vetorial com brilho e rastros de fósforo"
+        },
+        {
+          "en": "Five campaign sectors and an endless survival mode",
+          "pt-BR": "Cinco setores de campanha e um modo de sobrevivência infinito"
+        },
+        {
+          "en": "Desktop keyboard, mouse, and gamepad input",
+          "pt-BR": "Entrada por teclado, mouse e controle no desktop"
+        }
+      ],
+      "related_apps": [
+        "phosphor-archive"
+      ]
     },
     {
       "id": "placecheck",
@@ -132,7 +246,25 @@
         "en": "A real-estate listing aggregator MVP with normalized ingestion, conservative deduplication, offer comparison, and source-aware inventory tracking.",
         "pt-BR": "Um MVP agregador de anúncios imobiliários com ingestão normalizada, deduplicação conservadora, comparação de ofertas e acompanhamento de estoque por fonte."
       },
-      "screenshot": null
+      "screenshot": null,
+      "detail": {
+        "en": "An experimental real-estate search foundation that brings listings from different sources into a consistent structure while preserving provenance and reducing obvious duplicates.",
+        "pt-BR": "Uma base experimental de busca imobiliária que reúne anúncios de diferentes fontes em uma estrutura consistente, preserva a origem e reduz duplicatas evidentes."
+      },
+      "highlights": [
+        {
+          "en": "Normalized ingestion from external listing sources",
+          "pt-BR": "Ingestão normalizada de fontes externas de anúncios"
+        },
+        {
+          "en": "Conservative duplicate detection and offer comparison",
+          "pt-BR": "Detecção conservadora de duplicatas e comparação de ofertas"
+        },
+        {
+          "en": "Source-aware tracking of available properties",
+          "pt-BR": "Acompanhamento da disponibilidade de imóveis por fonte"
+        }
+      ]
     },
     {
       "id": "ghost-mirror",
@@ -165,7 +297,25 @@
         "en": "A Super Mario Bros. speedrun practice tool with synchronized player, personal-best, and TAS views, ghost overlays, split comparison, and controller support.",
         "pt-BR": "Uma ferramenta de treino para speedrun de Super Mario Bros. com visualizações sincronizadas do jogador, PB e TAS, ghosts, comparação de splits e suporte a controle."
       },
-      "screenshot": null
+      "screenshot": null,
+      "detail": {
+        "en": "A specialized practice environment for comparing a player's movement against personal-best and tool-assisted reference runs in synchronized views.",
+        "pt-BR": "Um ambiente de treino especializado para comparar os movimentos do jogador com recordes pessoais e referências TAS em visualizações sincronizadas."
+      },
+      "highlights": [
+        {
+          "en": "Synchronized player, personal-best, and TAS views",
+          "pt-BR": "Visualizações sincronizadas do jogador, recorde pessoal e TAS"
+        },
+        {
+          "en": "Ghost overlays and split comparison",
+          "pt-BR": "Sobreposições de ghosts e comparação de splits"
+        },
+        {
+          "en": "Controller-supported speedrun practice",
+          "pt-BR": "Treino de speedrun com suporte a controle"
+        }
+      ]
     },
     {
       "id": "moth-controller",
@@ -198,7 +348,25 @@
         "en": "A lightweight multi-account PokéIdle companion focused on low resource use, background sessions, hunt tracking, automation, and consolidated streaming-chat connectivity.",
         "pt-BR": "Um companion leve para múltiplas contas do PokéIdle, focado em baixo consumo de recursos, sessões em segundo plano, acompanhamento de hunts, automações e conectividade consolidada com chats de streaming."
       },
-      "screenshot": null
+      "screenshot": null,
+      "detail": {
+        "en": "A lightweight desktop companion for managing multiple PokéIdle sessions with an emphasis on long-running background use and visibility across accounts.",
+        "pt-BR": "Um companion desktop leve para gerenciar várias sessões de PokéIdle, com foco em uso prolongado em segundo plano e visibilidade entre contas."
+      },
+      "highlights": [
+        {
+          "en": "Multi-account background session management",
+          "pt-BR": "Gerenciamento de sessões de múltiplas contas em segundo plano"
+        },
+        {
+          "en": "Hunt tracking and automation controls",
+          "pt-BR": "Acompanhamento de hunts e controles de automação"
+        },
+        {
+          "en": "Consolidated streaming-chat connectivity",
+          "pt-BR": "Conectividade consolidada com chats de streaming"
+        }
+      ]
     }
   ]
 }

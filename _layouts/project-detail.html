@@ -1,0 +1,66 @@
+---
+layout: default
+---
+{% assign project = site.data.projects.projects | where: "id", page.project_id | first %}
+<main id="main-content" tabindex="-1" class="project-detail-page">
+    {% if project %}
+    <header class="project-detail-hero">
+        <div class="project-meta">
+            <span class="project-kind">{{ project.type.label[page.lang] | escape }}</span>
+            <span class="project-status project-status-{{ project.status.code }}">{{ project.status.label[page.lang] | escape }}</span>
+        </div>
+        <h1>{{ project.name | escape }}</h1>
+        <p class="project-detail-lede">{{ project.description[page.lang] | escape }}</p>
+        <div class="project-detail-links">
+            <a class="btn btn-primary" href="{{ project.repository_url }}" target="_blank" rel="noopener noreferrer">{% if page.lang == 'pt-BR' %}Ver repositório{% else %}View repository{% endif %} ↗</a>
+            <a class="btn btn-secondary" href="{% if page.lang == 'pt-BR' %}/pt-BR/index.html{% else %}/index.html{% endif %}#projects">{% if page.lang == 'pt-BR' %}Explorar projetos{% else %}Explore projects{% endif %}</a>
+        </div>
+    </header>
+    {% if project.screenshot %}
+    {% assign shot = project.screenshot %}
+    <figure class="project-detail-media">
+        <img src="{% if shot.src %}{{ shot.src | relative_url }}{% else %}{{ shot | relative_url }}{% endif %}"
+             alt="{% if shot.alt %}{{ shot.alt[page.lang] | escape }}{% else %}{{ project.name | escape }}{% endif %}"
+             {% if shot.width and shot.height %}width="{{ shot.width }}" height="{{ shot.height }}"{% endif %}
+             decoding="async" loading="lazy">
+        {% if shot.caption %}<figcaption>{{ shot.caption[page.lang] | escape }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
+    <section class="project-detail-section">
+        <h2>{% if page.lang == 'pt-BR' %}Visão geral{% else %}Overview{% endif %}</h2>
+        <p>{{ project.detail[page.lang] | default: project.description[page.lang] | escape }}</p>
+    </section>
+    {% if project.highlights %}
+    <section class="project-detail-section">
+        <h2>{% if page.lang == 'pt-BR' %}Recursos e mecânicas{% else %}Features and mechanics{% endif %}</h2>
+        <ul class="project-highlight-list">
+        {% for highlight in project.highlights %}
+            <li>{{ highlight[page.lang] | escape }}</li>
+        {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+    <section class="project-detail-section">
+        <h2>{% if page.lang == 'pt-BR' %}Plataforma e tecnologias{% else %}Platform and technology{% endif %}</h2>
+        <p>{{ project.platform[page.lang] | escape }}</p>
+        <ul class="project-tech">
+            {% for technology in project.tech %}<li>{{ technology | escape }}</li>{% endfor %}
+        </ul>
+    </section>
+    {% if project.related_projects or project.related_apps %}
+    <section class="project-detail-section">
+        <h2>{% if page.lang == 'pt-BR' %}Projetos relacionados{% else %}Related projects{% endif %}</h2>
+        <ul class="project-related-links">
+        {% for related_id in project.related_projects %}
+            {% assign related = site.data.projects.projects | where: "id", related_id | first %}
+            {% if related %}<li><a href="{% if page.lang == 'pt-BR' %}/pt-BR{% endif %}/projects/{{ related.id }}.html">{{ related.name | escape }}</a></li>{% endif %}
+        {% endfor %}
+        {% for related_id in project.related_apps %}
+            {% assign related_app = site.data.apps.apps | where: "id", related_id | first %}
+            {% if related_app %}<li><a href="{{ related_app.overview[page.lang] }}">{{ related_app.name | escape }} — Android</a></li>{% endif %}
+        {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+    {% endif %}
+</main>

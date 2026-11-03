@@ -49,7 +49,31 @@
     <link rel="alternate" hreflang="pt-BR" href="{{ site.url }}{{ page.alternate_url }}">
     {% endif %}
     <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.english_url | default: page.url }}">
-    <link rel="stylesheet" href="{{ '/style.css?v=20261031b' | relative_url }}">
+    {% comment %}Only application overview pages represent an app; policy pages do not.{% endcomment %}
+    {% if social_app and page.url == social_app.overview[page.lang] %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": {{ social_app.name | jsonify }},
+      "description": {{ social_app.description[page.lang] | jsonify }},
+      "url": {{ social_url | jsonify }},
+      "inLanguage": {{ page.lang | jsonify }},
+      "applicationCategory": {% if social_app.theme == 'emoji' or social_app.theme == 'phosphor' %}"GameApplication"{% else %}"UtilitiesApplication"{% endif %},
+      "operatingSystem": "Android",
+      "identifier": {{ social_app.package | jsonify }},
+      "publisher": {
+        "@type": "Organization",
+        "name": "MOTHblank",
+        "url": {{ site.url | jsonify }}
+      }{% if social_app.icon %},
+      "image": {{ social_app.icon | absolute_url | jsonify }}{% endif %}{% if social_app.play_url %},
+      "installUrl": {{ social_app.play_url | jsonify }},
+      "sameAs": {{ social_app.play_url | jsonify }}{% endif %}
+    }
+    </script>
+    {% endif %}
+    <link rel="stylesheet" href="{{ '/style.css?v=20261102a' | relative_url }}">
 </head>
 <body>
     {% assign ui = site.data.i18n[page.lang] %}

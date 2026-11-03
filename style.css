@@ -1584,3 +1584,92 @@ main:focus {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* Reusable project detail pages and optional screenshot galleries */
+.project-title a {
+    color: inherit;
+    text-decoration: none;
+}
+.project-title a:hover,
+.project-title a:focus-visible {
+    color: var(--accent-cyan);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem 1.5rem;
+}
+.project-detail-page {
+    max-width: 850px;
+}
+.project-detail-hero {
+    padding: 1.5rem 0 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.project-detail-hero h1 {
+    margin: 0 0 1rem;
+    overflow-wrap: anywhere;
+}
+.project-detail-lede {
+    max-width: 65ch;
+    color: var(--text-primary);
+    font-size: 1.05rem;
+}
+.project-detail-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1.5rem;
+}
+.project-detail-section {
+    padding-top: 2rem;
+}
+.project-highlight-list,
+.project-related-links {
+    margin: 0 0 1rem 1.3rem;
+}
+.project-highlight-list li,
+.project-related-links li {
+    margin-bottom: 0.7rem;
+}
+.project-related-links a {
+    color: var(--accent-cyan);
+    text-underline-offset: 0.2em;
+}
+.project-detail-media {
+    margin: 2rem 0 0;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+}
+.project-detail-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.project-detail-media figcaption,
+.product-gallery-item figcaption {
+    padding: 0.55rem 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+}
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 1rem;
+}
+.product-gallery-item {
+    min-width: 0;
+    margin: 0;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+.product-gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: var(--bg-primary);
+}
