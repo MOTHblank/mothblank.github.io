@@ -112,7 +112,11 @@
         "en": "A stylized arcade shooter featuring retro CRT phosphor emulation, dynamic bloom, and responsive multi-touch controls. Challenge yourself across dynamic campaign sectors or survival mode.",
         "pt-BR": "Um shooter arcade estilizado com emulação de fósforo CRT, bloom dinâmico e controles responsivos. Enfrente setores de campanha com objetivos próprios ou sobreviva no modo infinito."
       },
-      "icon": "/assets/icons/phosphor.svg"
+      "icon": "/assets/icons/phosphor.svg",
+      "terms": {
+        "en": "/terms-phosphor.html",
+        "pt-BR": "/pt-BR/terms-phosphor.html"
+      }
     },
     {
       "id": "hestia-tuner",
