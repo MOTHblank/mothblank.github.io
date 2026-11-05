@@ -10,8 +10,8 @@ permalink: "/phosphor-archive.html"
 back_label: "back_home"
 ---
 {% assign app = site.data.apps.apps | where: "id", page.app_id | first %}
-<main id="main-content" tabindex="-1" class="product-page">
-        <section class="product-hero phosphor-product">
+<main id="main-content" tabindex="-1" class="product-page phosphor-product-page">
+        <section class="product-hero phosphor-product phosphor-crt-hero">
             <div class="product-svg-mark phosphor-mark" aria-hidden="true">
                 <svg viewBox="0 0 120 120" fill="none">
                     <path d="M60 12L102 96L60 74L18 96L60 12Z" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
@@ -20,7 +20,7 @@ back_label: "back_home"
                 </svg>
             </div>
             <div class="product-kicker phosphor-accent">{{ app.type[page.lang] | upcase }} · {{ app.status.label[page.lang] | upcase }}</div>
-            <h1>{{ app.name }}</h1>
+            <h1 class="phosphor-game-title" aria-label="{{ app.name }}"><span>PHOSPHOR</span><span>ARCHIVE</span></h1>
             <p class="product-lede">A vector-styled arcade shooter built around luminous phosphor trails, hostile space, compact missions, and high-pressure survival.</p>
             {% include product-actions.html lang=page.lang %}
         </section>
