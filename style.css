@@ -2565,3 +2565,490 @@ main:focus {
         color: #3e2723;
     }
 }
+
+
+/* Emoji Magia moonlit-storybook product page */
+.emoji-magia-product-page {
+    --emoji-sky: #7fa9c4;
+    --emoji-light-blue: #b7cbd5;
+    --emoji-lavender: #9a89b4;
+    --emoji-mint: #8fb99a;
+    --emoji-peach: #d1a36f;
+    --emoji-pink: #d4877e;
+    --emoji-cream: #f0e2c4;
+    --emoji-dark-bg: #101722;
+    --emoji-dark-surface: #182231;
+    --emoji-dark-card: #202d3d;
+    --emoji-ink: #0d131b;
+    --emoji-parchment: #e6d3aa;
+    --emoji-parchment-dim: #c9b58d;
+    --emoji-moss: #667d65;
+    --emoji-ember: #c8794f;
+    --emoji-text: #f6ebd5;
+    --emoji-muted: #9da7ac;
+    --emoji-gold: #d7b05a;
+    --emoji-border: #465361;
+    max-width: 1040px;
+    color: var(--emoji-text);
+    text-shadow: none;
+}
+
+.emoji-magia-product-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 78% 10%, rgba(230,211,170,.08), transparent 23%),
+        radial-gradient(circle at 15% 36%, rgba(127,169,196,.055), transparent 26%),
+        radial-gradient(circle at 84% 76%, rgba(154,137,180,.045), transparent 24%),
+        linear-gradient(180deg, #0d141e 0%, #101722 44%, #0c121a 100%);
+}
+
+.emoji-magia-product-page .emoji-storybook-hero {
+    overflow: hidden;
+    isolation: isolate;
+    min-height: 560px;
+    padding: clamp(3.2rem, 7vw, 5.4rem) clamp(1.4rem, 5vw, 4rem) 3.4rem;
+    border-bottom: 1px solid rgba(70,83,97,.72);
+    background:
+        radial-gradient(circle at 77% 22%, rgba(230,211,170,.17) 0 10%, rgba(230,211,170,.035) 10.3% 16%, transparent 16.4%),
+        radial-gradient(circle at 76% 21%, rgba(230,211,170,.72) 0 1px, transparent 1.6px),
+        radial-gradient(circle at 70% 12%, rgba(183,203,213,.42) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 88% 32%, rgba(183,203,213,.30) 0 1px, transparent 1.4px),
+        linear-gradient(180deg, rgba(16,23,34,.15), rgba(12,18,26,.54));
+    box-shadow: inset 0 -38px 70px rgba(8,13,20,.28);
+}
+
+.emoji-magia-product-page .emoji-product::before {
+    content: "";
+    position: absolute;
+    inset: auto -5% -2px -5%;
+    height: 34%;
+    z-index: -1;
+    background:
+        radial-gradient(ellipse at 12% 100%, rgba(102,125,101,.28) 0 16%, transparent 16.5%),
+        radial-gradient(ellipse at 38% 100%, rgba(102,125,101,.20) 0 22%, transparent 22.5%),
+        radial-gradient(ellipse at 70% 100%, rgba(102,125,101,.22) 0 18%, transparent 18.5%),
+        radial-gradient(ellipse at 95% 100%, rgba(102,125,101,.18) 0 24%, transparent 24.5%);
+    pointer-events: none;
+}
+
+.emoji-magia-product-page .emoji-storybook-hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+.emoji-magia-product-page .emoji-story-scene {
+    width: min(100%, 620px);
+    min-height: 128px;
+    margin: 0 0 1.45rem;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: clamp(.45rem, 2vw, 1rem);
+}
+
+.emoji-magia-product-page .emoji-story-scene::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: min(100%, 530px);
+    height: 1px;
+    background: linear-gradient(90deg, var(--emoji-parchment-dim), rgba(201,181,141,.22), transparent);
+}
+
+.emoji-magia-product-page .emoji-hero-figure {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 94px;
+    height: 94px;
+    margin-right: clamp(.4rem, 2vw, 1.2rem);
+    font-size: clamp(3.4rem, 8vw, 5rem);
+    line-height: 1;
+    filter: drop-shadow(0 10px 14px rgba(0,0,0,.28));
+}
+
+.emoji-magia-product-page .emoji-horde-figure {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(54px, 8vw, 76px);
+    height: clamp(54px, 8vw, 76px);
+    font-size: clamp(2.3rem, 6vw, 3.6rem);
+    line-height: 1;
+    opacity: .78;
+    filter: saturate(.72) brightness(.88) drop-shadow(0 8px 10px rgba(0,0,0,.24));
+}
+
+.emoji-magia-product-page .emoji-horde-figure:nth-of-type(3) {
+    transform: translateY(-12px) scale(1.08);
+}
+
+.emoji-magia-product-page .emoji-horde-figure:nth-of-type(4) {
+    transform: translateY(2px) scale(1.18);
+}
+
+.emoji-magia-product-page .emoji-horde-figure:nth-of-type(5) {
+    transform: translateY(-8px) scale(.94);
+}
+
+.emoji-magia-product-page .product-kicker {
+    margin-bottom: 1rem;
+    color: var(--emoji-parchment-dim);
+    font-family: var(--font-body);
+    font-size: .76rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.emoji-magia-product-page .emoji-magia-title {
+    max-width: 760px;
+    margin: 0 0 1.15rem;
+    color: var(--emoji-text);
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 8vw, 5.7rem);
+    font-weight: 850;
+    line-height: .94;
+    letter-spacing: -.06em;
+    text-transform: none;
+    text-shadow: none;
+}
+
+.emoji-magia-product-page .emoji-magia-title .emoji-magia-accent {
+    color: var(--emoji-parchment);
+    font-weight: 700;
+}
+
+.emoji-magia-product-page .product-lede {
+    max-width: 690px;
+    color: var(--emoji-parchment-dim);
+    font-size: clamp(1rem, 2.4vw, 1.2rem);
+    line-height: 1.72;
+}
+
+.emoji-magia-product-page .product-actions {
+    gap: .7rem;
+}
+
+.emoji-magia-product-page .product-actions .btn {
+    min-height: 44px;
+    padding: .66rem 1rem;
+    border-radius: 10px;
+    background: rgba(24,34,49,.78);
+    border: 1px solid var(--emoji-border);
+    color: var(--emoji-text);
+    font-family: var(--font-body);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .015em;
+    text-transform: none;
+    box-shadow: inset 0 1px 0 rgba(240,226,196,.025);
+}
+
+.emoji-magia-product-page .product-actions .btn::before,
+.emoji-magia-product-page .product-actions .btn::after {
+    content: "";
+    margin: 0;
+}
+
+.emoji-magia-product-page .product-actions .btn:hover,
+.emoji-magia-product-page .product-actions .btn:focus-visible {
+    background: var(--emoji-dark-card);
+    border-color: var(--emoji-parchment-dim);
+    color: var(--emoji-parchment);
+}
+
+.emoji-magia-product-page .product-actions .btn-store {
+    background: var(--emoji-parchment);
+    border-color: var(--emoji-parchment);
+    color: var(--emoji-ink);
+}
+
+.emoji-magia-product-page .product-actions .btn-store:hover,
+.emoji-magia-product-page .product-actions .btn-store:focus-visible {
+    background: var(--emoji-gold);
+    border-color: var(--emoji-gold);
+    color: var(--emoji-ink);
+}
+
+.emoji-magia-product-page .product-section {
+    position: relative;
+    padding: 3.45rem .4rem;
+    border-bottom-color: rgba(70,83,97,.56);
+}
+
+.emoji-magia-product-page .section-heading {
+    gap: .85rem;
+    align-items: center;
+    margin-bottom: 1.35rem;
+}
+
+.emoji-magia-product-page .section-heading > span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    height: 27px;
+    padding: 0 .5rem;
+    border: 1px solid rgba(201,181,141,.36);
+    border-radius: 999px;
+    color: var(--emoji-parchment-dim);
+    background: rgba(13,19,27,.36);
+    font-family: var(--font-mono);
+    font-size: .66rem;
+}
+
+.emoji-magia-product-page .section-heading h2 {
+    color: var(--emoji-text);
+    font-family: var(--font-heading);
+    font-size: clamp(1.35rem, 3vw, 1.85rem);
+    font-weight: 800;
+    letter-spacing: -.025em;
+    text-transform: none;
+}
+
+.emoji-magia-product-page .product-section p {
+    max-width: 80ch;
+    color: var(--emoji-muted);
+    font-size: .95rem;
+    line-height: 1.82;
+}
+
+.emoji-magia-product-page .feature-grid {
+    gap: 1rem;
+}
+
+.emoji-magia-product-page .feature-card {
+    min-height: 190px;
+    padding: 1.4rem;
+    border: 1px solid rgba(70,83,97,.82);
+    border-radius: 12px;
+    background:
+        linear-gradient(155deg, rgba(230,211,170,.025), transparent 46%),
+        var(--emoji-dark-surface);
+    box-shadow: inset 0 1px 0 rgba(240,226,196,.025);
+    transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.emoji-magia-product-page .feature-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(201,181,141,.60);
+    background:
+        linear-gradient(155deg, rgba(230,211,170,.045), transparent 48%),
+        var(--emoji-dark-card);
+}
+
+.emoji-magia-product-page .feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    min-height: 48px;
+    margin-bottom: .9rem;
+    font-size: 1.9rem;
+    line-height: 1;
+    filter: saturate(.85);
+}
+
+.emoji-magia-product-page .feature-card h3 {
+    color: var(--emoji-parchment);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 780;
+}
+
+.emoji-magia-product-page .feature-card p {
+    margin: 0;
+    color: var(--emoji-muted);
+    font-size: .89rem;
+    line-height: 1.74;
+}
+
+.emoji-magia-product-page .feature-card:nth-child(1) {
+    border-top-color: rgba(154,137,180,.52);
+}
+
+.emoji-magia-product-page .feature-card:nth-child(2) {
+    border-top-color: rgba(143,185,154,.52);
+}
+
+.emoji-magia-product-page .feature-card:nth-child(3) {
+    border-top-color: rgba(127,169,196,.54);
+}
+
+.emoji-magia-product-page .feature-card:nth-child(4) {
+    border-top-color: rgba(209,163,111,.54);
+}
+
+.emoji-magia-product-page .status-line {
+    position: relative;
+    overflow: hidden;
+    padding: 1.35rem;
+    border: 1px solid rgba(70,83,97,.82);
+    border-radius: 12px;
+    background: var(--emoji-dark-surface);
+    box-shadow: inset 0 1px 0 rgba(240,226,196,.025);
+}
+
+.emoji-magia-product-page .status-line::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3px;
+    background: var(--emoji-gold);
+}
+
+.emoji-magia-product-page .status-dot {
+    background: var(--emoji-gold);
+    box-shadow: 0 0 0 5px rgba(215,176,90,.10);
+}
+
+.emoji-magia-product-page .status-line strong {
+    color: var(--emoji-parchment);
+}
+
+.emoji-magia-product-page .status-line p {
+    color: var(--emoji-muted);
+}
+
+.emoji-magia-product-page .product-gallery {
+    gap: 1rem;
+}
+
+.emoji-magia-product-page .product-gallery-item {
+    overflow: hidden;
+    border: 1px solid rgba(70,83,97,.86);
+    border-radius: 12px;
+    background: var(--emoji-dark-surface);
+}
+
+.emoji-magia-product-page .product-gallery-item img {
+    background: var(--emoji-dark-bg);
+}
+
+.emoji-magia-product-page .product-gallery-item figcaption {
+    color: var(--emoji-muted);
+    border-top: 1px solid rgba(70,83,97,.62);
+}
+
+.emoji-magia-product-page .emoji-secondary {
+    --btn-color: var(--emoji-parchment-dim);
+    --btn-border: rgba(201,181,141,.34);
+}
+
+.emoji-magia-product-page .emoji-secondary:hover,
+.emoji-magia-product-page .emoji-secondary:focus-visible {
+    background: var(--emoji-parchment);
+    border-color: var(--emoji-parchment);
+    color: var(--emoji-ink);
+}
+
+.emoji-magia-product-page .text-cta,
+.emoji-magia-product-page a.doc-link {
+    color: var(--emoji-sky);
+    border-bottom-color: rgba(127,169,196,.44);
+    text-decoration-color: rgba(127,169,196,.44);
+}
+
+.emoji-magia-product-page .text-cta:hover,
+.emoji-magia-product-page .text-cta:focus-visible,
+.emoji-magia-product-page a.doc-link:hover,
+.emoji-magia-product-page a.doc-link:focus-visible {
+    color: var(--emoji-parchment);
+    border-bottom-color: var(--emoji-parchment);
+    text-decoration-color: var(--emoji-parchment);
+}
+
+.emoji-magia-product-page :focus-visible {
+    --focus-ring: var(--emoji-parchment);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .emoji-magia-product-page .emoji-hero-figure {
+        animation: emoji-hero-float 4.8s ease-in-out infinite;
+    }
+
+    .emoji-magia-product-page .emoji-horde-figure:nth-of-type(3) {
+        animation: emoji-horde-float-a 5.6s ease-in-out infinite;
+    }
+
+    .emoji-magia-product-page .emoji-horde-figure:nth-of-type(5) {
+        animation: emoji-horde-float-b 6.1s ease-in-out infinite;
+    }
+
+    @keyframes emoji-hero-float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
+
+    @keyframes emoji-horde-float-a {
+        0%, 100% { transform: translateY(-12px) scale(1.08); }
+        50% { transform: translateY(-17px) scale(1.08); }
+    }
+
+    @keyframes emoji-horde-float-b {
+        0%, 100% { transform: translateY(-8px) scale(.94); }
+        50% { transform: translateY(-3px) scale(.94); }
+    }
+}
+
+@media (max-width: 700px) {
+    .emoji-magia-product-page .emoji-storybook-hero {
+        min-height: 0;
+        padding: 2.8rem 1.15rem 2.5rem;
+    }
+
+    .emoji-magia-product-page .emoji-story-scene {
+        min-height: 98px;
+    }
+
+    .emoji-magia-product-page .emoji-hero-figure {
+        width: 72px;
+        height: 72px;
+        font-size: 3.5rem;
+    }
+
+    .emoji-magia-product-page .emoji-horde-figure {
+        width: 46px;
+        height: 46px;
+        font-size: 2.35rem;
+    }
+
+    .emoji-magia-product-page .emoji-magia-title {
+        font-size: clamp(2.6rem, 14vw, 4rem);
+    }
+
+    .emoji-magia-product-page .product-actions .btn {
+        flex: 1 1 calc(50% - .7rem);
+        min-width: min(100%, 145px);
+    }
+
+    .emoji-magia-product-page .product-section {
+        padding: 2.75rem .15rem;
+    }
+}
+
+@media print {
+    .emoji-magia-product-page::before,
+    .emoji-magia-product-page .emoji-product::before {
+        display: none;
+    }
+
+    .emoji-magia-product-page .emoji-storybook-hero,
+    .emoji-magia-product-page .feature-card,
+    .emoji-magia-product-page .status-line {
+        background: #fff;
+        box-shadow: none;
+    }
+
+    .emoji-magia-product-page .emoji-magia-title,
+    .emoji-magia-product-page .section-heading h2,
+    .emoji-magia-product-page .feature-card h3 {
+        color: #0d131b;
+    }
+}
