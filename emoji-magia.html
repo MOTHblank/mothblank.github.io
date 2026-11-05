@@ -10,11 +10,11 @@ permalink: "/emoji-magia.html"
 back_label: "back_home"
 ---
 {% assign app = site.data.apps.apps | where: "id", page.app_id | first %}
-<main id="main-content" tabindex="-1" class="product-page">
-<section class="product-hero emoji-product">
-    <div class="product-mark" aria-hidden="true"><span>🧙</span><span>✨</span><span>⚔️</span></div>
+<main id="main-content" tabindex="-1" class="product-page emoji-magia-product-page">
+<section class="product-hero emoji-product emoji-storybook-hero">
+    <div class="emoji-story-scene" aria-hidden="true"><span class="emoji-hero-figure">🧙</span><span class="emoji-horde-figure">🦔</span><span class="emoji-horde-figure">🦉</span><span class="emoji-horde-figure">🐗</span><span class="emoji-horde-figure">🐉</span></div>
     <div class="product-kicker">{{ app.type[page.lang] | upcase }} · {{ app.status.label[page.lang] | upcase }}</div>
-    <h1>{{ app.name }}</h1>
+    <h1 class="emoji-magia-title">Emoji <span class="emoji-magia-accent">Magia</span></h1>
     <p class="product-lede">Small heroes. Big magic. A direct-control survivors-like built around readable chaos, expressive emoji characters, and run-defining combinations.</p>
     {% include product-actions.html lang=page.lang %}
 </section>
