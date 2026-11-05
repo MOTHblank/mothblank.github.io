@@ -2,5 +2,6 @@
 {% assign ui = site.data.i18n[include.lang] %}
 <div class="product-actions">
     <a href="{{ app.privacy[include.lang] }}" class="text-cta{% if app.theme == "hestia" %} hestia-text-cta{% elsif app.theme == "phosphor" %} phosphor-text-cta{% elsif app.theme == "nota" %} nota-text-cta{% endif %}">{{ ui.privacy_policy }} →</a>
+    {% if app.terms and app.terms[include.lang] %}<a href="{{ app.terms[include.lang] }}" class="text-cta{% if app.theme == "hestia" %} hestia-text-cta{% elsif app.theme == "phosphor" %} phosphor-text-cta{% elsif app.theme == "nota" %} nota-text-cta{% endif %}">{{ ui.terms_of_service }} →</a>{% endif %}
     <a href="{{ app.eula[include.lang] }}" class="text-cta{% if app.theme == "hestia" %} hestia-text-cta{% elsif app.theme == "phosphor" %} phosphor-text-cta{% elsif app.theme == "nota" %} nota-text-cta{% endif %}">EULA →</a>
 </div>
