@@ -1673,3 +1673,462 @@ main:focus {
     object-fit: contain;
     background: var(--bg-primary);
 }
+
+
+/* Phosphor Archive game-identity product page */
+.phosphor-product-page {
+    --phosphor-green: #00ff00;
+    --phosphor-green-bright: #88ff88;
+    --phosphor-green-dark: #003300;
+    --phosphor-amber: #ffb000;
+    --phosphor-cyan: #55ffff;
+    --phosphor-white: #ffffff;
+    --phosphor-black: #000000;
+    --phosphor-panel: #020703;
+    --phosphor-edge: rgba(0, 255, 0, 0.28);
+    --phosphor-copy: #a7b9a7;
+    --phosphor-font: 'Press Start 2P', var(--font-mono);
+    max-width: 1040px;
+    padding-top: 2rem;
+    color: var(--phosphor-copy);
+    font-family: var(--font-mono);
+    text-shadow: none;
+}
+
+.phosphor-product-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 12% 18%, rgba(136, 255, 136, 0.09) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 82% 24%, rgba(255, 176, 0, 0.09) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 30% 74%, rgba(85, 255, 255, 0.08) 0 1px, transparent 1.5px),
+        #000;
+    background-size: 97px 83px, 137px 119px, 173px 151px, auto;
+}
+
+.phosphor-product-page .phosphor-crt-hero {
+    overflow: hidden;
+    isolation: isolate;
+    min-height: 560px;
+    padding: clamp(3.2rem, 8vw, 6rem) clamp(1.3rem, 5vw, 4rem) 3.3rem;
+    border: 1px solid rgba(0, 255, 0, 0.42);
+    background:
+        radial-gradient(circle at 50% 43%, rgba(255, 255, 255, 0.12) 0 2px, rgba(255, 176, 0, 0.08) 3px, transparent 15%),
+        radial-gradient(circle at 16% 36%, rgba(255, 176, 0, 0.30) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 82% 58%, rgba(85, 255, 255, 0.30) 0 1px, transparent 1.5px),
+        linear-gradient(180deg, #000 0%, #010601 52%, #000 100%);
+    box-shadow:
+        inset 0 0 80px rgba(0, 255, 0, 0.045),
+        0 0 32px rgba(0, 255, 0, 0.08);
+}
+
+.phosphor-product-page .phosphor-product::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,.62) 0 1px, transparent 1.3px),
+        radial-gradient(circle, rgba(136,255,136,.38) 0 1px, transparent 1.4px);
+    background-size: 76px 76px, 131px 131px;
+    background-position: 15px 22px, 61px 37px;
+    opacity: .38;
+    pointer-events: none;
+}
+
+.phosphor-product-page .phosphor-crt-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 8;
+    pointer-events: none;
+    background:
+        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, .20) 50%),
+        linear-gradient(90deg, rgba(255, 0, 0, .018), rgba(0, 255, 0, .008), rgba(0, 0, 255, .018));
+    background-size: 100% 3px, 4px 100%;
+    mix-blend-mode: screen;
+    opacity: .76;
+}
+
+.phosphor-product-page .phosphor-crt-hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+.phosphor-product-page .phosphor-mark {
+    width: 76px;
+    height: 76px;
+    margin-bottom: 1.8rem;
+    color: var(--phosphor-amber);
+    filter:
+        drop-shadow(0 0 4px rgba(255,176,0,.9))
+        drop-shadow(0 0 16px rgba(255,176,0,.35));
+}
+
+.phosphor-product-page .phosphor-mark svg path:first-child {
+    stroke-width: 3;
+}
+
+.phosphor-product-page .phosphor-mark svg path:nth-child(2) {
+    fill: transparent;
+    stroke: var(--phosphor-cyan);
+    stroke-width: 2;
+    opacity: .9;
+}
+
+.phosphor-product-page .phosphor-mark svg circle {
+    fill: var(--phosphor-white);
+    filter: drop-shadow(0 0 7px var(--phosphor-white));
+}
+
+.phosphor-product-page .product-kicker {
+    margin-bottom: 1.25rem;
+    color: var(--phosphor-green-bright);
+    font-family: var(--phosphor-font);
+    font-size: clamp(.58rem, 1.45vw, .72rem);
+    line-height: 1.8;
+    letter-spacing: .08em;
+    text-shadow: 0 0 8px rgba(136,255,136,.35);
+}
+
+.phosphor-product-page .phosphor-game-title {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 0 1.6rem;
+    color: var(--phosphor-green);
+    font-family: var(--phosphor-font);
+    font-size: clamp(2rem, 7vw, 5.25rem);
+    font-weight: 400;
+    line-height: 1.28;
+    letter-spacing: -.02em;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 4px rgba(0,255,0,.95),
+        0 0 13px rgba(0,255,0,.42),
+        0 0 32px rgba(0,255,0,.16);
+}
+
+.phosphor-product-page .phosphor-game-title span:last-child {
+    margin-left: clamp(.4rem, 4vw, 3.2rem);
+}
+
+.phosphor-product-page .product-lede {
+    max-width: 690px;
+    color: var(--phosphor-white);
+    font-family: var(--font-mono);
+    font-size: clamp(.93rem, 2.2vw, 1.08rem);
+    line-height: 1.75;
+    text-shadow: 0 0 8px rgba(255,255,255,.08);
+}
+
+.phosphor-product-page .product-actions {
+    gap: .7rem;
+}
+
+.phosphor-product-page .product-actions .btn {
+    min-height: 42px;
+    padding: .7rem .9rem;
+    background: rgba(0,0,0,.72);
+    border-color: rgba(136,255,136,.34);
+    color: var(--phosphor-white);
+    font-family: var(--phosphor-font);
+    font-size: clamp(.5rem, 1.2vw, .62rem);
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: 0;
+    box-shadow: inset 0 0 0 1px rgba(0,255,0,.04);
+}
+
+.phosphor-product-page .product-actions .btn:hover,
+.phosphor-product-page .product-actions .btn:focus-visible {
+    background: rgba(255,176,0,.08);
+    border-color: var(--phosphor-amber);
+    color: var(--phosphor-amber);
+    box-shadow: 0 0 14px rgba(255,176,0,.18);
+}
+
+.phosphor-product-page .product-actions .btn[href*="play.google.com"] {
+    color: var(--phosphor-amber);
+    border-color: rgba(255,176,0,.72);
+    text-shadow: 0 0 8px rgba(255,176,0,.28);
+}
+
+.phosphor-product-page .product-actions .btn[href*="itch.io"] {
+    color: var(--phosphor-cyan);
+    border-color: rgba(85,255,255,.64);
+    text-shadow: 0 0 8px rgba(85,255,255,.24);
+}
+
+.phosphor-product-page .product-actions .btn[href*="play.google.com"]:hover,
+.phosphor-product-page .product-actions .btn[href*="play.google.com"]:focus-visible {
+    background: var(--phosphor-amber);
+    color: #000;
+}
+
+.phosphor-product-page .product-actions .btn[href*="itch.io"]:hover,
+.phosphor-product-page .product-actions .btn[href*="itch.io"]:focus-visible {
+    background: var(--phosphor-cyan);
+    color: #000;
+}
+
+.phosphor-product-page .product-gallery {
+    gap: .8rem;
+    padding: 1.2rem 0 0;
+}
+
+.phosphor-product-page .product-gallery-item {
+    overflow: hidden;
+    background: #000;
+    border-color: rgba(0,255,0,.28);
+    box-shadow: 0 0 20px rgba(0,255,0,.035);
+}
+
+.phosphor-product-page .product-gallery-item img {
+    background: #000;
+    filter: saturate(.92) contrast(1.04);
+}
+
+.phosphor-product-page .product-gallery-item figcaption {
+    color: #819181;
+    border-top: 1px solid rgba(0,255,0,.14);
+    font-family: var(--phosphor-font);
+    font-size: .52rem;
+    line-height: 1.65;
+}
+
+.phosphor-product-page .product-section {
+    position: relative;
+    padding: 3.4rem clamp(.15rem, 2vw, 1.2rem);
+    border-bottom-color: rgba(0,255,0,.18);
+}
+
+.phosphor-product-page .section-heading {
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.phosphor-product-page .section-heading > span {
+    min-width: 2.7rem;
+    color: var(--phosphor-amber);
+    font-family: var(--phosphor-font);
+    font-size: .58rem;
+    text-shadow: 0 0 7px rgba(255,176,0,.26);
+}
+
+.phosphor-product-page .section-heading h2,
+.phosphor-product-page .product-section > h2 {
+    color: var(--phosphor-green-bright);
+    font-family: var(--phosphor-font);
+    font-size: clamp(.82rem, 2.2vw, 1.12rem);
+    font-weight: 400;
+    line-height: 1.65;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+    text-shadow: 0 0 9px rgba(136,255,136,.22);
+}
+
+.phosphor-product-page .product-section > h2 {
+    margin-bottom: 1.4rem;
+    border-left: 2px solid var(--phosphor-amber);
+    padding-left: 1rem;
+}
+
+.phosphor-product-page .product-section > h2::before {
+    content: "";
+}
+
+.phosphor-product-page .product-section p {
+    max-width: 78ch;
+    color: var(--phosphor-copy);
+    font-family: var(--font-mono);
+    font-size: .92rem;
+    line-height: 1.85;
+}
+
+.phosphor-product-page .feature-grid {
+    gap: .85rem;
+}
+
+.phosphor-product-page .feature-card {
+    position: relative;
+    min-height: 190px;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg, rgba(0,255,0,.028), transparent 40%),
+        var(--phosphor-panel);
+    border-color: rgba(0,255,0,.22);
+    padding: 1.35rem;
+    transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.phosphor-product-page .feature-card::before,
+.phosphor-product-page .status-line::before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    width: 26px;
+    height: 3px;
+    background: var(--phosphor-cyan);
+    box-shadow: 0 0 8px rgba(85,255,255,.28);
+}
+
+.phosphor-product-page .feature-card:hover {
+    border-color: rgba(255,176,0,.72);
+    box-shadow: 0 0 18px rgba(255,176,0,.09);
+    transform: translateY(-2px);
+}
+
+.phosphor-product-page .feature-icon {
+    color: var(--phosphor-green);
+    font-family: var(--phosphor-font);
+    font-size: 1.35rem;
+    text-shadow: 0 0 9px rgba(0,255,0,.38);
+}
+
+.phosphor-product-page .feature-card:nth-child(2) .feature-icon {
+    color: var(--phosphor-amber);
+    text-shadow: 0 0 9px rgba(255,176,0,.32);
+}
+
+.phosphor-product-page .feature-card:nth-child(3) .feature-icon {
+    color: var(--phosphor-cyan);
+    text-shadow: 0 0 9px rgba(85,255,255,.26);
+}
+
+.phosphor-product-page .feature-card:nth-child(4) .feature-icon {
+    color: var(--phosphor-white);
+    text-shadow: 0 0 9px rgba(255,255,255,.24);
+}
+
+.phosphor-product-page .feature-card h3,
+.phosphor-product-page .status-line strong {
+    color: var(--phosphor-white);
+    font-family: var(--phosphor-font);
+    font-size: .68rem;
+    font-weight: 400;
+    line-height: 1.75;
+    text-transform: uppercase;
+}
+
+.phosphor-product-page .feature-card p {
+    font-size: .86rem;
+    line-height: 1.75;
+}
+
+.phosphor-product-page .status-line {
+    position: relative;
+    background: var(--phosphor-panel);
+    border-color: rgba(0,255,0,.30);
+    box-shadow: inset 0 0 28px rgba(0,255,0,.025);
+}
+
+.phosphor-product-page .status-dot {
+    width: 9px;
+    height: 9px;
+    background: var(--phosphor-green);
+    box-shadow:
+        0 0 5px rgba(0,255,0,.95),
+        0 0 14px rgba(0,255,0,.48);
+}
+
+.phosphor-product-page .status-line p {
+    color: #8fa48f;
+}
+
+.phosphor-product-page .phosphor-text-cta,
+.phosphor-product-page a.doc-link {
+    color: var(--phosphor-cyan);
+    border-bottom-color: rgba(85,255,255,.42);
+    text-decoration-color: rgba(85,255,255,.42);
+    text-shadow: 0 0 7px rgba(85,255,255,.18);
+}
+
+.phosphor-product-page .phosphor-text-cta {
+    font-family: var(--phosphor-font);
+    font-size: .58rem;
+    line-height: 1.8;
+}
+
+.phosphor-product-page .phosphor-text-cta:hover,
+.phosphor-product-page .phosphor-text-cta:focus-visible,
+.phosphor-product-page a.doc-link:hover,
+.phosphor-product-page a.doc-link:focus-visible {
+    color: var(--phosphor-amber);
+    border-bottom-color: var(--phosphor-amber);
+    text-decoration-color: var(--phosphor-amber);
+}
+
+.phosphor-product-page :focus-visible {
+    --focus-ring: var(--phosphor-amber);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .phosphor-product-page .phosphor-game-title {
+        animation: phosphor-title-pulse 3.4s ease-in-out infinite;
+    }
+
+    @keyframes phosphor-title-pulse {
+        0%, 100% {
+            filter: brightness(.96);
+        }
+        50% {
+            filter: brightness(1.08);
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .phosphor-product-page {
+        padding-top: 1.1rem;
+    }
+
+    .phosphor-product-page .phosphor-crt-hero {
+        min-height: 0;
+        padding: 3rem 1.15rem 2.4rem;
+    }
+
+    .phosphor-product-page .phosphor-game-title {
+        font-size: clamp(1.75rem, 11vw, 3.15rem);
+        line-height: 1.35;
+    }
+
+    .phosphor-product-page .phosphor-game-title span:last-child {
+        margin-left: 0;
+    }
+
+    .phosphor-product-page .product-actions .btn {
+        flex: 1 1 calc(50% - .7rem);
+        min-width: min(100%, 145px);
+    }
+
+    .phosphor-product-page .product-section {
+        padding: 2.7rem .2rem;
+    }
+}
+
+@media print {
+    .phosphor-product-page::before,
+    .phosphor-product-page .phosphor-crt-hero::after {
+        display: none;
+    }
+
+    .phosphor-product-page .phosphor-crt-hero,
+    .phosphor-product-page .feature-card,
+    .phosphor-product-page .status-line {
+        background: #fff;
+        box-shadow: none;
+    }
+
+    .phosphor-product-page .phosphor-game-title,
+    .phosphor-product-page .section-heading h2,
+    .phosphor-product-page .product-section > h2 {
+        color: #064b06;
+        text-shadow: none;
+    }
+}
