@@ -67,26 +67,26 @@
       "name": "Phosphor Archive",
       "package": "com.mothblank.phosphorarchive",
       "type": {
-        "en": "Android Game",
-        "pt-BR": "Jogo Android"
+        "en": "Game",
+        "pt-BR": "Jogo"
       },
       "status": {
-        "code": "open-testing",
+        "code": "production",
         "label": {
-          "en": "Open Testing",
-          "pt-BR": "Teste aberto"
+          "en": "Production",
+          "pt-BR": "Produção"
         },
         "summary": {
-          "en": "Android release in open testing",
-          "pt-BR": "Versão Android em teste aberto"
+          "en": "Available on Android and desktop",
+          "pt-BR": "Disponível para Android e desktop"
         },
         "detail": {
-          "en": "The Android repository is the production source of truth. A separate desktop port is being prepared for itch.io and possible later Steam distribution.",
-          "pt-BR": "O repositório Android é a fonte oficial da versão de produção. Um port separado para desktop está sendo preparado para itch.io e possivelmente Steam depois."
+          "en": "Phosphor Archive is publicly available on Google Play for Android and on itch.io for Windows, Linux, and macOS.",
+          "pt-BR": "Phosphor Archive está disponível publicamente na Google Play para Android e no itch.io para Windows, Linux e macOS."
         }
       },
       "play_url": "https://play.google.com/store/apps/details?id=com.mothblank.phosphorarchive",
-      "testing_url": "https://groups.google.com/g/mothblankdev",
+      "testing_url": null,
       "overview": {
         "en": "/phosphor-archive.html",
         "pt-BR": "/pt-BR/phosphor-archive.html"
@@ -109,14 +109,15 @@
         "pt-BR": "Visão geral"
       },
       "description": {
-        "en": "A stylized arcade shooter featuring retro CRT phosphor emulation, dynamic bloom, and responsive multi-touch controls. Challenge yourself across dynamic campaign sectors or survival mode.",
-        "pt-BR": "Um shooter arcade estilizado com emulação de fósforo CRT, bloom dinâmico e controles responsivos. Enfrente setores de campanha com objetivos próprios ou sobreviva no modo infinito."
+        "en": "A stylized arcade space shooter with retro CRT phosphor emulation, dynamic bloom, campaign sectors, Endless mode, and responsive controls. Available on Android, Windows, Linux, and macOS.",
+        "pt-BR": "Um shooter espacial arcade estilizado com emulação de fósforo CRT, bloom dinâmico, campanha, modo infinito e controles responsivos. Disponível para Android, Windows, Linux e macOS."
       },
       "icon": "/assets/icons/phosphor.svg",
       "terms": {
         "en": "/terms-phosphor.html",
         "pt-BR": "/pt-BR/terms-phosphor.html"
-      }
+      },
+      "desktop_url": "https://mothblank.itch.io/phosphor-archive"
     },
     {
       "id": "hestia-tuner",
