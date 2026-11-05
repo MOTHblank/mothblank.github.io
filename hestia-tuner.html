@@ -11,8 +11,8 @@ back_label: "back_home"
 back_label: "back_home"
 ---
 {% assign app = site.data.apps.apps | where: "id", page.app_id | first %}
-<main id="main-content" tabindex="-1" class="product-page">
-        <section class="product-hero hestia-product">
+<main id="main-content" tabindex="-1" class="product-page hestia-product-page">
+        <section class="product-hero hestia-product hestia-autumn-hero">
             <div class="product-svg-mark hestia-mark" aria-hidden="true">
                 <svg viewBox="0 0 120 120" fill="none">
                     <path d="M60 12L36 103H84L60 12Z" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
@@ -22,7 +22,7 @@ back_label: "back_home"
                 </svg>
             </div>
             <div class="product-kicker hestia-accent">{{ app.type[page.lang] | upcase }} · {{ app.status.label[page.lang] | upcase }}</div>
-            <h1>{{ app.name }}</h1>
+            <h1 class="hestia-title">Hestia <span class="hestia-title-accent">Tuner</span></h1>
             <p class="product-lede">A focused guitar tuner and mechanical metronome built for stable pitch feedback, precise timing, and fast use during practice.</p>
             {% include product-actions.html lang=page.lang %}
         </section>
