@@ -2132,3 +2132,436 @@ main:focus {
         text-shadow: none;
     }
 }
+
+
+/* Hestia Tuner autumn-identity product page */
+.hestia-product-page {
+    --hestia-bg: #2c2112;
+    --hestia-surface: #4b3a23;
+    --hestia-surface-variant: #3a3226;
+    --hestia-container: #7c6240;
+    --hestia-burnt: #b05c12;
+    --hestia-deep-amber: #ff8c00;
+    --hestia-gold: #d8a03a;
+    --hestia-amber: #f7931e;
+    --hestia-rust: #b22222;
+    --hestia-olive: #7a6a3a;
+    --hestia-earth: #6b4f27;
+    --hestia-warm-brown: #a0522d;
+    --hestia-dark-brown: #3e2723;
+    --hestia-cream: #f5e9da;
+    --hestia-gray: #b8a99a;
+    --hestia-blue: #4fc3f7;
+    max-width: 1040px;
+    color: var(--hestia-cream);
+    text-shadow: none;
+}
+
+.hestia-product-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 15% 12%, rgba(216, 160, 58, .09), transparent 24%),
+        radial-gradient(circle at 85% 36%, rgba(176, 92, 18, .10), transparent 30%),
+        radial-gradient(circle at 45% 88%, rgba(122, 106, 58, .07), transparent 28%);
+}
+
+.hestia-product-page .hestia-autumn-hero {
+    overflow: hidden;
+    isolation: isolate;
+    padding: clamp(3rem, 7vw, 5rem) clamp(1.5rem, 5vw, 4rem) 3.2rem;
+    border: 1px solid rgba(160, 82, 45, .55);
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 78% 22%, rgba(216, 160, 58, .10), transparent 24%),
+        radial-gradient(circle at 12% 78%, rgba(122, 106, 58, .09), transparent 26%),
+        linear-gradient(180deg, #2c2112 0%, #4b3a23 52%, #2c2112 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(245, 233, 218, .05),
+        0 24px 80px rgba(44, 33, 18, .30);
+}
+
+.hestia-product-page .hestia-product::before {
+    content: "";
+    position: absolute;
+    right: clamp(-90px, -6vw, -20px);
+    top: 50%;
+    width: clamp(260px, 38vw, 420px);
+    aspect-ratio: 1;
+    transform: translateY(-50%);
+    border: 1px solid rgba(216, 160, 58, .16);
+    border-radius: 50%;
+    background:
+        conic-gradient(
+            from 225deg,
+            transparent 0 8deg,
+            rgba(245, 233, 218, .16) 8deg 9deg,
+            transparent 9deg 17deg
+        );
+    -webkit-mask: radial-gradient(circle, transparent 0 53%, #000 54% 56%, transparent 57% 64%, #000 65% 66%, transparent 67%);
+    mask: radial-gradient(circle, transparent 0 53%, #000 54% 56%, transparent 57% 64%, #000 65% 66%, transparent 67%);
+    opacity: .9;
+    pointer-events: none;
+}
+
+.hestia-product-page .hestia-product::after {
+    content: "";
+    position: absolute;
+    right: clamp(25px, 10vw, 110px);
+    top: 49%;
+    width: clamp(105px, 13vw, 150px);
+    height: 3px;
+    transform-origin: 92% 50%;
+    transform: rotate(-18deg);
+    background: linear-gradient(90deg, transparent, var(--hestia-burnt) 28%, var(--hestia-gold));
+    border-radius: 999px;
+    box-shadow: 0 0 18px rgba(216, 160, 58, .18);
+    pointer-events: none;
+}
+
+.hestia-product-page .hestia-product > * {
+    position: relative;
+    z-index: 2;
+}
+
+.hestia-product-page .hestia-mark {
+    width: 108px;
+    height: 108px;
+    margin-bottom: 1.6rem;
+    padding: 18px;
+    color: var(--hestia-gold);
+    border: 1px solid rgba(216, 160, 58, .48);
+    border-radius: 50%;
+    background: rgba(44, 33, 18, .72);
+    box-shadow:
+        inset 0 0 0 8px rgba(124, 98, 64, .16),
+        0 12px 35px rgba(44, 33, 18, .32);
+    filter: none;
+}
+
+.hestia-product-page .hestia-mark svg path:first-child {
+    stroke: var(--hestia-amber);
+    stroke-width: 4;
+}
+
+.hestia-product-page .hestia-mark svg path:nth-child(2) {
+    stroke: var(--hestia-cream);
+    stroke-width: 4;
+}
+
+.hestia-product-page .hestia-mark svg circle {
+    fill: var(--hestia-gold);
+}
+
+.hestia-product-page .hestia-mark svg path:last-child {
+    stroke: var(--hestia-gray);
+    opacity: .72;
+}
+
+.hestia-product-page .product-kicker {
+    color: var(--hestia-gold);
+    font-family: var(--font-body);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.hestia-product-page .hestia-title {
+    max-width: 760px;
+    margin-bottom: 1rem;
+    color: var(--hestia-cream);
+    font-family: var(--font-heading);
+    font-size: clamp(2.8rem, 7vw, 5.4rem);
+    font-weight: 760;
+    line-height: .98;
+    letter-spacing: -.055em;
+    text-transform: none;
+    text-shadow: none;
+}
+
+.hestia-product-page .hestia-title .hestia-title-accent {
+    color: var(--hestia-amber);
+    font-weight: 650;
+}
+
+.hestia-product-page .product-lede {
+    max-width: 680px;
+    color: var(--hestia-gray);
+    font-size: clamp(1rem, 2.3vw, 1.2rem);
+    line-height: 1.7;
+}
+
+.hestia-product-page .product-actions {
+    gap: .7rem;
+}
+
+.hestia-product-page .product-actions .btn {
+    min-height: 46px;
+    padding: .72rem 1.05rem;
+    border-radius: 16px;
+    border-color: rgba(107, 79, 39, .82);
+    background: var(--hestia-surface-variant);
+    color: var(--hestia-cream);
+    font-family: var(--font-body);
+    font-size: .78rem;
+    font-weight: 650;
+    letter-spacing: .02em;
+    text-transform: none;
+    box-shadow: inset 0 1px 0 rgba(245,233,218,.04);
+}
+
+.hestia-product-page .product-actions .btn::before,
+.hestia-product-page .product-actions .btn::after {
+    content: "";
+    margin: 0;
+}
+
+.hestia-product-page .product-actions .btn:hover,
+.hestia-product-page .product-actions .btn:focus-visible {
+    background: var(--hestia-container);
+    border-color: var(--hestia-gold);
+    color: var(--hestia-cream);
+    box-shadow: 0 8px 22px rgba(44,33,18,.26);
+}
+
+.hestia-product-page .product-actions .btn-store {
+    background: var(--hestia-burnt);
+    color: var(--hestia-cream);
+    border-color: var(--hestia-burnt);
+}
+
+.hestia-product-page .product-actions .btn-store:hover,
+.hestia-product-page .product-actions .btn-store:focus-visible {
+    background: var(--hestia-amber);
+    border-color: var(--hestia-amber);
+    color: var(--hestia-dark-brown);
+}
+
+.hestia-product-page .product-section {
+    padding: 3.35rem .4rem;
+    border-bottom-color: rgba(107,79,39,.58);
+}
+
+.hestia-product-page .section-heading {
+    gap: .9rem;
+    align-items: center;
+    margin-bottom: 1.4rem;
+}
+
+.hestia-product-page .section-heading > span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: var(--hestia-surface);
+    border: 1px solid var(--hestia-earth);
+    color: var(--hestia-gold);
+    font-family: var(--font-body);
+    font-size: .7rem;
+    font-weight: 750;
+}
+
+.hestia-product-page .section-heading h2 {
+    color: var(--hestia-cream);
+    font-family: var(--font-heading);
+    font-size: clamp(1.35rem, 3vw, 1.8rem);
+    font-weight: 680;
+    letter-spacing: -.025em;
+}
+
+.hestia-product-page .product-section p {
+    max-width: 78ch;
+    color: var(--hestia-gray);
+    font-size: .95rem;
+    line-height: 1.8;
+}
+
+.hestia-product-page .feature-grid {
+    gap: 1rem;
+}
+
+.hestia-product-page .feature-card {
+    min-height: 190px;
+    padding: 1.45rem;
+    border: 1px solid var(--hestia-earth);
+    border-radius: 16px;
+    background:
+        linear-gradient(155deg, rgba(124,98,64,.14), transparent 45%),
+        var(--hestia-surface-variant);
+    box-shadow: inset 0 1px 0 rgba(245,233,218,.035);
+    transition: transform .18s ease, border-color .18s ease, background .18s ease, box-shadow .18s ease;
+}
+
+.hestia-product-page .feature-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--hestia-gold);
+    background:
+        linear-gradient(155deg, rgba(216,160,58,.09), transparent 48%),
+        var(--hestia-surface);
+    box-shadow: 0 14px 36px rgba(44,33,18,.20);
+}
+
+.hestia-product-page .feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: .95rem;
+    border-radius: 12px;
+    background: var(--hestia-bg);
+    color: var(--hestia-gold);
+    font-size: 1.25rem;
+}
+
+.hestia-product-page .feature-card:nth-child(2) .feature-icon {
+    color: var(--hestia-blue);
+}
+
+.hestia-product-page .feature-card:nth-child(3) .feature-icon {
+    color: var(--hestia-amber);
+}
+
+.hestia-product-page .feature-card:nth-child(4) .feature-icon {
+    color: var(--hestia-olive);
+}
+
+.hestia-product-page .feature-card h3 {
+    color: var(--hestia-cream);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 680;
+}
+
+.hestia-product-page .feature-card p {
+    margin: 0;
+    color: var(--hestia-gray);
+    font-size: .89rem;
+    line-height: 1.72;
+}
+
+.hestia-product-page .status-line {
+    position: relative;
+    overflow: hidden;
+    padding: 1.35rem;
+    border: 1px solid var(--hestia-earth);
+    border-radius: 16px;
+    background: var(--hestia-surface-variant);
+    box-shadow: inset 0 1px 0 rgba(245,233,218,.04);
+}
+
+.hestia-product-page .status-line::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: var(--hestia-burnt);
+}
+
+.hestia-product-page .status-dot {
+    background: var(--hestia-gold);
+    box-shadow: 0 0 0 5px rgba(216,160,58,.12);
+}
+
+.hestia-product-page .status-line strong {
+    color: var(--hestia-cream);
+}
+
+.hestia-product-page .status-line p {
+    color: var(--hestia-gray);
+}
+
+.hestia-product-page .product-gallery {
+    gap: 1rem;
+}
+
+.hestia-product-page .product-gallery-item {
+    overflow: hidden;
+    border: 1px solid var(--hestia-earth);
+    border-radius: 18px;
+    background: var(--hestia-surface-variant);
+    box-shadow: 0 12px 32px rgba(44,33,18,.14);
+}
+
+.hestia-product-page .product-gallery-item img {
+    background: var(--hestia-bg);
+}
+
+.hestia-product-page .product-gallery-item figcaption {
+    color: var(--hestia-gray);
+    border-top: 1px solid var(--hestia-earth);
+}
+
+.hestia-product-page .hestia-text-cta,
+.hestia-product-page a.doc-link {
+    color: var(--hestia-amber);
+    border-bottom-color: rgba(247,147,30,.45);
+    text-decoration-color: rgba(247,147,30,.45);
+    font-weight: 650;
+}
+
+.hestia-product-page .hestia-text-cta:hover,
+.hestia-product-page .hestia-text-cta:focus-visible,
+.hestia-product-page a.doc-link:hover,
+.hestia-product-page a.doc-link:focus-visible {
+    color: var(--hestia-gold);
+    border-bottom-color: var(--hestia-gold);
+    text-decoration-color: var(--hestia-gold);
+}
+
+.hestia-product-page :focus-visible {
+    --focus-ring: var(--hestia-gold);
+}
+
+@media (max-width: 700px) {
+    .hestia-product-page .hestia-autumn-hero {
+        padding: 2.8rem 1.2rem 2.3rem;
+        border-radius: 22px;
+    }
+
+    .hestia-product-page .hestia-product::before,
+    .hestia-product-page .hestia-product::after {
+        opacity: .28;
+    }
+
+    .hestia-product-page .hestia-title {
+        font-size: clamp(2.45rem, 13vw, 3.8rem);
+    }
+
+    .hestia-product-page .product-actions .btn {
+        flex: 1 1 calc(50% - .7rem);
+        min-width: min(100%, 145px);
+    }
+
+    .hestia-product-page .product-section {
+        padding: 2.7rem .15rem;
+    }
+}
+
+@media print {
+    .hestia-product-page::before,
+    .hestia-product-page .hestia-product::before,
+    .hestia-product-page .hestia-product::after {
+        display: none;
+    }
+
+    .hestia-product-page .hestia-autumn-hero,
+    .hestia-product-page .feature-card,
+    .hestia-product-page .status-line {
+        background: #fff;
+        box-shadow: none;
+    }
+
+    .hestia-product-page .hestia-title,
+    .hestia-product-page .section-heading h2,
+    .hestia-product-page .feature-card h3 {
+        color: #3e2723;
+    }
+}
