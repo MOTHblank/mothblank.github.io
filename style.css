@@ -3052,3 +3052,445 @@ main:focus {
         color: #0d131b;
     }
 }
+
+
+/* NotaSegura secure-document product page */
+.notasegura-product-page {
+    --nota-blue: #0d47a1;
+    --nota-blue-container: #dce8ff;
+    --nota-blue-deep: #082e68;
+    --nota-green: #2e7d32;
+    --nota-green-container: #d7f2d4;
+    --nota-orange: #9a4d00;
+    --nota-orange-container: #ffdcc1;
+    --nota-red: #b3261e;
+    --nota-bg: #fdfbff;
+    --nota-text: #1a1c1e;
+    --nota-muted: #44474f;
+    --nota-surface-variant: #e1e2ec;
+    --nota-outline: #5f636b;
+    max-width: 1040px;
+    margin-top: 1.4rem;
+    margin-bottom: 2.5rem;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid rgba(95,99,107,.42);
+    border-radius: 24px;
+    background: var(--nota-bg);
+    color: var(--nota-text);
+    box-shadow: 0 26px 80px rgba(0,0,0,.22);
+    text-shadow: none;
+}
+
+.notasegura-product-page .nota-secure-hero {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    padding: clamp(4.7rem, 9vw, 7rem) clamp(1.5rem, 6vw, 4.5rem) 3.5rem;
+    border-bottom: 1px solid #c7cbd5;
+    background:
+        radial-gradient(circle at 84% 34%, rgba(46,125,50,.10), transparent 22%),
+        linear-gradient(155deg, #ffffff 0%, #f6f8ff 48%, #eef4ff 100%);
+}
+
+.notasegura-product-page .nota-secure-hero::before {
+    content: "NOTASEGURA";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 52px;
+    padding: 0 clamp(1.2rem, 4vw, 2.5rem);
+    display: flex;
+    align-items: center;
+    background: var(--nota-blue);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: .92rem;
+    font-weight: 750;
+    letter-spacing: .01em;
+    box-shadow: 0 2px 8px rgba(13,71,161,.18);
+}
+
+.notasegura-product-page .nota-secure-hero::after {
+    content: "";
+    position: absolute;
+    right: clamp(18px, 8vw, 90px);
+    top: clamp(88px, 13vw, 132px);
+    width: clamp(190px, 28vw, 285px);
+    height: clamp(245px, 35vw, 350px);
+    z-index: -1;
+    border: 1px solid #c7cbd5;
+    border-radius: 18px;
+    background:
+        linear-gradient(var(--nota-blue-container), var(--nota-blue-container)) 24px 28px / 48% 12px no-repeat,
+        linear-gradient(#d1d5dd, #d1d5dd) 24px 62px / 72% 8px no-repeat,
+        linear-gradient(#d1d5dd, #d1d5dd) 24px 86px / 58% 8px no-repeat,
+        linear-gradient(var(--nota-green-container), var(--nota-green-container)) 24px 125px / calc(100% - 48px) 58px no-repeat,
+        linear-gradient(#d1d5dd, #d1d5dd) 24px 211px / 66% 8px no-repeat,
+        linear-gradient(#d1d5dd, #d1d5dd) 24px 235px / 74% 8px no-repeat,
+        #fff;
+    box-shadow:
+        0 16px 38px rgba(8,46,104,.10),
+        -18px 20px 0 -4px var(--nota-blue-container);
+    transform: rotate(2.2deg);
+    opacity: .92;
+}
+
+.notasegura-product-page .nota-secure-hero > * {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.notasegura-product-page .nota-mark {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 1.45rem;
+    padding: 15px;
+    border-radius: 22px;
+    color: var(--nota-blue);
+    background: var(--nota-blue-container);
+    border: 1px solid rgba(13,71,161,.18);
+    filter: none;
+    box-shadow: 0 12px 28px rgba(13,71,161,.10);
+}
+
+.notasegura-product-page .nota-mark svg path {
+    stroke: var(--nota-blue);
+}
+
+.notasegura-product-page .nota-mark svg path:last-child {
+    stroke: var(--nota-green);
+}
+
+.notasegura-product-page .product-kicker {
+    margin-bottom: .85rem;
+    color: var(--nota-green);
+    font-family: var(--font-body);
+    font-size: .82rem;
+    font-weight: 750;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.notasegura-product-page .nota-title {
+    margin: 0 0 1.1rem;
+    color: var(--nota-text);
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 7.5vw, 5.5rem);
+    font-weight: 780;
+    line-height: .98;
+    letter-spacing: -.055em;
+    text-transform: none;
+    text-shadow: none;
+}
+
+.notasegura-product-page .nota-title .nota-title-accent {
+    color: var(--nota-blue);
+}
+
+.notasegura-product-page .product-lede {
+    max-width: 640px;
+    margin-bottom: 1.8rem;
+    color: var(--nota-muted);
+    font-size: clamp(1.04rem, 2.4vw, 1.22rem);
+    font-weight: 500;
+    line-height: 1.72;
+}
+
+.notasegura-product-page .product-actions {
+    gap: .75rem;
+}
+
+.notasegura-product-page .product-actions .btn {
+    min-height: 50px;
+    padding: .78rem 1.1rem;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid #b8bdc7;
+    color: var(--nota-blue);
+    font-family: var(--font-body);
+    font-size: .88rem;
+    font-weight: 750;
+    letter-spacing: 0;
+    text-transform: none;
+    box-shadow: 0 2px 6px rgba(26,28,30,.06);
+}
+
+.notasegura-product-page .product-actions .btn::before,
+.notasegura-product-page .product-actions .btn::after {
+    content: "";
+    margin: 0;
+}
+
+.notasegura-product-page .product-actions .btn:hover,
+.notasegura-product-page .product-actions .btn:focus-visible {
+    background: var(--nota-blue-container);
+    border-color: var(--nota-blue);
+    color: var(--nota-blue-deep);
+}
+
+.notasegura-product-page .product-actions .btn-store {
+    background: var(--nota-blue);
+    border-color: var(--nota-blue);
+    color: #fff;
+}
+
+.notasegura-product-page .product-actions .btn-store:hover,
+.notasegura-product-page .product-actions .btn-store:focus-visible {
+    background: var(--nota-blue-deep);
+    border-color: var(--nota-blue-deep);
+    color: #fff;
+}
+
+.notasegura-product-page .product-section {
+    padding: 3.4rem clamp(1.4rem, 5vw, 4rem);
+    border-bottom: 1px solid #d6d9e1;
+    background: var(--nota-bg);
+}
+
+.notasegura-product-page .product-section:nth-of-type(even) {
+    background: #f7f8fc;
+}
+
+.notasegura-product-page .section-heading {
+    gap: .9rem;
+    align-items: center;
+    margin-bottom: 1.35rem;
+}
+
+.notasegura-product-page .section-heading > span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    height: 32px;
+    padding: 0 .65rem;
+    border-radius: 999px;
+    background: var(--nota-blue-container);
+    color: var(--nota-blue-deep);
+    font-family: var(--font-body);
+    font-size: .74rem;
+    font-weight: 800;
+}
+
+.notasegura-product-page .section-heading h2 {
+    margin: 0;
+    color: var(--nota-text);
+    font-family: var(--font-heading);
+    font-size: clamp(1.45rem, 3vw, 1.95rem);
+    font-weight: 760;
+    letter-spacing: -.025em;
+    text-transform: none;
+}
+
+.notasegura-product-page .product-section p {
+    max-width: 78ch;
+    color: var(--nota-muted);
+    font-size: 1.02rem;
+    line-height: 1.78;
+}
+
+.notasegura-product-page .feature-grid {
+    gap: 1rem;
+}
+
+.notasegura-product-page .feature-card {
+    min-height: 205px;
+    padding: 1.45rem;
+    border: 1px solid #c6cad3;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 5px 16px rgba(26,28,30,.045);
+    transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+.notasegura-product-page .feature-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(13,71,161,.55);
+    box-shadow: 0 10px 26px rgba(13,71,161,.08);
+}
+
+.notasegura-product-page .feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    border-radius: 14px;
+    background: var(--nota-blue-container);
+    color: var(--nota-blue);
+    font-family: var(--font-mono);
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.notasegura-product-page .feature-card:nth-child(2) .feature-icon {
+    background: var(--nota-green-container);
+    color: var(--nota-green);
+}
+
+.notasegura-product-page .feature-card:nth-child(3) .feature-icon {
+    background: var(--nota-orange-container);
+    color: var(--nota-orange);
+}
+
+.notasegura-product-page .feature-card:nth-child(4) .feature-icon {
+    background: var(--nota-blue-container);
+    color: var(--nota-blue-deep);
+}
+
+.notasegura-product-page .feature-card h3 {
+    color: var(--nota-text);
+    font-family: var(--font-heading);
+    font-size: 1.08rem;
+    font-weight: 760;
+}
+
+.notasegura-product-page .feature-card p {
+    margin: 0;
+    color: var(--nota-muted);
+    font-size: .96rem;
+    line-height: 1.68;
+}
+
+.notasegura-product-page code {
+    padding: .12rem .3rem;
+    border-radius: 5px;
+    background: var(--nota-blue-container);
+    color: var(--nota-blue-deep);
+    font-size: .9em;
+}
+
+.notasegura-product-page .status-line {
+    position: relative;
+    overflow: hidden;
+    padding: 1.45rem;
+    border: 1px solid #b8c9b9;
+    border-radius: 18px;
+    background: #f6fff5;
+    box-shadow: none;
+}
+
+.notasegura-product-page .status-line::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 5px;
+    background: var(--nota-green);
+}
+
+.notasegura-product-page .status-dot {
+    width: 12px;
+    height: 12px;
+    margin-top: .35rem;
+    background: var(--nota-green);
+    box-shadow: 0 0 0 5px rgba(46,125,50,.12);
+}
+
+.notasegura-product-page .status-line strong {
+    color: #123b16;
+    font-size: 1rem;
+}
+
+.notasegura-product-page .status-line p {
+    color: #3f5140;
+}
+
+.notasegura-product-page .product-gallery {
+    gap: 1rem;
+}
+
+.notasegura-product-page .product-gallery-item {
+    overflow: hidden;
+    border: 1px solid #c6cad3;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 8px 22px rgba(26,28,30,.06);
+}
+
+.notasegura-product-page .product-gallery-item img {
+    background: var(--nota-bg);
+}
+
+.notasegura-product-page .product-gallery-item figcaption {
+    color: var(--nota-muted);
+    border-top: 1px solid #d6d9e1;
+    font-size: .86rem;
+}
+
+.notasegura-product-page .nota-text-cta,
+.notasegura-product-page a.doc-link {
+    color: var(--nota-blue);
+    border-bottom-color: rgba(13,71,161,.38);
+    text-decoration-color: rgba(13,71,161,.38);
+    font-weight: 700;
+}
+
+.notasegura-product-page .nota-text-cta:hover,
+.notasegura-product-page .nota-text-cta:focus-visible,
+.notasegura-product-page a.doc-link:hover,
+.notasegura-product-page a.doc-link:focus-visible {
+    color: var(--nota-green);
+    border-bottom-color: var(--nota-green);
+    text-decoration-color: var(--nota-green);
+}
+
+.notasegura-product-page :focus-visible {
+    --focus-ring: var(--nota-blue);
+    outline-width: 2px;
+    outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+    .notasegura-product-page {
+        margin-top: .5rem;
+        border-radius: 18px;
+    }
+
+    .notasegura-product-page .nota-secure-hero {
+        padding: 4.5rem 1.25rem 2.6rem;
+    }
+
+    .notasegura-product-page .nota-secure-hero::after {
+        display: none;
+    }
+
+    .notasegura-product-page .nota-title {
+        font-size: clamp(2.7rem, 13vw, 4.2rem);
+    }
+
+    .notasegura-product-page .product-actions .btn {
+        flex: 1 1 calc(50% - .75rem);
+        min-width: min(100%, 150px);
+    }
+
+    .notasegura-product-page .product-section {
+        padding: 2.8rem 1.25rem;
+    }
+}
+
+@media print {
+    .notasegura-product-page {
+        border: 0;
+        box-shadow: none;
+    }
+
+    .notasegura-product-page .nota-secure-hero::after {
+        display: none;
+    }
+
+    .notasegura-product-page .nota-secure-hero,
+    .notasegura-product-page .product-section,
+    .notasegura-product-page .feature-card,
+    .notasegura-product-page .status-line {
+        background: #fff;
+        box-shadow: none;
+    }
+
+    .notasegura-product-page .nota-title,
+    .notasegura-product-page .section-heading h2,
+    .notasegura-product-page .feature-card h3 {
+        color: #1a1c1e;
+    }
+}
