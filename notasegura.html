@@ -10,8 +10,8 @@ permalink: "/notasegura.html"
 back_label: "back_home"
 ---
 {% assign app = site.data.apps.apps | where: "id", page.app_id | first %}
-<main id="main-content" tabindex="-1" class="product-page">
-<section class="product-hero nota-product">
+<main id="main-content" tabindex="-1" class="product-page notasegura-product-page">
+<section class="product-hero nota-product nota-secure-hero">
     <div class="product-svg-mark nota-mark" aria-hidden="true">
         <svg viewBox="0 0 120 120" fill="none">
             <path d="M31 15H78L91 28V101H31V15Z" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
@@ -21,7 +21,7 @@ back_label: "back_home"
         </svg>
     </div>
     <div class="product-kicker nota-accent">{{ app.type[page.lang] | upcase }} · {{ app.status.label[page.lang] | upcase }}</div>
-    <h1>{{ app.name }}</h1>
+    <h1 class="nota-title">Nota<span class="nota-title-accent">Segura</span></h1>
     <p class="product-lede">A local-first archive for receipts, proof-of-purchase documents, warranties, and payment reminders—built to keep important purchase records useful after the paper fades.</p>
     {% include product-actions.html lang=page.lang %}
 </section>
