@@ -73,7 +73,12 @@
     }
     </script>
     {% endif %}
-    <link rel="stylesheet" href="{{ '/style.css?v=20261102a' | relative_url }}">
+    {% if social_app and social_app.id == 'phosphor-archive' and page.url == social_app.overview[page.lang] %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+    {% endif %}
+    <link rel="stylesheet" href="{{ '/style.css?v=20261105p' | relative_url }}">
 </head>
 <body>
     {% assign ui = site.data.i18n[page.lang] %}
